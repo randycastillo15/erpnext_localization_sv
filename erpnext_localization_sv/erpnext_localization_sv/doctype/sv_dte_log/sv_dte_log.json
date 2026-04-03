@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "autoname": "DTELOG-.YYYY.-.#####",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "reference_doctype",
+  "reference_docname",
+  "sales_invoice",
+  "tipo_evento",
+  "ambiente",
+  "codigo_generacion",
+  "http_status",
+  "estado_resultante",
+  "timestamp",
+  "request_section",
+  "request_json",
+  "response_section",
+  "response_json",
+  "error_section",
+  "error_mensaje"
+ ],
+ "fields": [
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "DocType Referencia",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reference_docname",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Documento Referencia",
+   "options": "reference_doctype"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice (convenencia)",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "tipo_evento",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tipo Evento",
+   "options": "emision\nconsulta\nlote\ncontingencia\ninvalidacion"
+  },
+  {
+   "fieldname": "ambiente",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ambiente"
+  },
+  {
+   "fieldname": "codigo_generacion",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo Generaci\u00f3n"
+  },
+  {
+   "fieldname": "http_status",
+   "fieldtype": "Int",
+   "label": "HTTP Status"
+  },
+  {
+   "fieldname": "estado_resultante",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Estado Resultante"
+  },
+  {
+   "default": "now",
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp"
+  },
+  {
+   "fieldname": "request_section",
+   "fieldtype": "Section Break",
+   "label": "Request"
+  },
+  {
+   "fieldname": "request_json",
+   "fieldtype": "Code",
+   "label": "Request JSON",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "response_section",
+   "fieldtype": "Section Break",
+   "label": "Response"
+  },
+  {
+   "fieldname": "response_json",
+   "fieldtype": "Code",
+   "label": "Response JSON",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "error_section",
+   "fieldtype": "Section Break",
+   "label": "Error"
+  },
+  {
+   "fieldname": "error_mensaje",
+   "fieldtype": "Text",
+   "label": "Mensaje de Error"
+  }
+ ],
+ "links": [],
+ "module": "ERPNext Localization SV",
+ "name": "SV DTE Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts Manager"
+  }
+ ],
+ "sort_field": "timestamp",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

@@ -134,20 +134,31 @@ def emit_dte(doctype: str, docname: str) -> dict:
 
 	# 5. Persistir resultado en la Sales Invoice
 	result = response.json()
+	gen_code = result.get("generation_code") or result.get("uuid_dte")
 	frappe.db.set_value("Sales Invoice", docname, {
-		"sv_dte_status":        result.get("status"),
-		"sv_dte_uuid":          result.get("uuid_dte"),
-		"sv_dte_sent_at":       now_datetime(),
-		"sv_dte_last_response": frappe.as_json(result, indent=2),
+		"sv_dte_status":           result.get("status"),
+		"sv_dte_uuid":             result.get("uuid_dte"),
+		"sv_dte_generation_code":  gen_code,
+		"sv_dte_control_number":   result.get("control_number"),
+		"sv_dte_sent_at":          now_datetime(),
+		"sv_dte_last_payload":     frappe.as_json(payload, indent=2),
+		"sv_dte_last_response":    frappe.as_json(result, indent=2),
+		"sv_estado_mh":            result.get("estado"),
+		"sv_clasifica_msg":        result.get("clasificaMsg"),
+		"sv_codigo_msg":           result.get("codigoMsg"),
+		"sv_sello_recepcion":      result.get("selloRecibido"),
+		"sv_fecha_procesamiento":  result.get("fhProcesamiento"),
+		"sv_observaciones_mh":     frappe.as_json(result.get("observaciones") or [], indent=2),
 	})
 	frappe.db.commit()
 
 	# 6. Retornar respuesta del gateway
 	frappe.logger().info(
-		"[erpnext_localization_sv] emit_dte — docname=%s uuid_dte=%s mode=%s",
+		"[erpnext_localization_sv] emit_dte — docname=%s generation_code=%s mode=%s estado=%s",
 		docname,
-		result.get("uuid_dte"),
+		gen_code,
 		result.get("mode"),
+		result.get("estado") or result.get("status"),
 	)
 	return result
 

@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "autoname": "field:cod_estable_mh",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "cod_estable_mh",
+  "cod_estable",
+  "tipo_establecimiento",
+  "cod_punto_venta_mh",
+  "cod_punto_venta",
+  "direccion_section",
+  "departamento",
+  "municipio",
+  "complemento",
+  "contacto_section",
+  "telefono",
+  "correo",
+  "activo"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Empresa",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "description": "4 chars, asignado por MH",
+   "fieldname": "cod_estable_mh",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "C\u00f3digo Estab. MH",
+   "reqd": 1
+  },
+  {
+   "description": "Hasta 10 chars",
+   "fieldname": "cod_estable",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo Estab. Interno",
+   "reqd": 1
+  },
+  {
+   "description": "01=Sucursal 02=Casa Matriz 04=Bodega 07=Patio",
+   "fieldname": "tipo_establecimiento",
+   "fieldtype": "Select",
+   "label": "Tipo Establecimiento",
+   "options": "\n01\n02\n04\n07",
+   "reqd": 1
+  },
+  {
+   "description": "4 chars, c\u00f3digo MH",
+   "fieldname": "cod_punto_venta_mh",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo Punto Venta MH",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cod_punto_venta",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo Punto Venta Interno"
+  },
+  {
+   "fieldname": "direccion_section",
+   "fieldtype": "Section Break",
+   "label": "Direcci\u00f3n"
+  },
+  {
+   "fieldname": "departamento",
+   "fieldtype": "Select",
+   "label": "Departamento",
+   "options": "\n01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14"
+  },
+  {
+   "description": "C\u00f3digo CAT-013 seg\u00fan departamento",
+   "fieldname": "municipio",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo Municipio"
+  },
+  {
+   "fieldname": "complemento",
+   "fieldtype": "Data",
+   "label": "Complemento Direcci\u00f3n",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contacto_section",
+   "fieldtype": "Section Break",
+   "label": "Contacto"
+  },
+  {
+   "fieldname": "telefono",
+   "fieldtype": "Data",
+   "label": "Tel\u00e9fono"
+  },
+  {
+   "fieldname": "correo",
+   "fieldtype": "Data",
+   "label": "Correo Electr\u00f3nico"
+  },
+  {
+   "default": "1",
+   "fieldname": "activo",
+   "fieldtype": "Check",
+   "label": "Activo"
+  }
+ ],
+ "links": [],
+ "module": "ERPNext Localization SV",
+ "name": "SV DTE Establishment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "cod_estable_mh",
+ "track_changes": 1
+}

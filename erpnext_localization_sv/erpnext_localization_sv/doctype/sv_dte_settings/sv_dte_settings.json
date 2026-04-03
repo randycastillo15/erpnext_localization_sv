@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "ambiente_section",
+  "ambiente",
+  "url_gateway",
+  "timeout_segundos",
+  "max_reintentos",
+  "emisor_section",
+  "nit_emisor",
+  "nrc_emisor",
+  "nombre_emisor",
+  "nombre_comercial",
+  "cod_actividad",
+  "desc_actividad",
+  "establecimiento_section",
+  "establecimiento_default",
+  "cod_punto_venta_default",
+  "firmador_section",
+  "url_firmador",
+  "password_privada",
+  "doctypes_section",
+  "emitir_fe",
+  "emitir_ccf",
+  "emitir_nc"
+ ],
+ "fields": [
+  {
+   "fieldname": "ambiente_section",
+   "fieldtype": "Section Break",
+   "label": "Ambiente y Gateway"
+  },
+  {
+   "default": "00",
+   "description": "00 = Pruebas / 01 = Producci\u00f3n",
+   "fieldname": "ambiente",
+   "fieldtype": "Select",
+   "label": "Ambiente",
+   "options": "00\n01",
+   "reqd": 1
+  },
+  {
+   "default": "http://host.docker.internal:8100",
+   "fieldname": "url_gateway",
+   "fieldtype": "Data",
+   "label": "URL Gateway DTE",
+   "reqd": 1
+  },
+  {
+   "default": "8",
+   "fieldname": "timeout_segundos",
+   "fieldtype": "Int",
+   "label": "Timeout (segundos)"
+  },
+  {
+   "default": "2",
+   "fieldname": "max_reintentos",
+   "fieldtype": "Int",
+   "label": "M\u00e1x. Reintentos"
+  },
+  {
+   "fieldname": "emisor_section",
+   "fieldtype": "Section Break",
+   "label": "Datos del Emisor"
+  },
+  {
+   "description": "14 d\u00edgitos sin guiones",
+   "fieldname": "nit_emisor",
+   "fieldtype": "Data",
+   "label": "NIT Emisor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nrc_emisor",
+   "fieldtype": "Data",
+   "label": "NRC Emisor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nombre_emisor",
+   "fieldtype": "Data",
+   "label": "Nombre / Raz\u00f3n Social",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nombre_comercial",
+   "fieldtype": "Data",
+   "label": "Nombre Comercial"
+  },
+  {
+   "description": "CAT-019",
+   "fieldname": "cod_actividad",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo Actividad Econ\u00f3mica",
+   "reqd": 1
+  },
+  {
+   "fieldname": "desc_actividad",
+   "fieldtype": "Data",
+   "label": "Descripci\u00f3n Actividad",
+   "reqd": 1
+  },
+  {
+   "fieldname": "establecimiento_section",
+   "fieldtype": "Section Break",
+   "label": "Establecimiento por Defecto"
+  },
+  {
+   "fieldname": "establecimiento_default",
+   "fieldtype": "Link",
+   "label": "Establecimiento",
+   "options": "SV DTE Establishment"
+  },
+  {
+   "description": "4 chars, c\u00f3digo MH",
+   "fieldname": "cod_punto_venta_default",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo Punto de Venta"
+  },
+  {
+   "fieldname": "firmador_section",
+   "fieldtype": "Section Break",
+   "label": "Firmador"
+  },
+  {
+   "default": "http://host.docker.internal:8113/firma/firmardocumento/",
+   "fieldname": "url_firmador",
+   "fieldtype": "Data",
+   "label": "URL Firmador"
+  },
+  {
+   "description": "passwordPri del certificado de firma. Se almacena cifrada.",
+   "fieldname": "password_privada",
+   "fieldtype": "Password",
+   "label": "Contrase\u00f1a Clave Privada"
+  },
+  {
+   "fieldname": "doctypes_section",
+   "fieldtype": "Section Break",
+   "label": "Documentos Habilitados"
+  },
+  {
+   "default": "1",
+   "fieldname": "emitir_fe",
+   "fieldtype": "Check",
+   "label": "Emitir FE (01)"
+  },
+  {
+   "default": "1",
+   "fieldname": "emitir_ccf",
+   "fieldtype": "Check",
+   "label": "Emitir CCF (03)"
+  },
+  {
+   "default": "1",
+   "fieldname": "emitir_nc",
+   "fieldtype": "Check",
+   "label": "Emitir NC (05)"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "module": "ERPNext Localization SV",
+ "name": "SV DTE Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}
