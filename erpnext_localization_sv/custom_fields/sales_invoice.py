@@ -1,9 +1,10 @@
 """
-Custom Fields DTE para Sales Invoice — v1.1
+Custom Fields DTE para Sales Invoice — v1.4
 
 Definición centralizada usada desde:
   - patches/v1_0/add_dte_custom_fields.py  (patch original — sitios existentes)
   - patches/v1_1/update_dte_custom_fields.py (patch v1.1 — añade campos ampliados)
+  - patches/v1_4/add_anulacion_contingencia_fields.py (Sprint 4)
 """
 
 import frappe
@@ -147,6 +148,97 @@ _DTE_FIELDS = {
             "read_only": 1,
             "no_copy": 1,
             "insert_after": "sv_dte_last_response",
+        },
+        # ── IVA total DTE (Sprint 4 — fuente principal para anulación) ─────────
+        {
+            "fieldname": "sv_total_iva",
+            "fieldtype": "Currency",
+            "label": "IVA Total DTE",
+            "read_only": 1,
+            "no_copy": 1,
+            "insert_after": "sv_observaciones_mh",
+            "description": "IVA calculado al momento de la emisión DTE. Fuente principal para montoIva en anulación.",
+        },
+        # ── Sección Anulación ─────────────────────────────────────────────────
+        {
+            "fieldname": "sv_anulacion_section",
+            "fieldtype": "Section Break",
+            "label": "Anulación DTE",
+            "collapsible": 1,
+            "insert_after": "sv_total_iva",
+        },
+        {
+            "fieldname": "sv_anulacion_status",
+            "fieldtype": "Select",
+            "label": "Estado Anulación",
+            "options": "\nAnulado\nRechazado",
+            "read_only": 1,
+            "no_copy": 1,
+            "insert_after": "sv_anulacion_section",
+        },
+        {
+            "fieldname": "sv_anulacion_tipo",
+            "fieldtype": "Int",
+            "label": "Tipo Anulación",
+            "read_only": 1,
+            "no_copy": 1,
+            "insert_after": "sv_anulacion_status",
+        },
+        {
+            "fieldname": "sv_anulacion_sello",
+            "fieldtype": "Data",
+            "label": "Sello Anulación",
+            "read_only": 1,
+            "no_copy": 1,
+            "insert_after": "sv_anulacion_tipo",
+        },
+        {
+            "fieldname": "sv_anulacion_fecha",
+            "fieldtype": "Date",
+            "label": "Fecha Anulación",
+            "read_only": 1,
+            "no_copy": 1,
+            "insert_after": "sv_anulacion_sello",
+        },
+        {
+            "fieldname": "sv_anulacion_codigo_generacion_reemplazo",
+            "fieldtype": "Data",
+            "label": "UUID Reemplazo (Anulación)",
+            "read_only": 1,
+            "no_copy": 1,
+            "insert_after": "sv_anulacion_fecha",
+        },
+        # ── Sección Contingencia ──────────────────────────────────────────────
+        {
+            "fieldname": "sv_contingencia_section",
+            "fieldtype": "Section Break",
+            "label": "Contingencia DTE",
+            "collapsible": 1,
+            "insert_after": "sv_anulacion_codigo_generacion_reemplazo",
+        },
+        {
+            "fieldname": "sv_contingencia_event_uuid",
+            "fieldtype": "Data",
+            "label": "UUID Evento Contingencia",
+            "read_only": 1,
+            "no_copy": 1,
+            "insert_after": "sv_contingencia_section",
+        },
+        {
+            "fieldname": "sv_contingencia_tipo",
+            "fieldtype": "Int",
+            "label": "Tipo Contingencia",
+            "read_only": 1,
+            "no_copy": 1,
+            "insert_after": "sv_contingencia_event_uuid",
+        },
+        {
+            "fieldname": "sv_contingencia_sello",
+            "fieldtype": "Data",
+            "label": "Sello Contingencia",
+            "read_only": 1,
+            "no_copy": 1,
+            "insert_after": "sv_contingencia_tipo",
         },
     ]
 }

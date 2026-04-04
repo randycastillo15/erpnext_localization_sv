@@ -24,7 +24,11 @@
   "doctypes_section",
   "emitir_fe",
   "emitir_ccf",
-  "emitir_nc"
+  "emitir_nc",
+  "responsable_section",
+  "sv_nombre_responsable",
+  "sv_tipo_doc_responsable",
+  "sv_num_doc_responsable"
  ],
  "fields": [
   {
@@ -158,6 +162,30 @@
    "fieldname": "emitir_nc",
    "fieldtype": "Check",
    "label": "Emitir NC (05)"
+  },
+  {
+   "fieldname": "responsable_section",
+   "fieldtype": "Section Break",
+   "label": "Responsable (Anulación / Contingencia)"
+  },
+  {
+   "description": "Nombre completo del responsable técnico que ejecuta anulaciones y reportes de contingencia.",
+   "fieldname": "sv_nombre_responsable",
+   "fieldtype": "Data",
+   "label": "Nombre Responsable"
+  },
+  {
+   "description": "Código CAT-22: 36=NIT, 13=DUI, 02=Carnet residente, 03=Pasaporte, 37=Otro",
+   "fieldname": "sv_tipo_doc_responsable",
+   "fieldtype": "Select",
+   "label": "Tipo Doc Responsable",
+   "options": "\n36\n13\n02\n03\n37"
+  },
+  {
+   "description": "Número de documento del responsable (según el tipo seleccionado).",
+   "fieldname": "sv_num_doc_responsable",
+   "fieldtype": "Data",
+   "label": "Núm. Doc Responsable"
   }
  ],
  "issingle": 1,

@@ -189,6 +189,8 @@ def emit_dte(doctype: str, docname: str) -> dict:
         "sv_sello_recepcion":      result.get("sello_recibido"),
         "sv_fecha_procesamiento":  _parse_mh_datetime(result.get("fh_procesamiento")),
         "sv_observaciones_mh":     frappe.as_json(result.get("observaciones") or [], indent=2),
+        # Sprint 4: persistir IVA calculado en el DTE como fuente principal para anulación
+        "sv_total_iva":            float(payload.get("total_iva") or 0),
     })
     frappe.db.commit()
 
