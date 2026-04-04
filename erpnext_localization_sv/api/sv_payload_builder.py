@@ -12,6 +12,11 @@ Uso:
 import frappe
 from frappe.utils import now_datetime
 
+# Mapeo de etiquetas del campo Select → código DTE para el gateway.
+# El campo sv_dte_document_type almacena etiquetas legibles ("FE", "CCF", "NC")
+# pero el gateway y el schema MH usan códigos numéricos ("01", "03", "05").
+_DTE_LABEL_TO_CODE = {"FE": "01", "CCF": "03", "NC": "05"}
+
 
 # ---------------------------------------------------------------------------
 # Función principal
@@ -104,25 +109,59 @@ def _build_emisor_settings(settings, estab) -> dict:
 def _build_receptor(doc, tipo_dte: str) -> dict:
     """
     Construye el dict del receptor.
-    CCF requiere NIT y NRC desde el Customer (sv_nit, sv_nrc).
     FE: solo nombre + datos opcionales.
+    CCF/NC: requiere los 9 campos del schema fe-ccf-v3.json desde el Customer.
+    Falla temprano con mensaje claro si algún campo requerido falta.
     """
     receptor: dict = {
-        "nombre":    doc.get("customer_name") or doc.get("customer") or "Consumidor Final",
-        "correo":    doc.get("contact_email") or None,
-        "telefono":  doc.get("contact_mobile") or None,
+        "nombre":   doc.get("customer_name") or doc.get("customer") or "Consumidor Final",
+        "correo":   doc.get("contact_email") or None,
+        "telefono": doc.get("contact_mobile") or None,
     }
 
     if tipo_dte in ("03", "05") and doc.get("customer"):
-        try:
-            customer = frappe.get_doc("Customer", doc.customer)
-            receptor["nit"] = customer.get("sv_nit") or None
-            receptor["nrc"] = customer.get("sv_nrc") or None
-            receptor["cod_actividad"] = customer.get("sv_cod_actividad") or None
-            receptor["tipo_doc_identificacion"] = "02"  # NIT
-            receptor["num_documento"] = customer.get("sv_nit") or None
-        except frappe.DoesNotExistError:
-            pass
+        customer = frappe.get_doc("Customer", doc.customer)
+
+        nit = customer.get("sv_nit") or None
+        if not nit:
+            frappe.throw(f"El Customer '{doc.customer}' no tiene NIT DTE (sv_nit). Requerido para {tipo_dte}.")
+
+        nrc = customer.get("sv_nrc") or None
+        if not nrc:
+            frappe.throw(f"El Customer '{doc.customer}' no tiene NRC DTE (sv_nrc). Requerido para {tipo_dte}.")
+
+        cod_act = customer.get("sv_cod_actividad") or None
+        if not cod_act:
+            frappe.throw(f"El Customer '{doc.customer}' no tiene Código de Actividad (sv_cod_actividad). Requerido para {tipo_dte}.")
+
+        dep = customer.get("sv_direccion_departamento") or None
+        mun = customer.get("sv_direccion_municipio") or None
+        comp = customer.get("sv_direccion_complemento") or None
+        if not (dep and mun and comp):
+            frappe.throw(f"El Customer '{doc.customer}' no tiene dirección DTE completa (sv_direccion_*). Requerida para {tipo_dte}.")
+
+        # correo: fallback a contact_email del documento antes de fallar
+        correo = customer.get("sv_correo") or doc.get("contact_email") or None
+        if not correo:
+            frappe.throw(
+                f"El Customer '{doc.customer}' no tiene correo DTE (sv_correo) "
+                f"ni el documento tiene contact_email. Requerido por schema para {tipo_dte}."
+            )
+
+        receptor.update({
+            "nit":            nit,
+            "nrc":            nrc,
+            "cod_actividad":  cod_act,
+            "desc_actividad": customer.get("sv_desc_actividad") or "",
+            "nombre_comercial": customer.get("sv_nombre_comercial") or None,
+            "direccion": {
+                "departamento": dep,
+                "municipio":    mun,
+                "complemento":  comp,
+            },
+            "telefono": customer.get("sv_telefono") or doc.get("contact_mobile") or None,
+            "correo":   correo,
+        })
 
     return receptor
 
@@ -158,9 +197,44 @@ def _calc_total_iva(doc) -> float:
 
 
 def _build_nc_extras(doc) -> dict:
-    """Campos adicionales para NC (tipo 05)."""
+    """
+    Para NC (tipo 05): resuelve el CCF original via return_against.
+
+    Falla temprano si:
+    - return_against está vacío (no es una nota de crédito contra un DTE)
+    - El documento relacionado no existe
+    - El documento relacionado no tiene DTE emitido (sv_dte_generation_code vacío)
+    - El tipo del documento relacionado no es "03" (CCF) o "07" (ND)
+    """
+    original_name = doc.get("return_against")
+    if not original_name:
+        frappe.throw(
+            "NC requiere 'return_against' (documento origen). "
+            "El Sales Invoice debe ser una nota de crédito contra un CCF emitido."
+        )
+
+    try:
+        original_doc = frappe.get_doc("Sales Invoice", original_name)
+    except frappe.DoesNotExistError:
+        frappe.throw(f"Documento relacionado '{original_name}' no encontrado.")
+
+    gen_code = original_doc.get("sv_dte_generation_code")
+    if not gen_code:
+        frappe.throw(
+            f"El documento relacionado '{original_name}' no tiene DTE emitido "
+            f"(sv_dte_generation_code vacío). Emita el CCF primero."
+        )
+
+    raw_tipo = original_doc.get("sv_dte_document_type") or "CCF"
+    tipo_original = _DTE_LABEL_TO_CODE.get(raw_tipo, raw_tipo) or "03"
+    if tipo_original not in ("03", "07"):
+        frappe.throw(
+            f"NC solo puede referir a CCF (03) o ND (07). "
+            f"El documento '{original_name}' es tipo '{raw_tipo}' → '{tipo_original}'."
+        )
+
     return {
-        "documento_relacionado_codigo": doc.get("sv_dte_generation_code") or doc.get("return_against"),
-        "documento_relacionado_tipo":   doc.get("sv_dte_document_type") or "01",
-        "documento_relacionado_fecha":  str(doc.get("posting_date") or ""),
+        "documento_relacionado_codigo": gen_code,
+        "documento_relacionado_tipo":   tipo_original,
+        "documento_relacionado_fecha":  str(original_doc.get("posting_date") or ""),
     }

@@ -145,8 +145,11 @@ def emit_dte(doctype: str, docname: str) -> dict:
     except frappe.DoesNotExistError:
         frappe.throw(f"Documento no encontrado: {doctype} / {docname}")
 
-    # Determinar tipo DTE desde el campo del documento o default FE
-    tipo_dte = doc.get("sv_dte_document_type") or "01"
+    # Determinar tipo DTE desde el campo del documento o default FE.
+    # sv_dte_document_type almacena etiquetas ("FE","CCF","NC") o códigos legacy ("01","03","05").
+    _label_map = {"FE": "01", "CCF": "03", "NC": "05"}
+    raw_tipo = doc.get("sv_dte_document_type") or "FE"
+    tipo_dte = _label_map.get(raw_tipo, raw_tipo) or "01"
 
     # Construir payload completo sin secretos
     payload = build_emit_request(doc, tipo_dte)

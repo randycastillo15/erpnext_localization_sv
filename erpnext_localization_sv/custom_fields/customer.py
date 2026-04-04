@@ -1,7 +1,11 @@
 """
-Custom Fields DTE para Customer — v1.2
+Custom Fields DTE para Customer — v1.3
 
-Campos requeridos para emitir CCF (tipo 03): el receptor debe tener NIT y NRC.
+v1.2: sv_nit, sv_nrc (CCF básico)
+v1.3: 8 campos adicionales para receptor CCF/NC completo según schema MH fe-ccf-v3.json:
+      sv_cod_actividad, sv_desc_actividad, sv_nombre_comercial,
+      sv_direccion_departamento, sv_direccion_municipio, sv_direccion_complemento,
+      sv_correo, sv_telefono
 """
 
 import frappe
@@ -31,6 +35,76 @@ _CUSTOMER_DTE_FIELDS = {
             "no_copy": 1,
             "description": "Requerido para emitir CCF",
             "insert_after": "sv_nit",
+        },
+        {
+            "fieldname": "sv_cod_actividad",
+            "fieldtype": "Data",
+            "label": "Código Actividad (DTE)",
+            "no_copy": 0,
+            "description": "CAT-019 — código de actividad económica del receptor, requerido para CCF/NC",
+            "insert_after": "sv_nrc",
+        },
+        {
+            "fieldname": "sv_desc_actividad",
+            "fieldtype": "Small Text",
+            "label": "Descripción Actividad (DTE)",
+            "no_copy": 0,
+            "description": "Descripción de la actividad económica del receptor",
+            "insert_after": "sv_cod_actividad",
+        },
+        {
+            "fieldname": "sv_nombre_comercial",
+            "fieldtype": "Data",
+            "label": "Nombre Comercial (DTE)",
+            "no_copy": 0,
+            "description": "Nombre comercial del receptor (opcional, nullable en schema)",
+            "insert_after": "sv_desc_actividad",
+        },
+        {
+            "fieldname": "sv_col_break_dir",
+            "fieldtype": "Column Break",
+            "insert_after": "sv_nombre_comercial",
+        },
+        {
+            "fieldname": "sv_direccion_departamento",
+            "fieldtype": "Data",
+            "label": "Departamento (DTE)",
+            "no_copy": 0,
+            "description": "CAT-012 — código de departamento (ej. '05' = La Libertad)",
+            "insert_after": "sv_col_break_dir",
+        },
+        {
+            "fieldname": "sv_direccion_municipio",
+            "fieldtype": "Data",
+            "label": "Municipio (DTE)",
+            "no_copy": 0,
+            "description": "CAT-013 — código de municipio (ej. '25' = Colón)",
+            "insert_after": "sv_direccion_departamento",
+        },
+        {
+            "fieldname": "sv_direccion_complemento",
+            "fieldtype": "Small Text",
+            "label": "Dirección Complemento (DTE)",
+            "no_copy": 0,
+            "description": "Dirección completa del receptor (calle, número, etc.)",
+            "insert_after": "sv_direccion_municipio",
+        },
+        {
+            "fieldname": "sv_correo",
+            "fieldtype": "Data",
+            "label": "Correo (DTE)",
+            "no_copy": 0,
+            "options": "Email",
+            "description": "Correo electrónico del receptor — requerido por schema CCF/NC",
+            "insert_after": "sv_direccion_complemento",
+        },
+        {
+            "fieldname": "sv_telefono",
+            "fieldtype": "Data",
+            "label": "Teléfono (DTE)",
+            "no_copy": 0,
+            "description": "Teléfono del receptor (opcional, mínimo 8 caracteres)",
+            "insert_after": "sv_correo",
         },
     ]
 }
