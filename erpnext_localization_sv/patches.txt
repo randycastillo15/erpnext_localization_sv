@@ -6,3 +6,4 @@
 # Patches added in this section will be executed after doctypes are migrated
 erpnext_localization_sv.patches.v1_0.add_dte_custom_fields
 erpnext_localization_sv.patches.v1_1.update_dte_custom_fields
+erpnext_localization_sv.patches.v1_2.add_customer_dte_fields

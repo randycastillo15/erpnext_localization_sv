@@ -1,192 +1,243 @@
 """
-API DTE — stubs de integración con el DTE Gateway (FastAPI :8100).
+API DTE — integración con el DTE Gateway (FastAPI :8100) v2.
 
-Estos endpoints son llamables desde Frappe via:
+Endpoints whitelisted llamables desde Frappe via:
   /api/method/erpnext_localization_sv.api.dte.<función>
 
-La implementación real (firma XML, envío al MH, manejo de respuesta)
-se añadirá cuando el DocType de configuración y el gateway estén listos.
+Sprint 2: flujo real — payload builder + /v2/dte/emit + logs sanitizados.
+Los secretos (password_pri, api_password) nunca aparecen en el payload,
+en sv_dte_last_payload ni en SV DTE Log.
 """
 
 import os
+from datetime import datetime
 
 import frappe
 import requests
 from frappe.utils import now_datetime
 
 from erpnext_localization_sv.config.sv_fiscal_constants import DTE_GATEWAY_URL as _DTE_GATEWAY_URL_DEFAULT
+from erpnext_localization_sv.api.sv_payload_builder import build_emit_request
 
-# Timeout por defecto para llamadas al gateway (segundos)
-_GATEWAY_TIMEOUT = 5
+# Timeout ajustado para flujo real: firma (~3s) + MH (~8s × reintentos)
+_GATEWAY_TIMEOUT = 30
+
+# Claves sensibles que NO deben aparecer en logs ni en campos de la Sales Invoice
+_LOG_SENSITIVE_KEYS = frozenset({
+    "password_pri", "api_password", "passwordPri",
+    "firmaElectronica", "token", "body",
+    "FIRMADOR_PASSWORD_PRI", "MH_API_PASSWORD",
+})
 
 
 # ---------------------------------------------------------------------------
 # Resolución de la URL base del gateway
-# Prioridad: site_config.json > variable de entorno > constante (default)
 # ---------------------------------------------------------------------------
 
-
 def _get_gateway_base_url() -> str:
-	"""
-	Devuelve la URL base del DTE Gateway según el siguiente orden de precedencia:
+    site_config_url: str | None = frappe.conf.get("dte_gateway_url")
+    if site_config_url:
+        return site_config_url.rstrip("/")
 
-	1. ``dte_gateway_url`` en site_config.json   (frappe.conf)
-	2. Variable de entorno ``DTE_GATEWAY_URL``
-	3. Constante ``DTE_GATEWAY_URL`` en sv_fiscal_constants.py
-	       → default: http://host.docker.internal:8100
-	"""
-	# 1. site_config.json (por site, permite override sin reiniciar)
-	site_config_url: str | None = frappe.conf.get("dte_gateway_url")
-	if site_config_url:
-		return site_config_url.rstrip("/")
+    env_url: str | None = os.environ.get("DTE_GATEWAY_URL")
+    if env_url:
+        return env_url.rstrip("/")
 
-	# 2. Variable de entorno (útil en CI o entornos sin acceso a site_config)
-	env_url: str | None = os.environ.get("DTE_GATEWAY_URL")
-	if env_url:
-		return env_url.rstrip("/")
-
-	# 3. Default hardcodeado en constantes
-	return _DTE_GATEWAY_URL_DEFAULT.rstrip("/")
+    return _DTE_GATEWAY_URL_DEFAULT.rstrip("/")
 
 
 def _gateway_url(path: str) -> str:
-	"""Construye la URL completa del gateway evitando doble slash."""
-	return f"{_get_gateway_base_url()}/{path.lstrip('/')}"
+    return f"{_get_gateway_base_url()}/{path.lstrip('/')}"
+
+
+# ---------------------------------------------------------------------------
+# Sanitización de logs
+# ---------------------------------------------------------------------------
+
+def _parse_mh_datetime(dt_str: str | None) -> str | None:
+    """Convierte 'DD/MM/YYYY HH:MM:SS' (MH) → 'YYYY-MM-DD HH:MM:SS' (MySQL)."""
+    if not dt_str:
+        return None
+    try:
+        return datetime.strptime(dt_str, "%d/%m/%Y %H:%M:%S").strftime("%Y-%m-%d %H:%M:%S")
+    except ValueError:
+        return dt_str
+
+
+def _sanitize_for_log(data) -> object:
+    """Elimina campos sensibles recursivamente antes de persistir."""
+    if isinstance(data, dict):
+        return {
+            k: "***REDACTED***" if k in _LOG_SENSITIVE_KEYS else _sanitize_for_log(v)
+            for k, v in data.items()
+        }
+    if isinstance(data, list):
+        return [_sanitize_for_log(item) for item in data]
+    return data
+
+
+# ---------------------------------------------------------------------------
+# SV DTE Log
+# ---------------------------------------------------------------------------
+
+def _write_dte_log(docname: str, tipo_dte: str, payload: dict, result: dict) -> None:
+    try:
+        log = frappe.new_doc("SV DTE Log")
+        log.reference_doctype = "Sales Invoice"
+        log.reference_docname = docname
+        log.sales_invoice     = docname
+        log.tipo_evento       = "emision"
+        log.ambiente          = payload.get("ambiente", "00")
+        log.codigo_generacion = result.get("generation_code") or result.get("uuid_dte")
+        log.http_status       = 200
+        log.estado_resultante = result.get("estado") or result.get("status")
+        log.request_json      = frappe.as_json(_sanitize_for_log(payload), indent=2)
+        log.response_json     = frappe.as_json(_sanitize_for_log(result), indent=2)
+        log.insert(ignore_permissions=True)
+        frappe.db.commit()
+    except Exception as exc:
+        frappe.logger().warning("[erpnext_localization_sv] SV DTE Log falló: %s", exc)
 
 
 # ---------------------------------------------------------------------------
 # Endpoints whitelisted
 # ---------------------------------------------------------------------------
 
-
 @frappe.whitelist()
 def ping_gateway() -> dict:
-	"""
-	Verifica que el DTE Gateway esté en línea.
-	Llama GET <gateway_base_url>/health y devuelve su respuesta.
-	La URL se resuelve en tiempo de ejecución (site_config > env > default).
-	"""
-	url = _gateway_url("/health")
-	try:
-		response = requests.get(url, timeout=_GATEWAY_TIMEOUT)
-		response.raise_for_status()
-		return {"gateway_url": url, "gateway_response": response.json()}
-	except requests.exceptions.ConnectionError:
-		frappe.throw(f"No se pudo conectar al DTE Gateway en {url}")
-	except requests.exceptions.Timeout:
-		frappe.throw(f"Timeout al conectar con el DTE Gateway ({_GATEWAY_TIMEOUT}s)")
-	except requests.exceptions.HTTPError as exc:
-		frappe.throw(f"DTE Gateway respondió con error: {exc}")
+    """Verifica que el DTE Gateway esté en línea."""
+    url = _gateway_url("/health")
+    try:
+        response = requests.get(url, timeout=_GATEWAY_TIMEOUT)
+        response.raise_for_status()
+        return {"gateway_url": url, "gateway_response": response.json()}
+    except requests.exceptions.ConnectionError:
+        frappe.throw(f"No se pudo conectar al DTE Gateway en {url}")
+    except requests.exceptions.Timeout:
+        frappe.throw(f"Timeout al conectar con el DTE Gateway ({_GATEWAY_TIMEOUT}s)")
+    except requests.exceptions.HTTPError as exc:
+        frappe.throw(f"DTE Gateway respondió con error: {exc}")
 
 
 @frappe.whitelist()
 def emit_dte(doctype: str, docname: str) -> dict:
-	"""
-	Emite un DTE para el documento indicado enviando el payload al gateway.
+    """
+    Emite un DTE para el Sales Invoice indicado.
 
-	Solo soporta Sales Invoice en esta fase.
-	No firma XML ni conecta al Ministerio de Hacienda todavía.
+    Llama a /v2/dte/emit con el payload completo (sin secretos).
+    Persiste el resultado en los campos DTE de la Sales Invoice y crea SV DTE Log.
 
-	Args:
-		doctype: DocType del documento origen — debe ser "Sales Invoice".
-		docname: Nombre del documento (ej. "SINV-0001").
+    Args:
+        doctype: Debe ser "Sales Invoice".
+        docname: Nombre del documento (ej. "SINV-0001").
 
-	Returns:
-		Respuesta JSON del gateway: {status, uuid_dte, received_at, mode, echo}.
-	"""
-	if not doctype or not docname:
-		frappe.throw("doctype y docname son requeridos")
+    Returns:
+        Respuesta JSON del gateway (sanitizada — sin firma ni tokens).
+    """
+    if not doctype or not docname:
+        frappe.throw("doctype y docname son requeridos")
 
-	# 1. Solo Sales Invoice soportado por ahora
-	if doctype != "Sales Invoice":
-		frappe.throw(
-			f"emit_dte solo soporta 'Sales Invoice' por ahora. Recibido: {doctype}"
-		)
+    if doctype != "Sales Invoice":
+        frappe.throw(f"emit_dte solo soporta 'Sales Invoice'. Recibido: {doctype}")
 
-	# 2. Leer documento desde ERPNext
-	try:
-		doc = frappe.get_doc(doctype, docname)
-	except frappe.DoesNotExistError:
-		frappe.throw(f"Documento no encontrado: {doctype} / {docname}")
+    try:
+        doc = frappe.get_doc(doctype, docname)
+    except frappe.DoesNotExistError:
+        frappe.throw(f"Documento no encontrado: {doctype} / {docname}")
 
-	# 3. Construir payload mínimo de Sales Invoice
-	payload = {
-		"doctype": doc.doctype,
-		"docname": doc.name,
-		"company": doc.get("company"),
-		"posting_date": str(doc.get("posting_date") or ""),
-		"currency": doc.get("currency"),
-		"grand_total": float(doc.get("grand_total") or 0),
-		"customer": doc.get("customer"),
-	}
+    # Determinar tipo DTE desde el campo del documento o default FE
+    tipo_dte = doc.get("sv_dte_document_type") or "01"
 
-	# 4. POST al gateway
-	url = _gateway_url("/dte/emit")
-	try:
-		response = requests.post(url, json=payload, timeout=_GATEWAY_TIMEOUT)
-		response.raise_for_status()
-	except requests.exceptions.ConnectionError:
-		frappe.throw(f"No se pudo conectar al DTE Gateway en {url}")
-	except requests.exceptions.Timeout:
-		frappe.throw(f"Timeout al conectar con el DTE Gateway ({_GATEWAY_TIMEOUT}s)")
-	except requests.exceptions.HTTPError as exc:
-		frappe.throw(f"DTE Gateway respondió con error: {exc}")
+    # Construir payload completo sin secretos
+    payload = build_emit_request(doc, tipo_dte)
 
-	# 5. Persistir resultado en la Sales Invoice
-	result = response.json()
-	gen_code = result.get("generation_code") or result.get("uuid_dte")
-	frappe.db.set_value("Sales Invoice", docname, {
-		"sv_dte_status":           result.get("status"),
-		"sv_dte_uuid":             result.get("uuid_dte"),
-		"sv_dte_generation_code":  gen_code,
-		"sv_dte_control_number":   result.get("control_number"),
-		"sv_dte_sent_at":          now_datetime(),
-		"sv_dte_last_payload":     frappe.as_json(payload, indent=2),
-		"sv_dte_last_response":    frappe.as_json(result, indent=2),
-		"sv_estado_mh":            result.get("estado"),
-		"sv_clasifica_msg":        result.get("clasificaMsg"),
-		"sv_codigo_msg":           result.get("codigoMsg"),
-		"sv_sello_recepcion":      result.get("selloRecibido"),
-		"sv_fecha_procesamiento":  result.get("fhProcesamiento"),
-		"sv_observaciones_mh":     frappe.as_json(result.get("observaciones") or [], indent=2),
-	})
-	frappe.db.commit()
+    # POST al gateway v2
+    url = _gateway_url("/v2/dte/emit")
+    try:
+        response = requests.post(url, json=payload, timeout=_GATEWAY_TIMEOUT)
+        response.raise_for_status()
+    except requests.exceptions.ConnectionError:
+        frappe.throw(f"No se pudo conectar al DTE Gateway en {url}")
+    except requests.exceptions.Timeout:
+        frappe.throw(f"Timeout al conectar con el DTE Gateway ({_GATEWAY_TIMEOUT}s)")
+    except requests.exceptions.HTTPError as exc:
+        error_detail = ""
+        try:
+            error_detail = exc.response.json().get("detail", "") if exc.response else ""
+        except Exception:
+            pass
+        frappe.throw(f"DTE Gateway respondió con error: {exc} — {error_detail}")
 
-	# 6. Retornar respuesta del gateway
-	frappe.logger().info(
-		"[erpnext_localization_sv] emit_dte — docname=%s generation_code=%s mode=%s estado=%s",
-		docname,
-		gen_code,
-		result.get("mode"),
-		result.get("estado") or result.get("status"),
-	)
-	return result
+    result = response.json()
+    gen_code = result.get("generation_code") or result.get("uuid_dte")
+
+    # Persistir en Sales Invoice (solo datos limpios — sin firma)
+    frappe.db.set_value("Sales Invoice", docname, {
+        "sv_dte_status":           result.get("status"),
+        "sv_dte_uuid":             result.get("uuid_dte"),
+        "sv_dte_generation_code":  gen_code,
+        "sv_dte_control_number":   result.get("control_number"),
+        "sv_dte_sent_at":          now_datetime(),
+        "sv_dte_last_payload":     frappe.as_json(_sanitize_for_log(payload), indent=2),
+        "sv_dte_last_response":    frappe.as_json(_sanitize_for_log(result), indent=2),
+        "sv_estado_mh":            result.get("estado"),
+        "sv_clasifica_msg":        result.get("clasifica_msg"),
+        "sv_codigo_msg":           result.get("codigo_msg"),
+        "sv_sello_recepcion":      result.get("sello_recibido"),
+        "sv_fecha_procesamiento":  _parse_mh_datetime(result.get("fh_procesamiento")),
+        "sv_observaciones_mh":     frappe.as_json(result.get("observaciones") or [], indent=2),
+    })
+    frappe.db.commit()
+
+    # Crear SV DTE Log (sanitizado)
+    _write_dte_log(docname, tipo_dte, payload, result)
+
+    frappe.logger().info(
+        "[erpnext_localization_sv] emit_dte docname=%s gen_code=%s estado=%s",
+        docname, gen_code, result.get("estado") or result.get("status"),
+    )
+
+    # Retornar resultado sanitizado (sin firma)
+    return _sanitize_for_log(result)
 
 
 @frappe.whitelist()
-def get_dte_status(dte_uuid: str) -> dict:
-	"""
-	Stub: consulta el estado de un DTE previamente emitido.
+def get_dte_status(docname: str) -> dict:
+    """
+    Consulta el estado de un DTE en el MH por código de generación.
 
-	Args:
-		dte_uuid: UUID del DTE asignado por el MH.
+    El gateway resuelve el token internamente (api_password via env var).
+    No se envía api_password en el request.
 
-	Returns:
-		dict con estado del DTE.
+    Args:
+        docname: Nombre del Sales Invoice con DTE emitido.
+    """
+    if not docname:
+        frappe.throw("docname es requerido")
 
-	TODO: implementar cuando exista endpoint GET /dte/{uuid}/status en el gateway.
-	"""
-	if not dte_uuid:
-		frappe.throw("dte_uuid es requerido")
+    doc = frappe.get_doc("Sales Invoice", docname)
+    gen_code = doc.get("sv_dte_generation_code")
+    if not gen_code:
+        frappe.throw("El documento no tiene Código de Generación DTE. Emita el DTE primero.")
 
-	frappe.logger().info(
-		"[erpnext_localization_sv] get_dte_status llamado — uuid=%s (stub)",
-		dte_uuid,
-	)
+    settings = frappe.get_single("SV DTE Settings")
+    payload = {
+        "tipo_dte":          doc.get("sv_dte_document_type") or "01",
+        "codigo_generacion": gen_code,
+        "ambiente":          settings.get("ambiente") or "00",
+        "nit_emisor":        settings.get("nit_emisor") or "",
+        # api_password NO se incluye — el gateway lo resuelve via secret_resolver
+    }
 
-	return {
-		"status": "stub",
-		"dte_uuid": dte_uuid,
-		"mh_status": None,
-		"message": "get_dte_status no implementado aún — pendiente integración con gateway",
-	}
+    url = _gateway_url("/v2/dte/status")
+    try:
+        response = requests.post(url, json=payload, timeout=_GATEWAY_TIMEOUT)
+        response.raise_for_status()
+    except requests.exceptions.ConnectionError:
+        frappe.throw(f"No se pudo conectar al DTE Gateway en {url}")
+    except requests.exceptions.Timeout:
+        frappe.throw(f"Timeout ({_GATEWAY_TIMEOUT}s) consultando estado DTE")
+    except requests.exceptions.HTTPError as exc:
+        frappe.throw(f"DTE Gateway respondió con error: {exc}")
+
+    return response.json()
