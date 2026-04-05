@@ -226,8 +226,13 @@ def get_dte_status(docname: str) -> dict:
         frappe.throw("El documento no tiene Código de Generación DTE. Emita el DTE primero.")
 
     settings = frappe.get_single("SV DTE Settings")
+    # Mapear label → código para el campo tipo_dte (MH requiere "01", "03", "05")
+    _label_map = {"FE": "01", "CCF": "03", "NC": "05"}
+    raw_tipo = doc.get("sv_dte_document_type") or "FE"
+    tipo_dte_code = _label_map.get(raw_tipo, raw_tipo) or "01"
+
     payload = {
-        "tipo_dte":          doc.get("sv_dte_document_type") or "01",
+        "tipo_dte":          tipo_dte_code,
         "codigo_generacion": gen_code,
         "ambiente":          settings.get("ambiente") or "00",
         "nit_emisor":        settings.get("nit_emisor") or "",
@@ -245,4 +250,12 @@ def get_dte_status(docname: str) -> dict:
     except requests.exceptions.HTTPError as exc:
         frappe.throw(f"DTE Gateway respondió con error: {exc}")
 
-    return response.json()
+    result = response.json()
+
+    # Persistir el estado actual de MH en el Sales Invoice
+    estado_mh = result.get("estado")
+    if estado_mh:
+        frappe.db.set_value("Sales Invoice", docname, {"sv_estado_mh": estado_mh})
+        frappe.db.commit()
+
+    return result

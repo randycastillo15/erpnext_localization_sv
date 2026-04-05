@@ -181,12 +181,15 @@ def anular_dte(
     result = response.json()
 
     # Persistir resultado de anulación en Sales Invoice
+    anulado = bool(result.get("sello_recibido"))
     frappe.db.set_value("Sales Invoice", docname, {
-        "sv_anulacion_status":                     "Anulado" if result.get("sello_recibido") else "Rechazado",
+        "sv_anulacion_status":                     "Anulado" if anulado else "Rechazado",
         "sv_anulacion_tipo":                       tipo_anulacion,
         "sv_anulacion_sello":                      result.get("sello_recibido") or "",
         "sv_anulacion_fecha":                      fecha_anula,
         "sv_anulacion_codigo_generacion_reemplazo": codigo_generacion_reemplazo or "",
+        # Reflejar el estado real en MH: INVALIDADO si anulación fue aceptada
+        "sv_estado_mh":                            "INVALIDADO" if anulado else doc.get("sv_estado_mh"),
     })
     frappe.db.commit()
 
