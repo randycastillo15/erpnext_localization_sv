@@ -166,4 +166,11 @@ def emit_contingencia(
         result.get("estado"), sello,
     )
 
+    # Registrar en SV DTE Log (entrada representativa usando el primer docname)
+    from erpnext_localization_sv.api.dte import _write_dte_log
+    _write_dte_log(
+        docname=docnames[0], tipo_dte="14", payload=payload,
+        result=result, tipo_evento="contingencia", codigo_generacion=event_uuid,
+    )
+
     return result

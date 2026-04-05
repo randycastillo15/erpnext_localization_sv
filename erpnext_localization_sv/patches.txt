@@ -9,3 +9,4 @@ erpnext_localization_sv.patches.v1_1.update_dte_custom_fields
 erpnext_localization_sv.patches.v1_2.add_customer_dte_fields
 erpnext_localization_sv.patches.v1_3.add_customer_ccf_fields
 erpnext_localization_sv.patches.v1_4.add_anulacion_contingencia_fields
+erpnext_localization_sv.patches.v1_5.add_motivo_anulacion_field

@@ -26,6 +26,13 @@ after_install = "erpnext_localization_sv.patches.v1_0.install.execute"
 # ]
 
 # ---------------------------------------------------------------------------
+# JS personalizado por DocType
+# ---------------------------------------------------------------------------
+doctype_js = {
+    "Sales Invoice": "erpnext_localization_sv/public/js/sales_invoice.js",
+}
+
+# ---------------------------------------------------------------------------
 # Eventos de documento
 # Agregar overrides de Sales Invoice, Purchase Invoice, etc. aquí.
 # ---------------------------------------------------------------------------

@@ -185,6 +185,7 @@ def anular_dte(
     frappe.db.set_value("Sales Invoice", docname, {
         "sv_anulacion_status":                     "Anulado" if anulado else "Rechazado",
         "sv_anulacion_tipo":                       tipo_anulacion,
+        "sv_motivo_anulacion":                     motivo_anulacion or "",
         "sv_anulacion_sello":                      result.get("sello_recibido") or "",
         "sv_anulacion_fecha":                      fecha_anula,
         "sv_anulacion_codigo_generacion_reemplazo": codigo_generacion_reemplazo or "",
@@ -192,6 +193,13 @@ def anular_dte(
         "sv_estado_mh":                            "INVALIDADO" if anulado else doc.get("sv_estado_mh"),
     })
     frappe.db.commit()
+
+    # Registrar en SV DTE Log
+    from erpnext_localization_sv.api.dte import _write_dte_log
+    _write_dte_log(
+        docname=docname, tipo_dte=tipo_dte, payload=payload,
+        result=result, tipo_evento="invalidacion", codigo_generacion=gen_code,
+    )
 
     frappe.logger().info(
         "[anulacion] docname=%s gen_code=%s tipo=%s estado=%s sello=%s",

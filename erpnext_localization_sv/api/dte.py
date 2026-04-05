@@ -80,15 +80,27 @@ def _sanitize_for_log(data) -> object:
 # SV DTE Log
 # ---------------------------------------------------------------------------
 
-def _write_dte_log(docname: str, tipo_dte: str, payload: dict, result: dict) -> None:
+def _write_dte_log(
+    docname: str,
+    tipo_dte: str,
+    payload: dict,
+    result: dict,
+    tipo_evento: str = "emision",
+    codigo_generacion: str | None = None,
+) -> None:
     try:
         log = frappe.new_doc("SV DTE Log")
         log.reference_doctype = "Sales Invoice"
         log.reference_docname = docname
         log.sales_invoice     = docname
-        log.tipo_evento       = "emision"
+        log.tipo_evento       = tipo_evento
         log.ambiente          = payload.get("ambiente", "00")
-        log.codigo_generacion = result.get("generation_code") or result.get("uuid_dte")
+        log.codigo_generacion = (
+            codigo_generacion
+            or result.get("generation_code")
+            or result.get("uuid_dte")
+            or result.get("event_uuid")
+        )
         log.http_status       = 200
         log.estado_resultante = result.get("estado") or result.get("status")
         log.request_json      = frappe.as_json(_sanitize_for_log(payload), indent=2)
@@ -145,6 +157,12 @@ def emit_dte(doctype: str, docname: str) -> dict:
     except frappe.DoesNotExistError:
         frappe.throw(f"Documento no encontrado: {doctype} / {docname}")
 
+    if doc.get("sv_estado_mh") == "PROCESADO":
+        frappe.throw(
+            "Este DTE ya fue PROCESADO por MH. Use 'Anular DTE' si desea invalidarlo.",
+            title="DTE ya procesado"
+        )
+
     # Determinar tipo DTE desde el campo del documento o default FE.
     # sv_dte_document_type almacena etiquetas ("FE","CCF","NC") o códigos legacy ("01","03","05").
     _label_map = {"FE": "01", "CCF": "03", "NC": "05"}
@@ -195,7 +213,21 @@ def emit_dte(doctype: str, docname: str) -> dict:
     frappe.db.commit()
 
     # Crear SV DTE Log (sanitizado)
-    _write_dte_log(docname, tipo_dte, payload, result)
+    _write_dte_log(docname, tipo_dte, payload, result, tipo_evento="emision", codigo_generacion=gen_code)
+
+    # Mensajes accionables desde MH
+    obs = result.get("observaciones") or []
+    estado_emision = result.get("estado") or ""
+    _ESTADOS_EXITOSOS = {"PROCESADO"}
+    if estado_emision and estado_emision not in _ESTADOS_EXITOSOS:
+        obs_text = "\n".join(f"• {o}" for o in obs) if obs else f"Estado MH: {estado_emision}"
+        frappe.throw(obs_text, title=f"DTE {estado_emision} por MH")
+    elif obs:
+        frappe.msgprint(
+            "\n".join(f"• {o}" for o in obs),
+            title="Observaciones MH",
+            indicator="orange",
+        )
 
     frappe.logger().info(
         "[erpnext_localization_sv] emit_dte docname=%s gen_code=%s estado=%s",

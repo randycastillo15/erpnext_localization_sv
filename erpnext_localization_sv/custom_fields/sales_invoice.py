@@ -185,12 +185,20 @@ _DTE_FIELDS = {
             "insert_after": "sv_anulacion_status",
         },
         {
+            "fieldname": "sv_motivo_anulacion",
+            "fieldtype": "Small Text",
+            "label": "Motivo Anulación",
+            "read_only": 1,
+            "no_copy": 1,
+            "insert_after": "sv_anulacion_tipo",
+        },
+        {
             "fieldname": "sv_anulacion_sello",
             "fieldtype": "Data",
             "label": "Sello Anulación",
             "read_only": 1,
             "no_copy": 1,
-            "insert_after": "sv_anulacion_tipo",
+            "insert_after": "sv_motivo_anulacion",
         },
         {
             "fieldname": "sv_anulacion_fecha",
