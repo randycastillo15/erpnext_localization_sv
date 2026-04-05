@@ -105,7 +105,7 @@ function _dte_sv_refresh_buttons(frm) {
 						freeze_message: __("Anulando DTE..."),
 						callback(r) {
 							frm.reload_doc();
-							frappe.show_alert({ message: __("DTE anulado"), indicator: "blue" });
+							frappe.show_alert({ message: __("DTE invalidado"), indicator: "blue" });
 						},
 					});
 				},

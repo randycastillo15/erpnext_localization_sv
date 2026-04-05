@@ -171,7 +171,7 @@ _DTE_FIELDS = {
             "fieldname": "sv_anulacion_status",
             "fieldtype": "Select",
             "label": "Estado Anulación",
-            "options": "\nAnulado\nRechazado",
+            "options": "\nInvalidado\nRechazado",
             "read_only": 1,
             "no_copy": 1,
             "insert_after": "sv_anulacion_section",

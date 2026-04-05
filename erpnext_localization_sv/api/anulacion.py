@@ -183,7 +183,7 @@ def anular_dte(
     # Persistir resultado de anulación en Sales Invoice
     anulado = bool(result.get("sello_recibido"))
     frappe.db.set_value("Sales Invoice", docname, {
-        "sv_anulacion_status":                     "Anulado" if anulado else "Rechazado",
+        "sv_anulacion_status":                     "Invalidado" if anulado else "Rechazado",
         "sv_anulacion_tipo":                       tipo_anulacion,
         "sv_motivo_anulacion":                     motivo_anulacion or "",
         "sv_anulacion_sello":                      result.get("sello_recibido") or "",
