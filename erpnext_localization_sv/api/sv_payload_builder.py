@@ -28,7 +28,7 @@ def build_emit_request(doc, tipo_dte: str) -> dict:
 
     Args:
         doc:      Sales Invoice document (frappe.get_doc).
-        tipo_dte: "01"=FE, "03"=CCF, "05"=NC.
+        tipo_dte: "01"=FE, "03"=CCF, "05"=NC, "06"=ND.
 
     Returns:
         dict sin secretos listo para serializar a JSON.
@@ -113,7 +113,7 @@ def _build_receptor(doc, tipo_dte: str) -> dict:
     """
     Construye el dict del receptor.
     FE: solo nombre + datos opcionales.
-    CCF/NC: requiere los 9 campos del schema fe-ccf-v3.json desde el Customer.
+    CCF/NC/ND: requiere los 9 campos del schema fe-ccf-v3.json desde el Customer.
     Falla temprano con mensaje claro si algún campo requerido falta.
     """
     receptor: dict = {
@@ -122,7 +122,7 @@ def _build_receptor(doc, tipo_dte: str) -> dict:
         "telefono": doc.get("contact_mobile") or None,
     }
 
-    if tipo_dte in ("03", "05") and doc.get("customer"):
+    if tipo_dte in ("03", "05", "06") and doc.get("customer"):
         customer = frappe.get_doc("Customer", doc.customer)
 
         nit = customer.get("sv_nit") or None
