@@ -34,13 +34,14 @@ doctype_js = {
 
 # ---------------------------------------------------------------------------
 # Eventos de documento
-# Agregar overrides de Sales Invoice, Purchase Invoice, etc. aquí.
+# on_submit: emisión automática DTE si SV DTE Settings.emitir_al_someter=1.
+# Solo activo para FE y CCF. No bloquea el submit en caso de fallo.
 # ---------------------------------------------------------------------------
-# doc_events = {
-# 	"Sales Invoice": {
-# 		"on_submit": "erpnext_localization_sv.overrides.sales_invoice.on_submit",
-# 	},
-# }
+doc_events = {
+    "Sales Invoice": {
+        "on_submit": "erpnext_localization_sv.overrides.sales_invoice.on_submit",
+    },
+}
 
 # ---------------------------------------------------------------------------
 # Tareas programadas

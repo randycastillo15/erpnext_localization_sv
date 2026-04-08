@@ -1,5 +1,5 @@
 """
-Custom Fields DTE para Sales Invoice — v1.4
+Custom Fields DTE para Sales Invoice — v1.6
 
 Definición centralizada usada desde:
   - patches/v1_0/add_dte_custom_fields.py  (patch original — sitios existentes)
@@ -27,7 +27,7 @@ _DTE_FIELDS = {
             "fieldname": "sv_dte_document_type",
             "fieldtype": "Select",
             "label": "Tipo Documental Fiscal",
-            "options": "\nFE\nCCF\nNC",
+            "options": "\nFE\nCCF\nNC\nND",
             "no_copy": 1,
             "insert_after": "sv_dte_section",
         },
@@ -149,6 +149,16 @@ _DTE_FIELDS = {
             "no_copy": 1,
             "insert_after": "sv_dte_last_response",
         },
+        # ── URL verificación MH (Sprint 6 — generada al emitir) ──────────────
+        {
+            "fieldname": "sv_dte_qr_url",
+            "fieldtype": "Data",
+            "label": "URL Verificación MH",
+            "read_only": 1,
+            "no_copy": 1,
+            "insert_after": "sv_observaciones_mh",
+            "description": "URL generada al emitir. Configurar la base URL en SV DTE Settings → URL Consulta Pública MH.",
+        },
         # ── IVA total DTE (Sprint 4 — fuente principal para anulación) ─────────
         {
             "fieldname": "sv_total_iva",
@@ -156,21 +166,21 @@ _DTE_FIELDS = {
             "label": "IVA Total DTE",
             "read_only": 1,
             "no_copy": 1,
-            "insert_after": "sv_observaciones_mh",
+            "insert_after": "sv_dte_qr_url",
             "description": "IVA calculado al momento de la emisión DTE. Fuente principal para montoIva en anulación.",
         },
-        # ── Sección Anulación ─────────────────────────────────────────────────
+        # ── Sección Invalidación ──────────────────────────────────────────────
         {
             "fieldname": "sv_anulacion_section",
             "fieldtype": "Section Break",
-            "label": "Anulación DTE",
+            "label": "Invalidación DTE",
             "collapsible": 1,
             "insert_after": "sv_total_iva",
         },
         {
             "fieldname": "sv_anulacion_status",
             "fieldtype": "Select",
-            "label": "Estado Anulación",
+            "label": "Estado Invalidación",
             "options": "\nInvalidado\nRechazado",
             "read_only": 1,
             "no_copy": 1,
@@ -179,7 +189,7 @@ _DTE_FIELDS = {
         {
             "fieldname": "sv_anulacion_tipo",
             "fieldtype": "Int",
-            "label": "Tipo Anulación",
+            "label": "Tipo Invalidación",
             "read_only": 1,
             "no_copy": 1,
             "insert_after": "sv_anulacion_status",
@@ -187,7 +197,7 @@ _DTE_FIELDS = {
         {
             "fieldname": "sv_motivo_anulacion",
             "fieldtype": "Small Text",
-            "label": "Motivo Anulación",
+            "label": "Motivo Invalidación",
             "read_only": 1,
             "no_copy": 1,
             "insert_after": "sv_anulacion_tipo",
@@ -195,7 +205,7 @@ _DTE_FIELDS = {
         {
             "fieldname": "sv_anulacion_sello",
             "fieldtype": "Data",
-            "label": "Sello Anulación",
+            "label": "Sello Invalidación",
             "read_only": 1,
             "no_copy": 1,
             "insert_after": "sv_motivo_anulacion",
@@ -203,7 +213,7 @@ _DTE_FIELDS = {
         {
             "fieldname": "sv_anulacion_fecha",
             "fieldtype": "Date",
-            "label": "Fecha Anulación",
+            "label": "Fecha Invalidación",
             "read_only": 1,
             "no_copy": 1,
             "insert_after": "sv_anulacion_sello",
@@ -211,7 +221,7 @@ _DTE_FIELDS = {
         {
             "fieldname": "sv_anulacion_codigo_generacion_reemplazo",
             "fieldtype": "Data",
-            "label": "UUID Reemplazo (Anulación)",
+            "label": "UUID Reemplazo (Invalidación)",
             "read_only": 1,
             "no_copy": 1,
             "insert_after": "sv_anulacion_fecha",

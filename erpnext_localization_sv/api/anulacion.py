@@ -22,7 +22,7 @@ from frappe.utils import now_datetime
 from erpnext_localization_sv.api.dte import _get_gateway_base_url, _gateway_url
 from erpnext_localization_sv.api.sv_payload_builder import build_emit_request
 
-_DTE_LABEL_TO_CODE = {"FE": "01", "CCF": "03", "NC": "05"}
+_DTE_LABEL_TO_CODE = {"FE": "01", "CCF": "03", "NC": "05", "ND": "06"}
 _GATEWAY_TIMEOUT = 30
 
 

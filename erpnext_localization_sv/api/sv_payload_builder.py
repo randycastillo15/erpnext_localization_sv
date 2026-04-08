@@ -15,7 +15,7 @@ from frappe.utils import now_datetime
 # Mapeo de etiquetas del campo Select → código DTE para el gateway.
 # El campo sv_dte_document_type almacena etiquetas legibles ("FE", "CCF", "NC")
 # pero el gateway y el schema MH usan códigos numéricos ("01", "03", "05").
-_DTE_LABEL_TO_CODE = {"FE": "01", "CCF": "03", "NC": "05"}
+_DTE_LABEL_TO_CODE = {"FE": "01", "CCF": "03", "NC": "05", "ND": "06"}
 
 
 # ---------------------------------------------------------------------------
@@ -59,6 +59,9 @@ def build_emit_request(doc, tipo_dte: str) -> dict:
 
     if tipo_dte == "05":
         payload.update(_build_nc_extras(doc))
+
+    if tipo_dte == "06":
+        payload.update(_build_nd_extras(doc))
 
     return payload
 
@@ -194,6 +197,50 @@ def _build_items(doc) -> list[dict]:
 def _calc_total_iva(doc) -> float:
     """Suma el IVA incluido en los items (total_taxes_and_charges si aplica)."""
     return float(doc.get("total_taxes_and_charges") or 0)
+
+
+def _build_nd_extras(doc) -> dict:
+    """
+    Para ND (tipo 06): resuelve el CCF original via return_against.
+
+    ND solo puede referenciar CCF (tipo 03) en nuestra implementación inicial.
+    Lanza frappe.throw si:
+    - return_against está vacío
+    - El documento relacionado no tiene DTE emitido
+    - El tipo del documento relacionado no es CCF
+    """
+    original_name = doc.get("return_against")
+    if not original_name:
+        frappe.throw(
+            "ND requiere 'return_against' (documento origen). "
+            "El Sales Invoice debe ser una nota de débito contra un CCF emitido."
+        )
+
+    try:
+        original_doc = frappe.get_doc("Sales Invoice", original_name)
+    except frappe.DoesNotExistError:
+        frappe.throw(f"Documento relacionado '{original_name}' no encontrado.")
+
+    gen_code = original_doc.get("sv_dte_generation_code")
+    if not gen_code:
+        frappe.throw(
+            f"El documento relacionado '{original_name}' no tiene DTE emitido "
+            f"(sv_dte_generation_code vacío). Emita el CCF primero."
+        )
+
+    raw_tipo = original_doc.get("sv_dte_document_type") or "CCF"
+    tipo_original = _DTE_LABEL_TO_CODE.get(raw_tipo, raw_tipo) or "03"
+    if tipo_original != "03":
+        frappe.throw(
+            f"ND solo puede referir a CCF (03). "
+            f"El documento '{original_name}' es tipo '{raw_tipo}' → '{tipo_original}'."
+        )
+
+    return {
+        "documento_relacionado_codigo": gen_code,
+        "documento_relacionado_tipo":   tipo_original,
+        "documento_relacionado_fecha":  str(original_doc.get("posting_date") or ""),
+    }
 
 
 def _build_nc_extras(doc) -> dict:

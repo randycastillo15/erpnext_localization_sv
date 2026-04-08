@@ -1,6 +1,7 @@
 /**
  * DTE El Salvador — botones de acción en Sales Invoice.
  * Sprint 5: Emitir, Consultar Estado, Re-emitir, Anular DTE.
+ * Sprint 6: Terminología → Invalidar DTE. Botón Ver en Hacienda.
  */
 
 frappe.ui.form.on("Sales Invoice", {
@@ -16,6 +17,7 @@ function _dte_sv_refresh_buttons(frm) {
 	const estado_mh = frm.doc.sv_estado_mh;
 	const anulado   = frm.doc.sv_anulacion_status;
 	const tipo_doc  = frm.doc.sv_dte_document_type;
+	const qr_url    = (frm.doc.sv_dte_qr_url || "").trim();
 	const G = "DTE El Salvador";
 
 	// Emitir DTE — solo si tipo_doc seleccionado y aún sin gen_code
@@ -31,6 +33,13 @@ function _dte_sv_refresh_buttons(frm) {
 					frappe.show_alert({ message: __("DTE emitido"), indicator: "green" });
 				},
 			});
+		}, G);
+	}
+
+	// Ver en Hacienda — solo si hay URL de verificación MH (requiere url_verificacion_mh en Settings)
+	if (qr_url) {
+		frm.add_custom_button(__("Ver en Hacienda"), () => {
+			window.open(qr_url, "_blank", "noopener,noreferrer");
 		}, G);
 	}
 
@@ -67,13 +76,13 @@ function _dte_sv_refresh_buttons(frm) {
 		}, G);
 	}
 
-	// Anular DTE — solo si PROCESADO y sin anulación previa
+	// Invalidar DTE — solo si PROCESADO y sin invalidación previa
 	if (estado_mh === "PROCESADO" && !anulado) {
-		frm.add_custom_button(__("Anular DTE"), () => {
+		frm.add_custom_button(__("Invalidar DTE"), () => {
 			frappe.prompt(
 				[
 					{
-						label: __("Tipo de Anulación"),
+						label: __("Tipo de Invalidación"),
 						fieldname: "tipo_anulacion",
 						fieldtype: "Select",
 						options: "1 — Error, reemplazar\n2 — Sin reemplazo\n3 — Devolución",
@@ -102,15 +111,15 @@ function _dte_sv_refresh_buttons(frm) {
 							codigo_generacion_reemplazo: values.codigo_generacion_reemplazo || "",
 						},
 						freeze: true,
-						freeze_message: __("Anulando DTE..."),
+						freeze_message: __("Invalidando DTE..."),
 						callback(r) {
 							frm.reload_doc();
 							frappe.show_alert({ message: __("DTE invalidado"), indicator: "blue" });
 						},
 					});
 				},
-				__("Anular DTE"),
-				__("Confirmar Anulación")
+				__("Invalidar DTE"),
+				__("Confirmar Invalidación")
 			);
 		}, G).addClass("btn-danger");
 	}

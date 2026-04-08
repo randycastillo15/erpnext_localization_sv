@@ -25,6 +25,8 @@
   "emitir_fe",
   "emitir_ccf",
   "emitir_nc",
+  "emitir_al_someter",
+  "url_verificacion_mh",
   "responsable_section",
   "sv_nombre_responsable",
   "sv_tipo_doc_responsable",
@@ -70,10 +72,10 @@
    "label": "Datos del Emisor"
   },
   {
-   "description": "14 d\u00edgitos sin guiones",
+   "description": "9 d\u00edgitos sin gui\u00f3n si es DUI \u2014 14 d\u00edgitos sin guiones si es NIT",
    "fieldname": "nit_emisor",
    "fieldtype": "Data",
-   "label": "NIT Emisor",
+   "label": "DUI o NIT",
    "reqd": 1
   },
   {
@@ -164,9 +166,22 @@
    "label": "Emitir NC (05)"
   },
   {
+   "default": "0",
+   "description": "FE y CCF \u00fanicamente. En caso de fallo, se registra en Error Log y puede emitirse manualmente.",
+   "fieldname": "emitir_al_someter",
+   "fieldtype": "Check",
+   "label": "Emitir DTE autom\u00e1ticamente al someter"
+  },
+  {
+   "description": "URL base del portal de verificaci\u00f3n p\u00fablica del MH. Confirmar con documentaci\u00f3n oficial MH antes de usar en producci\u00f3n.",
+   "fieldname": "url_verificacion_mh",
+   "fieldtype": "Data",
+   "label": "URL Consulta P\u00fablica MH"
+  },
+  {
    "fieldname": "responsable_section",
    "fieldtype": "Section Break",
-   "label": "Responsable (Anulación / Contingencia)"
+   "label": "Responsable (Invalidación / Contingencia)"
   },
   {
    "description": "Nombre completo del responsable técnico que ejecuta anulaciones y reportes de contingencia.",

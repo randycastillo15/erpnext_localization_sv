@@ -159,13 +159,13 @@ def emit_dte(doctype: str, docname: str) -> dict:
 
     if doc.get("sv_estado_mh") == "PROCESADO":
         frappe.throw(
-            "Este DTE ya fue PROCESADO por MH. Use 'Anular DTE' si desea invalidarlo.",
+            "Este DTE ya fue PROCESADO por MH. Use 'Invalidar DTE' si desea invalidarlo.",
             title="DTE ya procesado"
         )
 
     # Determinar tipo DTE desde el campo del documento o default FE.
-    # sv_dte_document_type almacena etiquetas ("FE","CCF","NC") o códigos legacy ("01","03","05").
-    _label_map = {"FE": "01", "CCF": "03", "NC": "05"}
+    # sv_dte_document_type almacena etiquetas ("FE","CCF","NC","ND") o códigos legacy ("01","03","05","06").
+    _label_map = {"FE": "01", "CCF": "03", "NC": "05", "ND": "06"}
     raw_tipo = doc.get("sv_dte_document_type") or "FE"
     tipo_dte = _label_map.get(raw_tipo, raw_tipo) or "01"
 
@@ -192,6 +192,21 @@ def emit_dte(doctype: str, docname: str) -> dict:
     result = response.json()
     gen_code = result.get("generation_code") or result.get("uuid_dte")
 
+    # Computar URL de verificación MH (Sprint 6)
+    # Solo si la base URL está configurada en SV DTE Settings. No lanzar excepción si falta.
+    _qr_url = ""
+    try:
+        _settings = frappe.get_single("SV DTE Settings")
+        _base_url = (_settings.get("url_verificacion_mh") or "").strip().rstrip("/")
+        if gen_code and _base_url:
+            _amb_str = {"00": "pruebas", "01": "produccion"}.get(
+                str(payload.get("ambiente", "00")), "pruebas"
+            )
+            _fecha = str(payload.get("posting_date") or doc.posting_date or "")
+            _qr_url = f"{_base_url}?ambiente={_amb_str}&codGen={gen_code}&fechaEmi={_fecha}"
+    except Exception:
+        pass  # URL de QR es opcional — no bloquear la emisión
+
     # Persistir en Sales Invoice (solo datos limpios — sin firma)
     frappe.db.set_value("Sales Invoice", docname, {
         "sv_dte_status":           result.get("status"),
@@ -209,6 +224,8 @@ def emit_dte(doctype: str, docname: str) -> dict:
         "sv_observaciones_mh":     frappe.as_json(result.get("observaciones") or [], indent=2),
         # Sprint 4: persistir IVA calculado en el DTE como fuente principal para anulación
         "sv_total_iva":            float(payload.get("total_iva") or 0),
+        # Sprint 6: URL de verificación MH (vacía si url_verificacion_mh no está configurada)
+        "sv_dte_qr_url":           _qr_url,
     })
     frappe.db.commit()
 
