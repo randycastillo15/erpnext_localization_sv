@@ -40,7 +40,9 @@ function _dte_sv_refresh_buttons(frm) {
 	// Ver en Hacienda — muestra diálogo con datos listos para pegar en el portal MH
 	// El portal (admin.factura.gob.sv/consultaPublica) es una SPA Angular que no acepta
 	// params en la URL. Se copia el UUID al portapapeles y se muestra la fecha formateada.
-	if (qr_url && gen_code) {
+	// El botón aparece siempre que haya gen_code; usa sv_dte_qr_url o fallback.
+	const portal_url = qr_url || "https://admin.factura.gob.sv/consultaPublica";
+	if (gen_code) {
 		frm.add_custom_button(__("Ver en Hacienda"), () => {
 			const uuid = gen_code;
 			const raw_date = frm.doc.posting_date || "";
@@ -94,7 +96,7 @@ function _dte_sv_refresh_buttons(frm) {
 				}],
 				primary_action_label: __("Abrir portal MH"),
 				primary_action() {
-					window.open(qr_url, "_blank", "noopener,noreferrer");
+					window.open(portal_url, "_blank", "noopener,noreferrer");
 					dlg.hide();
 				},
 			});
