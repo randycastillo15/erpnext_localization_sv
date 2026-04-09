@@ -50,20 +50,12 @@ _DTE_FIELDS = {
             "insert_after": "sv_dte_environment",
         },
         {
-            "fieldname": "sv_dte_uuid",
-            "fieldtype": "Data",
-            "label": "DTE UUID (legacy)",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_dte_generation_code",
-        },
-        {
             "fieldname": "sv_dte_control_number",
             "fieldtype": "Data",
             "label": "Número de Control",
             "read_only": 1,
             "no_copy": 1,
-            "insert_after": "sv_dte_uuid",
+            "insert_after": "sv_dte_generation_code",
         },
         # ── Estado ────────────────────────────────────────────────────────────
         {

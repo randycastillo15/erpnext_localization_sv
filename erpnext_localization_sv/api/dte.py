@@ -209,7 +209,6 @@ def emit_dte(doctype: str, docname: str) -> dict:
     # Persistir en Sales Invoice (solo datos limpios — sin firma)
     frappe.db.set_value("Sales Invoice", docname, {
         "sv_dte_status":           result.get("status"),
-        "sv_dte_uuid":             result.get("uuid_dte"),
         "sv_dte_generation_code":  gen_code,
         "sv_dte_control_number":   result.get("control_number"),
         "sv_dte_sent_at":          now_datetime(),
