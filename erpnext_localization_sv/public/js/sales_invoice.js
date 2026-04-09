@@ -114,6 +114,18 @@ function _dte_sv_refresh_buttons(frm) {
 				freeze_message: __("Consultando MH..."),
 				callback(r) {
 					frm.reload_doc();
+					if (r && r.message) {
+						const msg = r.message;
+						const estado = msg.estado || msg.clasificaMsg || __("consultado");
+						const desc   = msg.descripcionMsg || msg.observaciones || "";
+						const color  = estado === "PROCESADO" ? "green" : "orange";
+						const detail = desc ? `<br><span style="font-size:11px;color:#555;">${desc}</span>` : "";
+						frappe.msgprint({
+							title: __("Estado DTE en Hacienda"),
+							indicator: color,
+							message: `<b>${estado}</b>${detail}`,
+						});
+					}
 				},
 			});
 		}, G);
