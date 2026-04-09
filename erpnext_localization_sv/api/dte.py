@@ -192,18 +192,17 @@ def emit_dte(doctype: str, docname: str) -> dict:
     result = response.json()
     gen_code = result.get("generation_code") or result.get("uuid_dte")
 
-    # Computar URL de verificación MH (Sprint 6)
-    # Solo si la base URL está configurada en SV DTE Settings. No lanzar excepción si falta.
+    # Computar URL del portal de consulta pública MH (Sprint 6, corregido Sprint 7).
+    # El portal admin.factura.gob.sv/consultaPublica es una SPA Angular que NO acepta
+    # parámetros en la URL para pre-poblar el formulario — solo usa la URL base.
+    # El usuario ingresa el codigoGeneracion manualmente en el portal.
+    # Solo si url_verificacion_mh está configurada en SV DTE Settings. No lanzar excepción si falta.
     _qr_url = ""
     try:
         _settings = frappe.get_single("SV DTE Settings")
         _base_url = (_settings.get("url_verificacion_mh") or "").strip().rstrip("/")
         if gen_code and _base_url:
-            _amb_str = {"00": "pruebas", "01": "produccion"}.get(
-                str(payload.get("ambiente", "00")), "pruebas"
-            )
-            _fecha = str(payload.get("posting_date") or doc.posting_date or "")
-            _qr_url = f"{_base_url}?ambiente={_amb_str}&codGen={gen_code}&fechaEmi={_fecha}"
+            _qr_url = _base_url  # URL del portal — no se añaden query params (SPA no los lee)
     except Exception:
         pass  # URL de QR es opcional — no bloquear la emisión
 

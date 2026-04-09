@@ -17,3 +17,4 @@ erpnext_localization_sv.patches.v1_6.create_dte_print_format
 erpnext_localization_sv.patches.v1_6.add_auto_emit_setting
 erpnext_localization_sv.patches.v1_6.add_nd_document_type
 erpnext_localization_sv.patches.v1_7.update_dte_print_format
+erpnext_localization_sv.patches.v1_8.fix_qr_portal_url
