@@ -2,6 +2,7 @@
  * DTE El Salvador — botones de acción en Sales Invoice.
  * Sprint 5: Emitir, Consultar Estado, Re-emitir, Anular DTE.
  * Sprint 6: Terminología → Invalidar DTE. Botón Ver en Hacienda.
+ * Sprint 7: Ver en Hacienda muestra diálogo con fecha/UUID listos + copia UUID al portapapeles.
  */
 
 frappe.ui.form.on("Sales Invoice", {
@@ -36,10 +37,68 @@ function _dte_sv_refresh_buttons(frm) {
 		}, G);
 	}
 
-	// Ver en Hacienda — solo si hay URL de verificación MH (requiere url_verificacion_mh en Settings)
-	if (qr_url) {
+	// Ver en Hacienda — muestra diálogo con datos listos para pegar en el portal MH
+	// El portal (admin.factura.gob.sv/consultaPublica) es una SPA Angular que no acepta
+	// params en la URL. Se copia el UUID al portapapeles y se muestra la fecha formateada.
+	if (qr_url && gen_code) {
 		frm.add_custom_button(__("Ver en Hacienda"), () => {
-			window.open(qr_url, "_blank", "noopener,noreferrer");
+			const uuid = gen_code;
+			const raw_date = frm.doc.posting_date || "";
+			// El portal espera fecha en formato DD/MM/YYYY
+			let fecha_portal = raw_date;
+			if (raw_date && raw_date.includes("-")) {
+				const [y, m, d] = raw_date.split("-");
+				fecha_portal = `${d}/${m}/${y}`;
+			}
+
+			// Copiar UUID al portapapeles (best-effort)
+			if (navigator.clipboard && navigator.clipboard.writeText) {
+				navigator.clipboard.writeText(uuid).catch(() => {});
+			}
+
+			const dlg = new frappe.ui.Dialog({
+				title: __("Verificar DTE en portal Ministerio de Hacienda"),
+				fields: [{
+					fieldtype: "HTML",
+					options: `
+						<p style="margin-bottom:12px;">
+							Ingresa estos datos en el portal
+							<strong>admin.factura.gob.sv/consultaPublica</strong>:
+						</p>
+						<table style="width:100%;font-size:13px;border-collapse:collapse;">
+							<tr>
+								<td style="padding:6px 10px 6px 0;font-weight:bold;white-space:nowrap;vertical-align:top;">
+									Fecha de Generación:
+								</td>
+								<td>
+									<code style="background:#f0f4ff;border:1px solid #c7d2fe;padding:4px 10px;border-radius:4px;font-size:13px;display:inline-block;">
+										${fecha_portal}
+									</code>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6px 10px 6px 0;font-weight:bold;white-space:nowrap;vertical-align:top;">
+									Código de Generación:
+								</td>
+								<td>
+									<code style="background:#f0f4ff;border:1px solid #c7d2fe;padding:4px 10px;border-radius:4px;font-size:12px;word-break:break-all;display:inline-block;">
+										${uuid}
+									</code>
+								</td>
+							</tr>
+						</table>
+						<p style="margin-top:10px;color:#4b5563;font-size:11px;">
+							&#x2713; Código de Generación copiado al portapapeles — solo pégalo en el portal.
+						</p>
+					`,
+				}],
+				primary_action_label: __("Abrir portal MH"),
+				primary_action() {
+					window.open(qr_url, "_blank", "noopener,noreferrer");
+					dlg.hide();
+				},
+			});
+			dlg.show();
 		}, G);
 	}
 
