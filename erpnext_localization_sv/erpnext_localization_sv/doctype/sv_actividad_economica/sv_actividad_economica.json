@@ -8,7 +8,8 @@
  "engine": "InnoDB",
  "field_order": [
   "codigo",
-  "descripcion"
+  "descripcion",
+  "titulo"
  ],
  "fields": [
   {
@@ -28,6 +29,13 @@
    "label": "Descripción",
    "reqd": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "titulo",
+   "fieldtype": "Small Text",
+   "label": "Título",
+   "hidden": 1,
+   "read_only": 1
   }
  ],
  "links": [],
@@ -66,6 +74,7 @@
  "search_fields": "descripcion",
  "sort_field": "codigo",
  "sort_order": "ASC",
- "title_field": "descripcion",
- "track_changes": 0
+ "title_field": "titulo",
+ "track_changes": 0,
+ "show_title_field_in_link": 1
 }

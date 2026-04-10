@@ -3,90 +3,105 @@
   "doctype": "SV Departamento",
   "name": "00",
   "codigo": "00",
-  "nombre": "Otro (Para extranjeros)"
+  "nombre": "Otro (Para extranjeros)",
+  "titulo": "00 — Otro (Para extranjeros)"
  },
  {
   "doctype": "SV Departamento",
   "name": "01",
   "codigo": "01",
-  "nombre": "Ahuachapán"
+  "nombre": "Ahuachapán",
+  "titulo": "01 — Ahuachapán"
  },
  {
   "doctype": "SV Departamento",
   "name": "02",
   "codigo": "02",
-  "nombre": "Santa Ana"
+  "nombre": "Santa Ana",
+  "titulo": "02 — Santa Ana"
  },
  {
   "doctype": "SV Departamento",
   "name": "03",
   "codigo": "03",
-  "nombre": "Sonsonate"
+  "nombre": "Sonsonate",
+  "titulo": "03 — Sonsonate"
  },
  {
   "doctype": "SV Departamento",
   "name": "04",
   "codigo": "04",
-  "nombre": "Chalatenango"
+  "nombre": "Chalatenango",
+  "titulo": "04 — Chalatenango"
  },
  {
   "doctype": "SV Departamento",
   "name": "05",
   "codigo": "05",
-  "nombre": "La Libertad"
+  "nombre": "La Libertad",
+  "titulo": "05 — La Libertad"
  },
  {
   "doctype": "SV Departamento",
   "name": "06",
   "codigo": "06",
-  "nombre": "San Salvador"
+  "nombre": "San Salvador",
+  "titulo": "06 — San Salvador"
  },
  {
   "doctype": "SV Departamento",
   "name": "07",
   "codigo": "07",
-  "nombre": "Cuscatlán"
+  "nombre": "Cuscatlán",
+  "titulo": "07 — Cuscatlán"
  },
  {
   "doctype": "SV Departamento",
   "name": "08",
   "codigo": "08",
-  "nombre": "La Paz"
+  "nombre": "La Paz",
+  "titulo": "08 — La Paz"
  },
  {
   "doctype": "SV Departamento",
   "name": "09",
   "codigo": "09",
-  "nombre": "Cabañas"
+  "nombre": "Cabañas",
+  "titulo": "09 — Cabañas"
  },
  {
   "doctype": "SV Departamento",
   "name": "10",
   "codigo": "10",
-  "nombre": "San Vicente"
+  "nombre": "San Vicente",
+  "titulo": "10 — San Vicente"
  },
  {
   "doctype": "SV Departamento",
   "name": "11",
   "codigo": "11",
-  "nombre": "Usulután"
+  "nombre": "Usulután",
+  "titulo": "11 — Usulután"
  },
  {
   "doctype": "SV Departamento",
   "name": "12",
   "codigo": "12",
-  "nombre": "San Miguel"
+  "nombre": "San Miguel",
+  "titulo": "12 — San Miguel"
  },
  {
   "doctype": "SV Departamento",
   "name": "13",
   "codigo": "13",
-  "nombre": "Morazán"
+  "nombre": "Morazán",
+  "titulo": "13 — Morazán"
  },
  {
   "doctype": "SV Departamento",
   "name": "14",
   "codigo": "14",
-  "nombre": "La Unión"
+  "nombre": "La Unión",
+  "titulo": "14 — La Unión"
  }
 ]

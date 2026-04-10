@@ -5,7 +5,11 @@
  "creation": "2026-04-09 00:00:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
- "field_order": ["codigo", "nombre"],
+ "field_order": [
+  "codigo",
+  "nombre",
+  "titulo"
+ ],
  "fields": [
   {
    "fieldname": "codigo",
@@ -21,6 +25,13 @@
    "in_list_view": 1,
    "label": "Nombre",
    "reqd": 1
+  },
+  {
+   "fieldname": "titulo",
+   "fieldtype": "Data",
+   "label": "Título",
+   "hidden": 1,
+   "read_only": 1
   }
  ],
  "links": [],
@@ -31,13 +42,35 @@
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
-  {"create": 1, "delete": 1, "email": 1, "export": 1, "print": 1, "read": 1, "report": 1, "role": "System Manager", "share": 1, "write": 1},
-  {"export": 1, "read": 1, "report": 1, "role": "Accounts Manager"},
-  {"export": 1, "read": 1, "report": 1, "role": "Accounts User"}
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager"
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User"
+  }
  ],
  "search_fields": "nombre",
  "sort_field": "codigo",
  "sort_order": "ASC",
- "title_field": "nombre",
- "track_changes": 0
+ "title_field": "titulo",
+ "track_changes": 0,
+ "show_title_field_in_link": 1
 }
