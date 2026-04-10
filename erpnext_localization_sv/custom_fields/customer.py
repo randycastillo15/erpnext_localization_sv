@@ -74,6 +74,13 @@ _CUSTOMER_DTE_FIELDS = {
             "description": "Se rellena automáticamente al seleccionar el Código Actividad",
             "insert_after": "sv_cod_actividad",
         },
+        # Column Break — separa DTE (col 1) de tax_id + estándar (col 2)
+        # column_break_21 (estándar) se oculta via Property Setter para evitar col 3
+        {
+            "fieldname": "sv_dte_col_break",
+            "fieldtype": "Column Break",
+            "insert_after": "sv_desc_actividad",
+        },
     ]
 }
 
