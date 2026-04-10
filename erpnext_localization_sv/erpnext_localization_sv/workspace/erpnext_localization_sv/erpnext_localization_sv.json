@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"type\": \"card\", \"data\": {\"card_name\": \"Documentos DTE\", \"col\": 4, \"links\": [{\"label\": \"SV DTE Document\", \"type\": \"doctype\", \"name\": \"SV DTE Document\", \"description\": \"\\u00cdndice operativo de todos los DTEs emitidos\", \"onboard\": 1}, {\"label\": \"SV DTE Log\", \"type\": \"doctype\", \"name\": \"SV DTE Log\", \"description\": \"Log t\\u00e9cnico de transacciones DTE\"}]}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Configuraci\\u00f3n\", \"col\": 4, \"links\": [{\"label\": \"SV DTE Settings\", \"type\": \"doctype\", \"name\": \"SV DTE Settings\", \"description\": \"Configuraci\\u00f3n de emisi\\u00f3n DTE El Salvador\", \"onboard\": 1}, {\"label\": \"SV DTE Establishment\", \"type\": \"doctype\", \"name\": \"SV DTE Establishment\", \"description\": \"Establecimientos y puntos de venta\"}]}}]",
+ "content": "[{\"id\": \"header_sc\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Accesos r\\u00e1pidos</b></span>\", \"col\": 12}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SV DTE Document\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SV DTE Log\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SV DTE Settings\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SV DTE Establishment\", \"col\": 3}}, {\"id\": \"spacer1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"card1\", \"type\": \"card\", \"data\": {\"card_name\": \"Documentos DTE\", \"col\": 4}}, {\"id\": \"card2\", \"type\": \"card\", \"data\": {\"card_name\": \"Configuraci\\u00f3n DTE\", \"col\": 4}}]",
  "creation": "2026-04-09 20:30:00.433363",
  "custom_blocks": [],
  "docstatus": 0,
@@ -11,8 +11,71 @@
  "indicator_color": "green",
  "is_hidden": 0,
  "label": "ERPNext Localization SV",
- "links": [],
- "modified": "2026-04-09 20:30:00.433363",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Documentos DTE",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "description": "\u00cdndice operativo de todos los DTEs emitidos",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SV DTE Document",
+   "link_count": 0,
+   "link_to": "SV DTE Document",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "description": "Log t\u00e9cnico de transacciones DTE",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SV DTE Log",
+   "link_count": 0,
+   "link_to": "SV DTE Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Configuraci\u00f3n DTE",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "description": "Par\u00e1metros de emisi\u00f3n DTE El Salvador",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SV DTE Settings",
+   "link_count": 0,
+   "link_to": "SV DTE Settings",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "description": "Establecimientos y puntos de venta",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SV DTE Establishment",
+   "link_count": 0,
+   "link_to": "SV DTE Establishment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-04-09 20:38:34.624013",
  "modified_by": "Administrator",
  "module": "ERPNext Localization SV",
  "name": "ERPNext Localization SV",
@@ -24,24 +87,27 @@
  "sequence_id": 99.0,
  "shortcuts": [
   {
-   "color": "#2490ef",
    "doc_view": "",
    "label": "SV DTE Document",
    "link_to": "SV DTE Document",
    "type": "DocType"
   },
   {
-   "color": "#4CAF50",
    "doc_view": "",
    "label": "SV DTE Log",
    "link_to": "SV DTE Log",
    "type": "DocType"
   },
   {
-   "color": "#ff5858",
    "doc_view": "",
    "label": "SV DTE Settings",
    "link_to": "SV DTE Settings",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "SV DTE Establishment",
+   "link_to": "SV DTE Establishment",
    "type": "DocType"
   }
  ],
