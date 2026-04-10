@@ -26,3 +26,4 @@ erpnext_localization_sv.patches.v1_10.add_actividad_economica_doctype
 erpnext_localization_sv.patches.v1_10.add_departamento_municipio_doctypes
 erpnext_localization_sv.patches.v1_10.add_titulo_to_catalogos
 erpnext_localization_sv.patches.v1_11.migrate_receptor_address
+erpnext_localization_sv.patches.v1_12.add_distrito_field

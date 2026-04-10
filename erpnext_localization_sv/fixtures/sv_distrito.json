@@ -1,0 +1,1574 @@
+[
+ {
+  "doctype": "SV Distrito",
+  "name": "01-14-Ahuachapán",
+  "municipio": "01-14",
+  "nombre": "Ahuachapán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "01-14-Apaneca",
+  "municipio": "01-14",
+  "nombre": "Apaneca"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "01-14-Concepción de Ataco",
+  "municipio": "01-14",
+  "nombre": "Concepción de Ataco"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "01-14-Tacuba",
+  "municipio": "01-14",
+  "nombre": "Tacuba"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "01-13-Atiquizaya",
+  "municipio": "01-13",
+  "nombre": "Atiquizaya"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "01-13-El Refugio",
+  "municipio": "01-13",
+  "nombre": "El Refugio"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "01-13-San Lorenzo",
+  "municipio": "01-13",
+  "nombre": "San Lorenzo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "01-13-Turín",
+  "municipio": "01-13",
+  "nombre": "Turín"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "01-15-Guaymango",
+  "municipio": "01-15",
+  "nombre": "Guaymango"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "01-15-Jujutla",
+  "municipio": "01-15",
+  "nombre": "Jujutla"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "01-15-San Francisco Menéndez",
+  "municipio": "01-15",
+  "nombre": "San Francisco Menéndez"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "01-15-San Pedro Puxtla",
+  "municipio": "01-15",
+  "nombre": "San Pedro Puxtla"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-15-Santa Ana",
+  "municipio": "02-15",
+  "nombre": "Santa Ana"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-16-Coatepeque",
+  "municipio": "02-16",
+  "nombre": "Coatepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-16-El Congo",
+  "municipio": "02-16",
+  "nombre": "El Congo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-14-Masahuat",
+  "municipio": "02-14",
+  "nombre": "Masahuat"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-14-Metapán",
+  "municipio": "02-14",
+  "nombre": "Metapán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-14-Santa Rosa Guachipilín",
+  "municipio": "02-14",
+  "nombre": "Santa Rosa Guachipilín"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-14-Texistepeque",
+  "municipio": "02-14",
+  "nombre": "Texistepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-17-Candelaria de la Frontera",
+  "municipio": "02-17",
+  "nombre": "Candelaria de la Frontera"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-17-Chalchuapa",
+  "municipio": "02-17",
+  "nombre": "Chalchuapa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-17-El Porvenir",
+  "municipio": "02-17",
+  "nombre": "El Porvenir"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-17-San Antonio Pajonal",
+  "municipio": "02-17",
+  "nombre": "San Antonio Pajonal"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-17-San Sebastián Salitrillo",
+  "municipio": "02-17",
+  "nombre": "San Sebastián Salitrillo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "02-17-Santiago de la Frontera",
+  "municipio": "02-17",
+  "nombre": "Santiago de la Frontera"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-18-Nahulingo",
+  "municipio": "03-18",
+  "nombre": "Nahulingo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-18-San Antonio del Monte",
+  "municipio": "03-18",
+  "nombre": "San Antonio del Monte"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-18-Santo Domingo de Guzmán",
+  "municipio": "03-18",
+  "nombre": "Santo Domingo de Guzmán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-18-Sonsonate",
+  "municipio": "03-18",
+  "nombre": "Sonsonate"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-18-Sonzacate",
+  "municipio": "03-18",
+  "nombre": "Sonzacate"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-19-Armenia",
+  "municipio": "03-19",
+  "nombre": "Armenia"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-19-Caluco",
+  "municipio": "03-19",
+  "nombre": "Caluco"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-19-Cuisnahuat",
+  "municipio": "03-19",
+  "nombre": "Cuisnahuat"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-19-Santa Isabel Ishuatán",
+  "municipio": "03-19",
+  "nombre": "Santa Isabel Ishuatán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-19-Izalco",
+  "municipio": "03-19",
+  "nombre": "Izalco"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-19-San Julián",
+  "municipio": "03-19",
+  "nombre": "San Julián"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-17-Juayúa",
+  "municipio": "03-17",
+  "nombre": "Juayúa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-17-Nahuizalco",
+  "municipio": "03-17",
+  "nombre": "Nahuizalco"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-17-Salcoatitán",
+  "municipio": "03-17",
+  "nombre": "Salcoatitán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-17-Santa Catarina Masahuat",
+  "municipio": "03-17",
+  "nombre": "Santa Catarina Masahuat"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "03-20-Acajutla",
+  "municipio": "03-20",
+  "nombre": "Acajutla"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-35-Agua Caliente",
+  "municipio": "04-35",
+  "nombre": "Agua Caliente"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-35-Dulce Nombre de María",
+  "municipio": "04-35",
+  "nombre": "Dulce Nombre de María"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-35-El Paraíso",
+  "municipio": "04-35",
+  "nombre": "El Paraíso"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-35-La Reina",
+  "municipio": "04-35",
+  "nombre": "La Reina"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-35-Nueva Concepción",
+  "municipio": "04-35",
+  "nombre": "Nueva Concepción"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-35-San Fernando",
+  "municipio": "04-35",
+  "nombre": "San Fernando"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-35-San Francisco Morazán",
+  "municipio": "04-35",
+  "nombre": "San Francisco Morazán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-35-San Rafael",
+  "municipio": "04-35",
+  "nombre": "San Rafael"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-35-Santa Rita",
+  "municipio": "04-35",
+  "nombre": "Santa Rita"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-35-Tejutla",
+  "municipio": "04-35",
+  "nombre": "Tejutla"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-34-Citalá",
+  "municipio": "04-34",
+  "nombre": "Citalá"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-34-San Ignacio",
+  "municipio": "04-34",
+  "nombre": "San Ignacio"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-34-La Palma",
+  "municipio": "04-34",
+  "nombre": "La Palma"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-Arcatao",
+  "municipio": "04-36",
+  "nombre": "Arcatao"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-Azacualpa",
+  "municipio": "04-36",
+  "nombre": "Azacualpa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-Comalapa",
+  "municipio": "04-36",
+  "nombre": "Comalapa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-Concepción Quezaltepeque",
+  "municipio": "04-36",
+  "nombre": "Concepción Quezaltepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-Chalatenango",
+  "municipio": "04-36",
+  "nombre": "Chalatenango"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-El Carrizal",
+  "municipio": "04-36",
+  "nombre": "El Carrizal"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-La Laguna",
+  "municipio": "04-36",
+  "nombre": "La Laguna"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-Las Vueltas",
+  "municipio": "04-36",
+  "nombre": "Las Vueltas"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-Nombre de Jesús",
+  "municipio": "04-36",
+  "nombre": "Nombre de Jesús"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-Nueva Trinidad",
+  "municipio": "04-36",
+  "nombre": "Nueva Trinidad"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-Ojos de Agua",
+  "municipio": "04-36",
+  "nombre": "Ojos de Agua"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-Potonico",
+  "municipio": "04-36",
+  "nombre": "Potonico"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-San Antonio de la Cruz",
+  "municipio": "04-36",
+  "nombre": "San Antonio de la Cruz"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-San Antonio Los Ranchos",
+  "municipio": "04-36",
+  "nombre": "San Antonio Los Ranchos"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-San Isidro Labrador",
+  "municipio": "04-36",
+  "nombre": "San Isidro Labrador"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-San Francisco Lempa",
+  "municipio": "04-36",
+  "nombre": "San Francisco Lempa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-San José Cancasque / Cancasque",
+  "municipio": "04-36",
+  "nombre": "San José Cancasque / Cancasque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-San José Las Flores / Las Flores",
+  "municipio": "04-36",
+  "nombre": "San José Las Flores / Las Flores"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-San Luis del Carmen",
+  "municipio": "04-36",
+  "nombre": "San Luis del Carmen"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "04-36-San Miguel de Mercedes",
+  "municipio": "04-36",
+  "nombre": "San Miguel de Mercedes"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-24-Ciudad Arce",
+  "municipio": "05-24",
+  "nombre": "Ciudad Arce"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-24-San Juan Opico",
+  "municipio": "05-24",
+  "nombre": "San Juan Opico"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-27-Chiltiupán",
+  "municipio": "05-27",
+  "nombre": "Chiltiupán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-27-Jicalapa",
+  "municipio": "05-27",
+  "nombre": "Jicalapa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-27-La Libertad",
+  "municipio": "05-27",
+  "nombre": "La Libertad"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-27-Tamanique",
+  "municipio": "05-27",
+  "nombre": "Tamanique"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-27-Teotepeque",
+  "municipio": "05-27",
+  "nombre": "Teotepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-26-Antiguo Cuscatlán",
+  "municipio": "05-26",
+  "nombre": "Antiguo Cuscatlán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-26-Huizúcar",
+  "municipio": "05-26",
+  "nombre": "Huizúcar"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-26-Nuevo Cuscatlán",
+  "municipio": "05-26",
+  "nombre": "Nuevo Cuscatlán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-26-San José Villanueva",
+  "municipio": "05-26",
+  "nombre": "San José Villanueva"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-26-Zaragoza",
+  "municipio": "05-26",
+  "nombre": "Zaragoza"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-23-Quezaltepeque",
+  "municipio": "05-23",
+  "nombre": "Quezaltepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-23-San Matías",
+  "municipio": "05-23",
+  "nombre": "San Matías"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-23-San Pablo Tacachico",
+  "municipio": "05-23",
+  "nombre": "San Pablo Tacachico"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-25-Colón",
+  "municipio": "05-25",
+  "nombre": "Colón"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-25-Jayaque",
+  "municipio": "05-25",
+  "nombre": "Jayaque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-25-Sacacoyo",
+  "municipio": "05-25",
+  "nombre": "Sacacoyo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-25-Talnique",
+  "municipio": "05-25",
+  "nombre": "Talnique"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-25-Tepecoyo",
+  "municipio": "05-25",
+  "nombre": "Tepecoyo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-28-Comasagua",
+  "municipio": "05-28",
+  "nombre": "Comasagua"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "05-28-Santa Tecla antes: Nueva San Salvador",
+  "municipio": "05-28",
+  "nombre": "Santa Tecla antes: Nueva San Salvador"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-23-Ayutuxtepeque",
+  "municipio": "06-23",
+  "nombre": "Ayutuxtepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-23-Cuscatancingo",
+  "municipio": "06-23",
+  "nombre": "Cuscatancingo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-23-Mejicanos",
+  "municipio": "06-23",
+  "nombre": "Mejicanos"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-23-San Salvador",
+  "municipio": "06-23",
+  "nombre": "San Salvador"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-23-Delgado",
+  "municipio": "06-23",
+  "nombre": "Delgado"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-22-Ilopango",
+  "municipio": "06-22",
+  "nombre": "Ilopango"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-22-San Martín",
+  "municipio": "06-22",
+  "nombre": "San Martín"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-22-Soyapango",
+  "municipio": "06-22",
+  "nombre": "Soyapango"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-22-Tonacatepeque",
+  "municipio": "06-22",
+  "nombre": "Tonacatepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-20-Aguilares",
+  "municipio": "06-20",
+  "nombre": "Aguilares"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-20-El Paisnal",
+  "municipio": "06-20",
+  "nombre": "El Paisnal"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-20-Guazapa",
+  "municipio": "06-20",
+  "nombre": "Guazapa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-21-Apopa",
+  "municipio": "06-21",
+  "nombre": "Apopa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-21-Nejapa",
+  "municipio": "06-21",
+  "nombre": "Nejapa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-24-Panchimalco",
+  "municipio": "06-24",
+  "nombre": "Panchimalco"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-24-Rosario de Mora",
+  "municipio": "06-24",
+  "nombre": "Rosario de Mora"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-24-San Marcos",
+  "municipio": "06-24",
+  "nombre": "San Marcos"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-24-Santiago Texacuangos",
+  "municipio": "06-24",
+  "nombre": "Santiago Texacuangos"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "06-24-Santo Tomás",
+  "municipio": "06-24",
+  "nombre": "Santo Tomás"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-17-Oratorio de Concepción",
+  "municipio": "07-17",
+  "nombre": "Oratorio de Concepción"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-17-San Bartolomé Perulapía",
+  "municipio": "07-17",
+  "nombre": "San Bartolomé Perulapía"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-17-San José Guayabal",
+  "municipio": "07-17",
+  "nombre": "San José Guayabal"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-17-San Pedro Perulapán",
+  "municipio": "07-17",
+  "nombre": "San Pedro Perulapán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-17-Suchitoto",
+  "municipio": "07-17",
+  "nombre": "Suchitoto"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-18-Candelaria",
+  "municipio": "07-18",
+  "nombre": "Candelaria"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-18-Cojutepeque",
+  "municipio": "07-18",
+  "nombre": "Cojutepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-18-El Carmen",
+  "municipio": "07-18",
+  "nombre": "El Carmen"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-18-El Rosario",
+  "municipio": "07-18",
+  "nombre": "El Rosario"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-18-Monte San Juan",
+  "municipio": "07-18",
+  "nombre": "Monte San Juan"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-18-San Cristóbal",
+  "municipio": "07-18",
+  "nombre": "San Cristóbal"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-18-San Rafael Cedros",
+  "municipio": "07-18",
+  "nombre": "San Rafael Cedros"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-18-San Ramón",
+  "municipio": "07-18",
+  "nombre": "San Ramón"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-18-Santa Cruz Analquito",
+  "municipio": "07-18",
+  "nombre": "Santa Cruz Analquito"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-18-Santa Cruz Michapa",
+  "municipio": "07-18",
+  "nombre": "Santa Cruz Michapa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "07-18-Tenancingo",
+  "municipio": "07-18",
+  "nombre": "Tenancingo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-El Rosario / Rosario de La Paz",
+  "municipio": "08-24",
+  "nombre": "El Rosario / Rosario de La Paz"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-Jerusalén",
+  "municipio": "08-24",
+  "nombre": "Jerusalén"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-Mercedes La Ceiba",
+  "municipio": "08-24",
+  "nombre": "Mercedes La Ceiba"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-Paraíso de Osorio",
+  "municipio": "08-24",
+  "nombre": "Paraíso de Osorio"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-San Antonio Masahuat",
+  "municipio": "08-24",
+  "nombre": "San Antonio Masahuat"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-San Emigdio",
+  "municipio": "08-24",
+  "nombre": "San Emigdio"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-San Juan Tepezontes",
+  "municipio": "08-24",
+  "nombre": "San Juan Tepezontes"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-San Miguel Tepezontes",
+  "municipio": "08-24",
+  "nombre": "San Miguel Tepezontes"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-San Pedro Nonualco",
+  "municipio": "08-24",
+  "nombre": "San Pedro Nonualco"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-Santa María Ostuma",
+  "municipio": "08-24",
+  "nombre": "Santa María Ostuma"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-Santiago Nonualco",
+  "municipio": "08-24",
+  "nombre": "Santiago Nonualco"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-24-San Luis La Herradura",
+  "municipio": "08-24",
+  "nombre": "San Luis La Herradura"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-25-San Juan Nonualco",
+  "municipio": "08-25",
+  "nombre": "San Juan Nonualco"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-25-San Rafael Obrajuelo",
+  "municipio": "08-25",
+  "nombre": "San Rafael Obrajuelo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-25-Zacatecoluca",
+  "municipio": "08-25",
+  "nombre": "Zacatecoluca"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-23-Cuyultitán",
+  "municipio": "08-23",
+  "nombre": "Cuyultitán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-23-Olocuilta",
+  "municipio": "08-23",
+  "nombre": "Olocuilta"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-23-San Francisco Chinameca",
+  "municipio": "08-23",
+  "nombre": "San Francisco Chinameca"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-23-San Juan Talpa",
+  "municipio": "08-23",
+  "nombre": "San Juan Talpa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-23-San Luis Talpa",
+  "municipio": "08-23",
+  "nombre": "San Luis Talpa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-23-San Pedro Masahuat",
+  "municipio": "08-23",
+  "nombre": "San Pedro Masahuat"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "08-23-Tapalhuaca",
+  "municipio": "08-23",
+  "nombre": "Tapalhuaca"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "09-11-Dolores / Villa Dolores",
+  "municipio": "09-11",
+  "nombre": "Dolores / Villa Dolores"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "09-11-Guacotecti",
+  "municipio": "09-11",
+  "nombre": "Guacotecti"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "09-11-San Isidro",
+  "municipio": "09-11",
+  "nombre": "San Isidro"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "09-11-Sensuntepeque",
+  "municipio": "09-11",
+  "nombre": "Sensuntepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "09-11-Victoria",
+  "municipio": "09-11",
+  "nombre": "Victoria"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "09-10-Cinquera",
+  "municipio": "09-10",
+  "nombre": "Cinquera"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "09-10-Ilobasco",
+  "municipio": "09-10",
+  "nombre": "Ilobasco"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "09-10-Jutiapa",
+  "municipio": "09-10",
+  "nombre": "Jutiapa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "09-10-Tejutepeque",
+  "municipio": "09-10",
+  "nombre": "Tejutepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-14-Apastepeque",
+  "municipio": "10-14",
+  "nombre": "Apastepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-14-San Esteban Catarina",
+  "municipio": "10-14",
+  "nombre": "San Esteban Catarina"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-14-San Ildefonso",
+  "municipio": "10-14",
+  "nombre": "San Ildefonso"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-14-San Lorenzo",
+  "municipio": "10-14",
+  "nombre": "San Lorenzo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-14-San Sebastián",
+  "municipio": "10-14",
+  "nombre": "San Sebastián"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-14-Santa Clara",
+  "municipio": "10-14",
+  "nombre": "Santa Clara"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-14-Santo Domingo",
+  "municipio": "10-14",
+  "nombre": "Santo Domingo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-15-Guadalupe",
+  "municipio": "10-15",
+  "nombre": "Guadalupe"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-15-San Cayetano Istepeque",
+  "municipio": "10-15",
+  "nombre": "San Cayetano Istepeque"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-15-San Vicente",
+  "municipio": "10-15",
+  "nombre": "San Vicente"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-15-Tecoluca",
+  "municipio": "10-15",
+  "nombre": "Tecoluca"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-15-Tepetitán",
+  "municipio": "10-15",
+  "nombre": "Tepetitán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "10-15-Verapaz",
+  "municipio": "10-15",
+  "nombre": "Verapaz"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-25-California",
+  "municipio": "11-25",
+  "nombre": "California"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-25-Concepción Batres",
+  "municipio": "11-25",
+  "nombre": "Concepción Batres"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-25-Ereguayquín",
+  "municipio": "11-25",
+  "nombre": "Ereguayquín"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-25-Jucuarán",
+  "municipio": "11-25",
+  "nombre": "Jucuarán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-25-Ozatlán",
+  "municipio": "11-25",
+  "nombre": "Ozatlán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-25-Usulután",
+  "municipio": "11-25",
+  "nombre": "Usulután"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-25-San Dionisio",
+  "municipio": "11-25",
+  "nombre": "San Dionisio"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-25-Santa Elena",
+  "municipio": "11-25",
+  "nombre": "Santa Elena"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-25-Santa María",
+  "municipio": "11-25",
+  "nombre": "Santa María"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-25-Tecapán",
+  "municipio": "11-25",
+  "nombre": "Tecapán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-24-Alegría",
+  "municipio": "11-24",
+  "nombre": "Alegría"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-24-Berlín",
+  "municipio": "11-24",
+  "nombre": "Berlín"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-24-El Triunfo",
+  "municipio": "11-24",
+  "nombre": "El Triunfo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-24-Estanzuelas",
+  "municipio": "11-24",
+  "nombre": "Estanzuelas"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-24-Jucuapa",
+  "municipio": "11-24",
+  "nombre": "Jucuapa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-24-Mercedes Umaña",
+  "municipio": "11-24",
+  "nombre": "Mercedes Umaña"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-24-Nueva Granada",
+  "municipio": "11-24",
+  "nombre": "Nueva Granada"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-24-San Buenaventura",
+  "municipio": "11-24",
+  "nombre": "San Buenaventura"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-24-Santiago de María",
+  "municipio": "11-24",
+  "nombre": "Santiago de María"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-26-Jiquilisco",
+  "municipio": "11-26",
+  "nombre": "Jiquilisco"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-26-Puerto El Triunfo",
+  "municipio": "11-26",
+  "nombre": "Puerto El Triunfo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-26-San Agustín",
+  "municipio": "11-26",
+  "nombre": "San Agustín"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "11-26-San Francisco Javier",
+  "municipio": "11-26",
+  "nombre": "San Francisco Javier"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-22-Comacarán",
+  "municipio": "12-22",
+  "nombre": "Comacarán"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-22-Moncagua",
+  "municipio": "12-22",
+  "nombre": "Moncagua"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-22-Chirilagua",
+  "municipio": "12-22",
+  "nombre": "Chirilagua"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-22-Quelepa",
+  "municipio": "12-22",
+  "nombre": "Quelepa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-22-San Miguel",
+  "municipio": "12-22",
+  "nombre": "San Miguel"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-22-Uluazapa",
+  "municipio": "12-22",
+  "nombre": "Uluazapa"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-21-Carolina",
+  "municipio": "12-21",
+  "nombre": "Carolina"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-21-Ciudad Barrios",
+  "municipio": "12-21",
+  "nombre": "Ciudad Barrios"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-21-Chapeltique",
+  "municipio": "12-21",
+  "nombre": "Chapeltique"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-21-Nuevo Edén de San Juan",
+  "municipio": "12-21",
+  "nombre": "Nuevo Edén de San Juan"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-21-San Antonio del Mosco",
+  "municipio": "12-21",
+  "nombre": "San Antonio del Mosco"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-21-San Gerardo",
+  "municipio": "12-21",
+  "nombre": "San Gerardo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-21-San Luis de La Reina",
+  "municipio": "12-21",
+  "nombre": "San Luis de La Reina"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-21-Sesori",
+  "municipio": "12-21",
+  "nombre": "Sesori"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-23-Chinameca",
+  "municipio": "12-23",
+  "nombre": "Chinameca"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-23-El Tránsito",
+  "municipio": "12-23",
+  "nombre": "El Tránsito"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-23-Lolotique",
+  "municipio": "12-23",
+  "nombre": "Lolotique"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-23-Nueva Guadalupe",
+  "municipio": "12-23",
+  "nombre": "Nueva Guadalupe"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-23-San Jorge",
+  "municipio": "12-23",
+  "nombre": "San Jorge"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "12-23-San Rafael Oriente",
+  "municipio": "12-23",
+  "nombre": "San Rafael Oriente"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-27-Arambala",
+  "municipio": "13-27",
+  "nombre": "Arambala"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-27-Cacaopera",
+  "municipio": "13-27",
+  "nombre": "Cacaopera"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-27-Corinto",
+  "municipio": "13-27",
+  "nombre": "Corinto"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-27-El Rosario",
+  "municipio": "13-27",
+  "nombre": "El Rosario"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-27-Joateca",
+  "municipio": "13-27",
+  "nombre": "Joateca"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-27-Jocoaitique",
+  "municipio": "13-27",
+  "nombre": "Jocoaitique"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-27-Meanguera",
+  "municipio": "13-27",
+  "nombre": "Meanguera"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-27-Perquín",
+  "municipio": "13-27",
+  "nombre": "Perquín"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-27-San Fernando",
+  "municipio": "13-27",
+  "nombre": "San Fernando"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-27-San Isidro",
+  "municipio": "13-27",
+  "nombre": "San Isidro"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-27-Torola",
+  "municipio": "13-27",
+  "nombre": "Torola"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-Chilanga",
+  "municipio": "13-28",
+  "nombre": "Chilanga"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-Delicias de Concepción",
+  "municipio": "13-28",
+  "nombre": "Delicias de Concepción"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-El Divisadero",
+  "municipio": "13-28",
+  "nombre": "El Divisadero"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-Gualococti",
+  "municipio": "13-28",
+  "nombre": "Gualococti"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-Guatajiagua",
+  "municipio": "13-28",
+  "nombre": "Guatajiagua"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-Jocoro",
+  "municipio": "13-28",
+  "nombre": "Jocoro"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-Lolotiquillo",
+  "municipio": "13-28",
+  "nombre": "Lolotiquillo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-Osicala",
+  "municipio": "13-28",
+  "nombre": "Osicala"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-San Carlos",
+  "municipio": "13-28",
+  "nombre": "San Carlos"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-San Francisco Gotera",
+  "municipio": "13-28",
+  "nombre": "San Francisco Gotera"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-San Simón",
+  "municipio": "13-28",
+  "nombre": "San Simón"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-Sensembra",
+  "municipio": "13-28",
+  "nombre": "Sensembra"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-Sociedad",
+  "municipio": "13-28",
+  "nombre": "Sociedad"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-Yamabal",
+  "municipio": "13-28",
+  "nombre": "Yamabal"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "13-28-Yoloaiquín",
+  "municipio": "13-28",
+  "nombre": "Yoloaiquín"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-19-Anamorós",
+  "municipio": "14-19",
+  "nombre": "Anamorós"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-19-Bolívar",
+  "municipio": "14-19",
+  "nombre": "Bolívar"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-19-Concepción de Oriente",
+  "municipio": "14-19",
+  "nombre": "Concepción de Oriente"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-19-El Sauce",
+  "municipio": "14-19",
+  "nombre": "El Sauce"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-19-Lislique",
+  "municipio": "14-19",
+  "nombre": "Lislique"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-19-Nueva Esparta",
+  "municipio": "14-19",
+  "nombre": "Nueva Esparta"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-19-Pasaquina",
+  "municipio": "14-19",
+  "nombre": "Pasaquina"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-19-Polorós",
+  "municipio": "14-19",
+  "nombre": "Polorós"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-19-San José La Fuente",
+  "municipio": "14-19",
+  "nombre": "San José La Fuente"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-19-Santa Rosa de Lima",
+  "municipio": "14-19",
+  "nombre": "Santa Rosa de Lima"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-20-Conchagua",
+  "municipio": "14-20",
+  "nombre": "Conchagua"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-20-El Carmen",
+  "municipio": "14-20",
+  "nombre": "El Carmen"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-20-Intipucá",
+  "municipio": "14-20",
+  "nombre": "Intipucá"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-20-La Unión",
+  "municipio": "14-20",
+  "nombre": "La Unión"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-20-Meanguera del Golfo",
+  "municipio": "14-20",
+  "nombre": "Meanguera del Golfo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-20-San Alejo",
+  "municipio": "14-20",
+  "nombre": "San Alejo"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-20-Yayantique",
+  "municipio": "14-20",
+  "nombre": "Yayantique"
+ },
+ {
+  "doctype": "SV Distrito",
+  "name": "14-20-Yucuaiquín",
+  "municipio": "14-20",
+  "nombre": "Yucuaiquín"
+ }
+]

@@ -22,6 +22,7 @@ fixtures = [
     {"dt": "SV Actividad Economica"},
     {"dt": "SV Departamento"},
     {"dt": "SV Municipio"},
+    {"dt": "SV Distrito"},
 ]
 
 # ---------------------------------------------------------------------------

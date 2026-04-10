@@ -35,6 +35,14 @@ _ADDRESS_DTE_FIELDS = {
             "in_list_view": 0,
             "insert_after": "sv_departamento",
         },
+        {
+            "fieldname": "sv_distrito",
+            "fieldtype": "Link",
+            "label": "Distrito",
+            "options": "SV Distrito",
+            "in_list_view": 0,
+            "insert_after": "sv_municipio",
+        },
     ]
 }
 
