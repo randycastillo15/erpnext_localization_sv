@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "autoname": "DTEDOC-.YYYY.-.#####",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "read_only": 1,
+ "field_order": [
+  "dte_type_label",
+  "dte_type_code",
+  "mh_status",
+  "generation_code",
+  "control_number",
+  "col_break_ids",
+  "source_doctype",
+  "source_docname",
+  "customer",
+  "customer_name",
+  "sec_mh",
+  "reception_seal",
+  "mh_processed_at",
+  "ambiente",
+  "company",
+  "col_break_mh",
+  "mh_verification_url",
+  "is_invalidated",
+  "invalidated_at",
+  "replacement_generation_code",
+  "last_status_check_at",
+  "sec_auditoria",
+  "issued_at",
+  "issued_by"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "dte_type_label",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tipo DTE",
+   "options": "\nFE\nCCF\nNC\nND"
+  },
+  {
+   "fieldname": "dte_type_code",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo Tipo"
+  },
+  {
+   "fieldname": "mh_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estado MH",
+   "options": "\nPENDIENTE\nPROCESADO\nRECHAZADO\nINVALIDADO\nCONTINGENCIA"
+  },
+  {
+   "fieldname": "generation_code",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo de Generaci\u00f3n",
+   "search_index": 1
+  },
+  {
+   "fieldname": "control_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00famero de Control",
+   "search_index": 1
+  },
+  {
+   "fieldname": "col_break_ids",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_doctype",
+   "fieldtype": "Link",
+   "label": "Tipo Documento Origen",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "source_docname",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Documento Origen",
+   "options": "source_doctype",
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Cliente",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre Cliente",
+   "search_index": 1
+  },
+  {
+   "fieldname": "sec_mh",
+   "fieldtype": "Section Break",
+   "label": "Informaci\u00f3n MH"
+  },
+  {
+   "fieldname": "reception_seal",
+   "fieldtype": "Data",
+   "label": "Sello de Recepci\u00f3n"
+  },
+  {
+   "fieldname": "mh_processed_at",
+   "fieldtype": "Datetime",
+   "label": "Fecha Procesamiento MH"
+  },
+  {
+   "fieldname": "ambiente",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Ambiente",
+   "options": "\n00\n01"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company"
+  },
+  {
+   "fieldname": "col_break_mh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mh_verification_url",
+   "fieldtype": "Data",
+   "label": "URL Verificaci\u00f3n MH"
+  },
+  {
+   "fieldname": "is_invalidated",
+   "fieldtype": "Check",
+   "label": "\u00bfInvalidado?"
+  },
+  {
+   "fieldname": "invalidated_at",
+   "fieldtype": "Datetime",
+   "label": "Fecha Invalidaci\u00f3n"
+  },
+  {
+   "fieldname": "replacement_generation_code",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo Generaci\u00f3n Reemplazo"
+  },
+  {
+   "fieldname": "last_status_check_at",
+   "fieldtype": "Datetime",
+   "label": "\u00daltima Consulta Estado"
+  },
+  {
+   "fieldname": "sec_auditoria",
+   "fieldtype": "Section Break",
+   "label": "Auditor\u00eda"
+  },
+  {
+   "default": "now",
+   "fieldname": "issued_at",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Fecha Emisi\u00f3n"
+  },
+  {
+   "fieldname": "issued_by",
+   "fieldtype": "Link",
+   "label": "Emitido por",
+   "options": "User"
+  }
+ ],
+ "links": [],
+ "module": "ERPNext Localization SV",
+ "name": "SV DTE Document",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "role": "Accounts Manager"
+  },
+  {
+   "read": 1,
+   "role": "Accounts User"
+  }
+ ],
+ "search_fields": "generation_code,control_number,source_docname,customer_name",
+ "sort_field": "issued_at",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "generation_code",
+ "track_changes": 0
+}

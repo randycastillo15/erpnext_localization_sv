@@ -227,6 +227,30 @@ def emit_dte(doctype: str, docname: str) -> dict:
     })
     frappe.db.commit()
 
+    # Sincronizar SV DTE Document (índice operativo)
+    try:
+        from erpnext_localization_sv.api.dte_document_sync import sync_on_emit
+        sync_on_emit(
+            source_doctype="Sales Invoice",
+            source_docname=docname,
+            generation_code=gen_code,
+            control_number=result.get("control_number"),
+            mh_status=result.get("estado"),
+            dte_type_label=raw_tipo,
+            dte_type_code=tipo_dte,
+            reception_seal=result.get("sello_recibido"),
+            mh_processed_at=_parse_mh_datetime(result.get("fh_procesamiento")),
+            ambiente=(_settings.get("ambiente") if "_settings" in dir() else None) or "00",
+            company=doc.company,
+            customer=doc.customer,
+            customer_name=doc.customer_name,
+            mh_verification_url=_qr_url,
+        )
+    except Exception as _sync_exc:
+        frappe.logger().warning(
+            "[erpnext_localization_sv] sync_on_emit falló para %s: %s", docname, _sync_exc
+        )
+
     # Crear SV DTE Log (sanitizado)
     _write_dte_log(docname, tipo_dte, payload, result, tipo_evento="emision", codigo_generacion=gen_code)
 
@@ -304,5 +328,14 @@ def get_dte_status(docname: str) -> dict:
     if estado_mh:
         frappe.db.set_value("Sales Invoice", docname, {"sv_estado_mh": estado_mh})
         frappe.db.commit()
+
+    # Sincronizar SV DTE Document
+    if estado_mh and gen_code:
+        try:
+            from erpnext_localization_sv.api.dte_document_sync import sync_on_status_check
+            sync_on_status_check(generation_code=gen_code, mh_status=estado_mh)
+            frappe.db.commit()
+        except Exception:
+            pass
 
     return result

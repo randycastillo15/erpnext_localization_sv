@@ -194,6 +194,20 @@ def anular_dte(
     })
     frappe.db.commit()
 
+    # Sincronizar SV DTE Document
+    try:
+        from erpnext_localization_sv.api.dte_document_sync import sync_on_invalidation
+        sync_on_invalidation(
+            generation_code=gen_code,
+            invalidated_at=fecha_anula if anulado else None,
+            replacement_generation_code=codigo_generacion_reemplazo or None,
+        )
+        frappe.db.commit()
+    except Exception as _sync_exc:
+        frappe.logger().warning(
+            "[anulacion] sync_on_invalidation falló para %s: %s", docname, _sync_exc
+        )
+
     # Registrar en SV DTE Log
     from erpnext_localization_sv.api.dte import _write_dte_log
     _write_dte_log(

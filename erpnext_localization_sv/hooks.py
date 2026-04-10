@@ -29,7 +29,12 @@ after_install = "erpnext_localization_sv.patches.v1_0.install.execute"
 # JS personalizado por DocType
 # ---------------------------------------------------------------------------
 doctype_js = {
-    "Sales Invoice": "public/js/sales_invoice.js",
+    "Sales Invoice":   "public/js/sales_invoice.js",
+    "SV DTE Document": "public/js/sv_dte_document.js",
+}
+
+doctype_list_js = {
+    "SV DTE Document": "public/js/sv_dte_document_list.js",
 }
 
 # ---------------------------------------------------------------------------
