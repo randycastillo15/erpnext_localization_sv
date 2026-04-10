@@ -17,8 +17,12 @@ def execute() -> None:
     from erpnext_localization_sv.custom_fields.address import create_address_dte_fields
     from erpnext_localization_sv.custom_fields.customer import create_customer_dte_fields
 
-    # 1. Crear custom fields en Address
+    # 1. Crear custom fields en Address (inline, sin sección separada)
     create_address_dte_fields()
+
+    # Eliminar sección separada si quedó de una ejecución anterior
+    if frappe.db.exists("Custom Field", "Address-sv_dte_section"):
+        frappe.delete_doc("Custom Field", "Address-sv_dte_section", ignore_permissions=True)
 
     # 2. Ocultar campos legacy en Customer (actualiza las Custom Field definitions)
     create_customer_dte_fields()
