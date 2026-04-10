@@ -77,7 +77,7 @@ def execute() -> None:
             addr.address_title = c.customer_name
             addr.address_type  = "Billing"
             addr.address_line1 = c.sv_direccion_complemento or "—"
-            addr.city          = "—"
+            addr.city          = "—"  # campo oculto por v1_13, valor mínimo para compatibilidad
             addr.country       = "El Salvador"
             addr.email_id      = c.sv_correo or ""
             addr.phone         = c.sv_telefono or ""
