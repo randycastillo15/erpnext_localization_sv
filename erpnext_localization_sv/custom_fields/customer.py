@@ -1,19 +1,24 @@
 """
-Custom Fields DTE para Customer — v1.11
+Custom Fields DTE para Customer — v1.14
 
-v1.2:  sv_nit, sv_nrc (CCF básico)
-v1.3:  dirección y contacto en Customer (directo)
-v1.11: MIGRACIÓN — dirección y contacto se mueven a Address estándar.
-       Customer conserva solo datos fiscales/identitarios del receptor.
-       Los campos de dirección/contacto quedan hidden=1 (datos preservados
-       en DB como fallback para documentos emitidos antes de la migración).
+Integración inline — sin sección separada "DTE El Salvador".
 
-Campos activos en Customer:
-  sv_nit              DUI o NIT del receptor
-  sv_nrc              NRC del receptor
-  sv_cod_actividad    Código de actividad económica (Link CAT-019)
-  sv_desc_actividad   Descripción (auto-rellenada, read-only)
-  sv_nombre_comercial Nombre comercial (opcional)
+Layout en el formulario:
+  Columna izquierda (basic_info):
+    customer_name → sv_nombre_comercial → gender → ...
+
+  Columna derecha (después de column_break0):
+    account_manager → customer_type (*) → customer_group → territory →
+    tax_id → sv_nit → sv_nrc → sv_cod_actividad → sv_desc_actividad → ...
+
+  (*) customer_type se reposiciona via Property Setter en patch v1_14.
+
+Campos activos:
+  sv_nombre_comercial  Nombre comercial — justo después de customer_name
+  sv_nit               DUI o NIT — después de tax_id
+  sv_nrc               NRC — después de sv_nit
+  sv_cod_actividad     Código de actividad económica (Link CAT-019)
+  sv_desc_actividad    Descripción (auto-rellenada, read-only)
 
 Campos legacy hidden (fallback):
   sv_direccion_departamento, sv_direccion_municipio,
@@ -25,21 +30,23 @@ from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 
 _CUSTOMER_DTE_FIELDS = {
     "Customer": [
-        # ── Sección activa ──────────────────────────────────────────────────
+        # ── Nombre comercial — columna izquierda, justo bajo el nombre ─────
         {
-            "fieldname": "sv_dte_section",
-            "fieldtype": "Section Break",
-            "label": "DTE El Salvador",
-            "collapsible": 1,
-            "insert_after": "customer_type",
+            "fieldname": "sv_nombre_comercial",
+            "fieldtype": "Data",
+            "label": "Nombre Comercial",
+            "no_copy": 0,
+            "description": "Nombre comercial del receptor (opcional)",
+            "insert_after": "customer_name",
         },
+        # ── Datos fiscales — columna derecha, zona fiscal ──────────────────
         {
             "fieldname": "sv_nit",
             "fieldtype": "Data",
             "label": "DUI o NIT",
             "no_copy": 1,
             "description": "9 dígitos sin guión si es DUI — 14 dígitos sin guiones si es NIT",
-            "insert_after": "sv_dte_section",
+            "insert_after": "tax_id",
         },
         {
             "fieldname": "sv_nrc",
@@ -67,23 +74,12 @@ _CUSTOMER_DTE_FIELDS = {
             "description": "Se rellena automáticamente al seleccionar el Código Actividad",
             "insert_after": "sv_cod_actividad",
         },
-        {
-            "fieldname": "sv_nombre_comercial",
-            "fieldtype": "Data",
-            "label": "Nombre Comercial",
-            "no_copy": 0,
-            "description": "Nombre comercial del receptor (opcional)",
-            "insert_after": "sv_desc_actividad",
-        },
         # ── Campos legacy — hidden, datos preservados para fallback ────────
-        # La dirección y contacto del receptor viven ahora en Address estándar.
-        # Estos campos se mantienen ocultos para compatibilidad con documentos
-        # emitidos antes de la migración v1.11.
         {
             "fieldname": "sv_col_break_dir",
             "fieldtype": "Column Break",
             "hidden": 1,
-            "insert_after": "sv_nombre_comercial",
+            "insert_after": "sv_desc_actividad",
         },
         {
             "fieldname": "sv_direccion_departamento",
