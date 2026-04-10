@@ -25,7 +25,7 @@ _CUSTOMER_DTE_FIELDS = {
             "fieldtype": "Data",
             "label": "NIT (DTE)",
             "no_copy": 1,
-            "description": "14 dígitos sin guiones — requerido para CCF",
+            "description": "DUI o NIT — 9 dígitos sin guión si es DUI — 14 dígitos sin guiones si es NIT",
             "insert_after": "sv_dte_section",
         },
         {
