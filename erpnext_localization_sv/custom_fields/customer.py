@@ -37,22 +37,14 @@ _CUSTOMER_DTE_FIELDS = {
             "description": "Nombre comercial del receptor (opcional)",
             "insert_after": "customer_name",
         },
-        # ── Sección fiscal — dos columnas ─────────────────────────────────
-        # Col 1: campos DTE propios
-        # Col 2: tax_id de ERPNext (reposicionado via Property Setter en patch)
-        {
-            "fieldname": "sv_fiscal_section",
-            "fieldtype": "Section Break",
-            "label": "",
-            "insert_after": "territory",
-        },
+        # ── Datos fiscales — misma columna, flujo continuo ────────────────
         {
             "fieldname": "sv_nit",
             "fieldtype": "Data",
             "label": "DUI o NIT",
             "no_copy": 1,
             "description": "9 dígitos sin guión si es DUI — 14 dígitos sin guiones si es NIT",
-            "insert_after": "sv_fiscal_section",
+            "insert_after": "tax_id",
         },
         {
             "fieldname": "sv_nrc",
@@ -79,12 +71,6 @@ _CUSTOMER_DTE_FIELDS = {
             "read_only": 1,
             "description": "Se rellena automáticamente al seleccionar el Código Actividad",
             "insert_after": "sv_cod_actividad",
-        },
-        # Column Break — separa DTE (col 1) de campos ERPNext tax (col 2)
-        {
-            "fieldname": "sv_fiscal_col_break",
-            "fieldtype": "Column Break",
-            "insert_after": "sv_desc_actividad",
         },
     ]
 }
