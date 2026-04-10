@@ -1,5 +1,5 @@
 """
-Custom Fields DTE para Customer — v1.14
+Custom Fields DTE para Customer — v1.15
 
 Integración inline — sin sección separada "DTE El Salvador".
 
@@ -20,9 +20,7 @@ Campos activos:
   sv_cod_actividad     Código de actividad económica (Link CAT-019)
   sv_desc_actividad    Descripción (auto-rellenada, read-only)
 
-Campos legacy hidden (fallback):
-  sv_direccion_departamento, sv_direccion_municipio,
-  sv_direccion_complemento, sv_correo, sv_telefono
+Los campos legacy de dirección/contacto fueron eliminados en v1.15.
 """
 
 import frappe
@@ -73,56 +71,6 @@ _CUSTOMER_DTE_FIELDS = {
             "read_only": 1,
             "description": "Se rellena automáticamente al seleccionar el Código Actividad",
             "insert_after": "sv_cod_actividad",
-        },
-        # ── Campos legacy — hidden, datos preservados para fallback ────────
-        {
-            "fieldname": "sv_col_break_dir",
-            "fieldtype": "Column Break",
-            "hidden": 1,
-            "insert_after": "sv_desc_actividad",
-        },
-        {
-            "fieldname": "sv_direccion_departamento",
-            "fieldtype": "Link",
-            "label": "Departamento (legacy)",
-            "options": "SV Departamento",
-            "hidden": 1,
-            "no_copy": 0,
-            "insert_after": "sv_col_break_dir",
-        },
-        {
-            "fieldname": "sv_direccion_municipio",
-            "fieldtype": "Link",
-            "label": "Municipio (legacy)",
-            "options": "SV Municipio",
-            "hidden": 1,
-            "no_copy": 0,
-            "insert_after": "sv_direccion_departamento",
-        },
-        {
-            "fieldname": "sv_direccion_complemento",
-            "fieldtype": "Small Text",
-            "label": "Dirección Complemento (legacy)",
-            "hidden": 1,
-            "no_copy": 0,
-            "insert_after": "sv_direccion_municipio",
-        },
-        {
-            "fieldname": "sv_correo",
-            "fieldtype": "Data",
-            "label": "Correo (legacy)",
-            "hidden": 1,
-            "no_copy": 0,
-            "options": "Email",
-            "insert_after": "sv_direccion_complemento",
-        },
-        {
-            "fieldname": "sv_telefono",
-            "fieldtype": "Data",
-            "label": "Teléfono (legacy)",
-            "hidden": 1,
-            "no_copy": 0,
-            "insert_after": "sv_correo",
         },
     ]
 }
