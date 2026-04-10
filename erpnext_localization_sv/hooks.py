@@ -20,16 +20,19 @@ after_install = "erpnext_localization_sv.patches.v1_0.install.execute"
 # ---------------------------------------------------------------------------
 fixtures = [
     {"dt": "SV Actividad Economica"},
+    {"dt": "SV Departamento"},
+    {"dt": "SV Municipio"},
 ]
 
 # ---------------------------------------------------------------------------
 # JS personalizado por DocType
 # ---------------------------------------------------------------------------
 doctype_js = {
-    "Sales Invoice":        "public/js/sales_invoice.js",
-    "SV DTE Document":      "public/js/sv_dte_document.js",
-    "SV DTE Settings":      "public/js/sv_dte_settings.js",
-    "Customer":             "public/js/customer_dte.js",
+    "Sales Invoice":          "public/js/sales_invoice.js",
+    "SV DTE Document":        "public/js/sv_dte_document.js",
+    "SV DTE Settings":        "public/js/sv_dte_settings.js",
+    "Customer":               "public/js/customer_dte.js",
+    "SV DTE Establishment":   "public/js/sv_dte_establishment.js",
 }
 
 doctype_list_js = {

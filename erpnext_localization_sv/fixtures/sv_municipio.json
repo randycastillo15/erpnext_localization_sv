@@ -1,0 +1,317 @@
+[
+ {
+  "doctype": "SV Municipio",
+  "name": "00-00",
+  "departamento": "00",
+  "codigo": "00",
+  "nombre": "Otro (Para extranjeros)"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "01-13",
+  "departamento": "01",
+  "codigo": "13",
+  "nombre": "AHUACHAPAN NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "01-14",
+  "departamento": "01",
+  "codigo": "14",
+  "nombre": "AHUACHAPAN CENTRO"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "01-15",
+  "departamento": "01",
+  "codigo": "15",
+  "nombre": "AHUACHAPAN SUR"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "02-14",
+  "departamento": "02",
+  "codigo": "14",
+  "nombre": "SANTA ANA NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "02-15",
+  "departamento": "02",
+  "codigo": "15",
+  "nombre": "SANTA ANA CENTRO"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "02-16",
+  "departamento": "02",
+  "codigo": "16",
+  "nombre": "SANTA ANA ESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "02-17",
+  "departamento": "02",
+  "codigo": "17",
+  "nombre": "SANTA ANA OESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "03-17",
+  "departamento": "03",
+  "codigo": "17",
+  "nombre": "SONSONATE NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "03-18",
+  "departamento": "03",
+  "codigo": "18",
+  "nombre": "SONSONATE CENTRO"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "03-19",
+  "departamento": "03",
+  "codigo": "19",
+  "nombre": "SONSONATE ESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "03-20",
+  "departamento": "03",
+  "codigo": "20",
+  "nombre": "SONSONATE OESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "04-34",
+  "departamento": "04",
+  "codigo": "34",
+  "nombre": "CHALATENANGO NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "04-35",
+  "departamento": "04",
+  "codigo": "35",
+  "nombre": "CHALATENANGO CENTRO"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "04-36",
+  "departamento": "04",
+  "codigo": "36",
+  "nombre": "CHALATENANGO SUR"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "05-23",
+  "departamento": "05",
+  "codigo": "23",
+  "nombre": "LA LIBERTAD NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "05-24",
+  "departamento": "05",
+  "codigo": "24",
+  "nombre": "LA LIBERTAD CENTRO"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "05-25",
+  "departamento": "05",
+  "codigo": "25",
+  "nombre": "LA LIBERTAD OESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "05-26",
+  "departamento": "05",
+  "codigo": "26",
+  "nombre": "LA LIBERTAD ESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "05-27",
+  "departamento": "05",
+  "codigo": "27",
+  "nombre": "LA LIBERTAD COSTA"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "05-28",
+  "departamento": "05",
+  "codigo": "28",
+  "nombre": "LA LIBERTAD SUR"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "06-20",
+  "departamento": "06",
+  "codigo": "20",
+  "nombre": "SAN SALVADOR NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "06-21",
+  "departamento": "06",
+  "codigo": "21",
+  "nombre": "SAN SALVADOR OESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "06-22",
+  "departamento": "06",
+  "codigo": "22",
+  "nombre": "SAN SALVADOR ESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "06-23",
+  "departamento": "06",
+  "codigo": "23",
+  "nombre": "SAN SALVADOR CENTRO"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "06-24",
+  "departamento": "06",
+  "codigo": "24",
+  "nombre": "SAN SALVADOR SUR"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "07-17",
+  "departamento": "07",
+  "codigo": "17",
+  "nombre": "CUSCATLAN NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "07-18",
+  "departamento": "07",
+  "codigo": "18",
+  "nombre": "CUSCATLAN SUR"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "08-23",
+  "departamento": "08",
+  "codigo": "23",
+  "nombre": "LA PAZ OESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "08-24",
+  "departamento": "08",
+  "codigo": "24",
+  "nombre": "LA PAZ CENTRO"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "08-25",
+  "departamento": "08",
+  "codigo": "25",
+  "nombre": "LA PAZ ESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "09-10",
+  "departamento": "09",
+  "codigo": "10",
+  "nombre": "CABAÑAS OESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "09-11",
+  "departamento": "09",
+  "codigo": "11",
+  "nombre": "CABAÑAS ESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "10-14",
+  "departamento": "10",
+  "codigo": "14",
+  "nombre": "SAN VICENTE NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "10-15",
+  "departamento": "10",
+  "codigo": "15",
+  "nombre": "SAN VICENTE SUR"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "11-24",
+  "departamento": "11",
+  "codigo": "24",
+  "nombre": "USULUTAN NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "11-25",
+  "departamento": "11",
+  "codigo": "25",
+  "nombre": "USULUTAN ESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "11-26",
+  "departamento": "11",
+  "codigo": "26",
+  "nombre": "USULUTAN OESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "12-21",
+  "departamento": "12",
+  "codigo": "21",
+  "nombre": "SAN MIGUEL NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "12-22",
+  "departamento": "12",
+  "codigo": "22",
+  "nombre": "SAN MIGUEL CENTRO"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "12-23",
+  "departamento": "12",
+  "codigo": "23",
+  "nombre": "SAN MIGUEL OESTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "13-27",
+  "departamento": "13",
+  "codigo": "27",
+  "nombre": "MORAZAN NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "13-28",
+  "departamento": "13",
+  "codigo": "28",
+  "nombre": "MORAZAN SUR"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "14-19",
+  "departamento": "14",
+  "codigo": "19",
+  "nombre": "LA UNION NORTE"
+ },
+ {
+  "doctype": "SV Municipio",
+  "name": "14-20",
+  "departamento": "14",
+  "codigo": "20",
+  "nombre": "LA UNION SUR"
+ }
+]

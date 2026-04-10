@@ -1,0 +1,92 @@
+[
+ {
+  "doctype": "SV Departamento",
+  "name": "00",
+  "codigo": "00",
+  "nombre": "Otro (Para extranjeros)"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "01",
+  "codigo": "01",
+  "nombre": "Ahuachapán"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "02",
+  "codigo": "02",
+  "nombre": "Santa Ana"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "03",
+  "codigo": "03",
+  "nombre": "Sonsonate"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "04",
+  "codigo": "04",
+  "nombre": "Chalatenango"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "05",
+  "codigo": "05",
+  "nombre": "La Libertad"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "06",
+  "codigo": "06",
+  "nombre": "San Salvador"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "07",
+  "codigo": "07",
+  "nombre": "Cuscatlán"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "08",
+  "codigo": "08",
+  "nombre": "La Paz"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "09",
+  "codigo": "09",
+  "nombre": "Cabañas"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "10",
+  "codigo": "10",
+  "nombre": "San Vicente"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "11",
+  "codigo": "11",
+  "nombre": "Usulután"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "12",
+  "codigo": "12",
+  "nombre": "San Miguel"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "13",
+  "codigo": "13",
+  "nombre": "Morazán"
+ },
+ {
+  "doctype": "SV Departamento",
+  "name": "14",
+  "codigo": "14",
+  "nombre": "La Unión"
+ }
+]

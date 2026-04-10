@@ -33,14 +33,14 @@
    "fieldname": "cod_estable_mh",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "C\u00f3digo Estab. MH",
+   "label": "Código Estab. MH",
    "reqd": 1
   },
   {
    "description": "Hasta 10 chars",
    "fieldname": "cod_estable",
    "fieldtype": "Data",
-   "label": "C\u00f3digo Estab. Interno",
+   "label": "Código Estab. Interno",
    "reqd": 1
   },
   {
@@ -52,38 +52,40 @@
    "reqd": 1
   },
   {
-   "description": "4 chars, c\u00f3digo MH",
+   "description": "4 chars, código MH",
    "fieldname": "cod_punto_venta_mh",
    "fieldtype": "Data",
-   "label": "C\u00f3digo Punto Venta MH",
+   "label": "Código Punto Venta MH",
    "reqd": 1
   },
   {
    "fieldname": "cod_punto_venta",
    "fieldtype": "Data",
-   "label": "C\u00f3digo Punto Venta Interno"
+   "label": "Código Punto Venta Interno"
   },
   {
    "fieldname": "direccion_section",
    "fieldtype": "Section Break",
-   "label": "Direcci\u00f3n"
+   "label": "Dirección"
   },
   {
    "fieldname": "departamento",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Departamento",
-   "options": "\n01\n02\n03\n04\n05\n06\n07\n08\n09\n10\n11\n12\n13\n14"
+   "description": "CAT-012 — seleccionar departamento",
+   "options": "SV Departamento"
   },
   {
-   "description": "C\u00f3digo CAT-013 seg\u00fan departamento",
+   "description": "CAT-013 — se filtra según el departamento seleccionado",
    "fieldname": "municipio",
-   "fieldtype": "Data",
-   "label": "C\u00f3digo Municipio"
+   "fieldtype": "Link",
+   "label": "Municipio",
+   "options": "SV Municipio"
   },
   {
    "fieldname": "complemento",
    "fieldtype": "Data",
-   "label": "Complemento Direcci\u00f3n",
+   "label": "Complemento Dirección",
    "reqd": 1
   },
   {
@@ -94,12 +96,12 @@
   {
    "fieldname": "telefono",
    "fieldtype": "Data",
-   "label": "Tel\u00e9fono"
+   "label": "Teléfono"
   },
   {
    "fieldname": "correo",
    "fieldtype": "Data",
-   "label": "Correo Electr\u00f3nico"
+   "label": "Correo Electrónico"
   },
   {
    "default": "1",

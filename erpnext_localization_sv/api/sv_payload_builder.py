@@ -18,6 +18,21 @@ from frappe.utils import now_datetime
 _DTE_LABEL_TO_CODE = {"FE": "01", "CCF": "03", "NC": "05", "ND": "06"}
 
 
+def _resolve_municipio(value: str | None) -> str | None:
+    """
+    Convierte el valor del campo municipio al código numérico que espera el gateway.
+
+    El campo sv_direccion_municipio / municipio es un Link a SV Municipio cuyo
+    name tiene formato "dept-codigo" (ej. "05-25"). El gateway solo necesita el
+    código relativo (ej. "25").  Para datos legacy que ya almacenaban el código
+    directamente, se retorna el valor sin cambios.
+    """
+    if not value:
+        return None
+    codigo = frappe.db.get_value("SV Municipio", value, "codigo")
+    return codigo if codigo else value
+
+
 # ---------------------------------------------------------------------------
 # Función principal
 # ---------------------------------------------------------------------------
@@ -99,7 +114,7 @@ def _build_emisor_settings(settings, estab) -> dict:
         "cod_punto_venta_mh":  estab.get("cod_punto_venta_mh") or "P001",
         "cod_punto_venta":     estab.get("cod_punto_venta") or None,
         "departamento":        estab.get("departamento") or "05",
-        "municipio":           estab.get("municipio") or "25",
+        "municipio":           _resolve_municipio(estab.get("municipio")) or "25",
         "complemento":         estab.get("complemento") or "",
         "telefono":            estab.get("telefono") or settings.get("telefono") or "22222222",
         "correo":              settings.get("correo") or "correo@empresa.com",
@@ -138,7 +153,8 @@ def _build_receptor(doc, tipo_dte: str) -> dict:
             frappe.throw(f"El Customer '{doc.customer}' no tiene Código de Actividad (sv_cod_actividad). Requerido para {tipo_dte}.")
 
         dep = customer.get("sv_direccion_departamento") or None
-        mun = customer.get("sv_direccion_municipio") or None
+        mun_raw = customer.get("sv_direccion_municipio") or None
+        mun = _resolve_municipio(mun_raw)
         comp = customer.get("sv_direccion_complemento") or None
         if not (dep and mun and comp):
             frappe.throw(f"El Customer '{doc.customer}' no tiene dirección DTE completa (sv_direccion_*). Requerida para {tipo_dte}.")
