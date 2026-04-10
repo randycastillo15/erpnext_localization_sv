@@ -21,3 +21,4 @@ erpnext_localization_sv.patches.v1_8.fix_qr_portal_url
 erpnext_localization_sv.patches.v1_9.remove_sv_dte_uuid_field
 erpnext_localization_sv.patches.v1_9.backfill_dte_documents
 erpnext_localization_sv.patches.v1_10.update_customer_nit_description
+erpnext_localization_sv.patches.v1_10.update_customer_dte_labels

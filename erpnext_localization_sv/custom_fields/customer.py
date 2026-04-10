@@ -23,15 +23,15 @@ _CUSTOMER_DTE_FIELDS = {
         {
             "fieldname": "sv_nit",
             "fieldtype": "Data",
-            "label": "NIT (DTE)",
+            "label": "DUI o NIT",
             "no_copy": 1,
-            "description": "DUI o NIT — 9 dígitos sin guión si es DUI — 14 dígitos sin guiones si es NIT",
+            "description": "9 dígitos sin guión si es DUI — 14 dígitos sin guiones si es NIT",
             "insert_after": "sv_dte_section",
         },
         {
             "fieldname": "sv_nrc",
             "fieldtype": "Data",
-            "label": "NRC (DTE)",
+            "label": "NRC",
             "no_copy": 1,
             "description": "Requerido para emitir CCF",
             "insert_after": "sv_nit",
@@ -39,7 +39,7 @@ _CUSTOMER_DTE_FIELDS = {
         {
             "fieldname": "sv_cod_actividad",
             "fieldtype": "Data",
-            "label": "Código Actividad (DTE)",
+            "label": "Código Actividad",
             "no_copy": 0,
             "description": "CAT-019 — código de actividad económica del receptor, requerido para CCF/NC",
             "insert_after": "sv_nrc",
@@ -47,7 +47,7 @@ _CUSTOMER_DTE_FIELDS = {
         {
             "fieldname": "sv_desc_actividad",
             "fieldtype": "Small Text",
-            "label": "Descripción Actividad (DTE)",
+            "label": "Descripción Actividad",
             "no_copy": 0,
             "description": "Descripción de la actividad económica del receptor",
             "insert_after": "sv_cod_actividad",
@@ -55,7 +55,7 @@ _CUSTOMER_DTE_FIELDS = {
         {
             "fieldname": "sv_nombre_comercial",
             "fieldtype": "Data",
-            "label": "Nombre Comercial (DTE)",
+            "label": "Nombre Comercial",
             "no_copy": 0,
             "description": "Nombre comercial del receptor (opcional, nullable en schema)",
             "insert_after": "sv_desc_actividad",
@@ -68,7 +68,7 @@ _CUSTOMER_DTE_FIELDS = {
         {
             "fieldname": "sv_direccion_departamento",
             "fieldtype": "Data",
-            "label": "Departamento (DTE)",
+            "label": "Departamento",
             "no_copy": 0,
             "description": "CAT-012 — código de departamento (ej. '05' = La Libertad)",
             "insert_after": "sv_col_break_dir",
@@ -76,7 +76,7 @@ _CUSTOMER_DTE_FIELDS = {
         {
             "fieldname": "sv_direccion_municipio",
             "fieldtype": "Data",
-            "label": "Municipio (DTE)",
+            "label": "Municipio",
             "no_copy": 0,
             "description": "CAT-013 — código de municipio (ej. '25' = Colón)",
             "insert_after": "sv_direccion_departamento",
@@ -84,7 +84,7 @@ _CUSTOMER_DTE_FIELDS = {
         {
             "fieldname": "sv_direccion_complemento",
             "fieldtype": "Small Text",
-            "label": "Dirección Complemento (DTE)",
+            "label": "Dirección Complemento",
             "no_copy": 0,
             "description": "Dirección completa del receptor (calle, número, etc.)",
             "insert_after": "sv_direccion_municipio",
@@ -92,7 +92,7 @@ _CUSTOMER_DTE_FIELDS = {
         {
             "fieldname": "sv_correo",
             "fieldtype": "Data",
-            "label": "Correo (DTE)",
+            "label": "Correo",
             "no_copy": 0,
             "options": "Email",
             "description": "Correo electrónico del receptor — requerido por schema CCF/NC",
@@ -101,7 +101,7 @@ _CUSTOMER_DTE_FIELDS = {
         {
             "fieldname": "sv_telefono",
             "fieldtype": "Data",
-            "label": "Teléfono (DTE)",
+            "label": "Teléfono",
             "no_copy": 0,
             "description": "Teléfono del receptor (opcional, mínimo 8 caracteres)",
             "insert_after": "sv_correo",
