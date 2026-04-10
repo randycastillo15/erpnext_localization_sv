@@ -37,14 +37,16 @@ _CUSTOMER_DTE_FIELDS = {
             "description": "Nombre comercial del receptor (opcional)",
             "insert_after": "customer_name",
         },
-        # ── Datos fiscales — misma columna, flujo continuo ────────────────
+        # ── Datos fiscales — col izquierda del Tax tab ────────────────────
+        # tax_id se mueve a col derecha via Property Setter (patch v1_18)
+        # insert_after: "taxation_section" → primer campo de la columna izquierda
         {
             "fieldname": "sv_nit",
             "fieldtype": "Data",
             "label": "DUI o NIT",
             "no_copy": 1,
             "description": "9 dígitos sin guión si es DUI — 14 dígitos sin guiones si es NIT",
-            "insert_after": "tax_id",
+            "insert_after": "taxation_section",
         },
         {
             "fieldname": "sv_nrc",
