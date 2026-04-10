@@ -1,11 +1,23 @@
 """
-Custom Fields DTE para Customer — v1.3
+Custom Fields DTE para Customer — v1.11
 
-v1.2: sv_nit, sv_nrc (CCF básico)
-v1.3: 8 campos adicionales para receptor CCF/NC completo según schema MH fe-ccf-v3.json:
-      sv_cod_actividad, sv_desc_actividad, sv_nombre_comercial,
-      sv_direccion_departamento, sv_direccion_municipio, sv_direccion_complemento,
-      sv_correo, sv_telefono
+v1.2:  sv_nit, sv_nrc (CCF básico)
+v1.3:  dirección y contacto en Customer (directo)
+v1.11: MIGRACIÓN — dirección y contacto se mueven a Address estándar.
+       Customer conserva solo datos fiscales/identitarios del receptor.
+       Los campos de dirección/contacto quedan hidden=1 (datos preservados
+       en DB como fallback para documentos emitidos antes de la migración).
+
+Campos activos en Customer:
+  sv_nit              DUI o NIT del receptor
+  sv_nrc              NRC del receptor
+  sv_cod_actividad    Código de actividad económica (Link CAT-019)
+  sv_desc_actividad   Descripción (auto-rellenada, read-only)
+  sv_nombre_comercial Nombre comercial (opcional)
+
+Campos legacy hidden (fallback):
+  sv_direccion_departamento, sv_direccion_municipio,
+  sv_direccion_complemento, sv_correo, sv_telefono
 """
 
 import frappe
@@ -13,6 +25,7 @@ from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 
 _CUSTOMER_DTE_FIELDS = {
     "Customer": [
+        # ── Sección activa ──────────────────────────────────────────────────
         {
             "fieldname": "sv_dte_section",
             "fieldtype": "Section Break",
@@ -59,55 +72,60 @@ _CUSTOMER_DTE_FIELDS = {
             "fieldtype": "Data",
             "label": "Nombre Comercial",
             "no_copy": 0,
-            "description": "Nombre comercial del receptor (opcional, nullable en schema)",
+            "description": "Nombre comercial del receptor (opcional)",
             "insert_after": "sv_desc_actividad",
         },
+        # ── Campos legacy — hidden, datos preservados para fallback ────────
+        # La dirección y contacto del receptor viven ahora en Address estándar.
+        # Estos campos se mantienen ocultos para compatibilidad con documentos
+        # emitidos antes de la migración v1.11.
         {
             "fieldname": "sv_col_break_dir",
             "fieldtype": "Column Break",
+            "hidden": 1,
             "insert_after": "sv_nombre_comercial",
         },
         {
             "fieldname": "sv_direccion_departamento",
             "fieldtype": "Link",
-            "label": "Departamento",
+            "label": "Departamento (legacy)",
             "options": "SV Departamento",
+            "hidden": 1,
             "no_copy": 0,
-            "description": "CAT-012 — seleccionar departamento",
             "insert_after": "sv_col_break_dir",
         },
         {
             "fieldname": "sv_direccion_municipio",
             "fieldtype": "Link",
-            "label": "Municipio",
+            "label": "Municipio (legacy)",
             "options": "SV Municipio",
+            "hidden": 1,
             "no_copy": 0,
-            "description": "CAT-013 — se filtra según el departamento seleccionado",
             "insert_after": "sv_direccion_departamento",
         },
         {
             "fieldname": "sv_direccion_complemento",
             "fieldtype": "Small Text",
-            "label": "Dirección Complemento",
+            "label": "Dirección Complemento (legacy)",
+            "hidden": 1,
             "no_copy": 0,
-            "description": "Dirección completa del receptor (calle, número, etc.)",
             "insert_after": "sv_direccion_municipio",
         },
         {
             "fieldname": "sv_correo",
             "fieldtype": "Data",
-            "label": "Correo",
+            "label": "Correo (legacy)",
+            "hidden": 1,
             "no_copy": 0,
             "options": "Email",
-            "description": "Correo electrónico del receptor — requerido por schema CCF/NC",
             "insert_after": "sv_direccion_complemento",
         },
         {
             "fieldname": "sv_telefono",
             "fieldtype": "Data",
-            "label": "Teléfono",
+            "label": "Teléfono (legacy)",
+            "hidden": 1,
             "no_copy": 0,
-            "description": "Teléfono del receptor (opcional, mínimo 8 caracteres)",
             "insert_after": "sv_correo",
         },
     ]

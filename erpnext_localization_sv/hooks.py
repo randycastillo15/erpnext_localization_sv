@@ -33,6 +33,7 @@ doctype_js = {
     "SV DTE Settings":        "public/js/sv_dte_settings.js",
     "Customer":               "public/js/customer_dte.js",
     "SV DTE Establishment":   "public/js/sv_dte_establishment.js",
+    "Address":                "public/js/address_dte.js",
 }
 
 doctype_list_js = {

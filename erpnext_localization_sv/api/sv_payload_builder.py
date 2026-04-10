@@ -22,7 +22,7 @@ def _resolve_municipio(value: str | None) -> str | None:
     """
     Convierte el valor del campo municipio al código numérico que espera el gateway.
 
-    El campo sv_direccion_municipio / municipio es un Link a SV Municipio cuyo
+    El campo sv_municipio / sv_direccion_municipio es un Link a SV Municipio cuyo
     name tiene formato "dept-codigo" (ej. "05-25"). El gateway solo necesita el
     código relativo (ej. "25").  Para datos legacy que ya almacenaban el código
     directamente, se retorna el valor sin cambios.
@@ -31,6 +31,35 @@ def _resolve_municipio(value: str | None) -> str | None:
         return None
     codigo = frappe.db.get_value("SV Municipio", value, "codigo")
     return codigo if codigo else value
+
+
+def _get_receptor_address(doc, customer_name: str):
+    """
+    Resuelve el Address del receptor para un Sales Invoice.
+
+    Cadena de resolución:
+    1. doc.customer_address  — seleccionado explícitamente en el documento
+    2. Dirección de facturación default del Customer
+    3. None  — el llamador usará fallback legacy (campos sv_direccion_* del Customer)
+    """
+    # 1. Dirección explícita en el documento
+    addr_name = doc.get("customer_address")
+    if addr_name:
+        try:
+            return frappe.get_doc("Address", addr_name)
+        except frappe.DoesNotExistError:
+            pass
+
+    # 2. Dirección default del Customer
+    try:
+        from frappe.contacts.doctype.address.address import get_default_address
+        default_name = get_default_address("Customer", customer_name)
+        if default_name:
+            return frappe.get_doc("Address", default_name)
+    except Exception:
+        pass
+
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -127,9 +156,15 @@ def _build_emisor_settings(settings, estab) -> dict:
 def _build_receptor(doc, tipo_dte: str) -> dict:
     """
     Construye el dict del receptor.
+
     FE: solo nombre + datos opcionales.
-    CCF/NC/ND: requiere los 9 campos del schema fe-ccf-v3.json desde el Customer.
-    Falla temprano con mensaje claro si algún campo requerido falta.
+    CCF/NC/ND: requiere datos fiscales del Customer y dirección del Address.
+
+    Fuente de datos (en orden de prioridad):
+      Identidad fiscal → Customer (sv_nit, sv_nrc, sv_cod_actividad, ...)
+      Dirección        → Address.sv_departamento / sv_municipio / address_line1
+      Contacto         → Address.email_id / phone  (o Contact / Sales Invoice)
+      Fallback legacy  → Customer.sv_direccion_* / sv_correo / sv_telefono
     """
     receptor: dict = {
         "nombre":   doc.get("customer_name") or doc.get("customer") or "Consumidor Final",
@@ -139,33 +174,53 @@ def _build_receptor(doc, tipo_dte: str) -> dict:
 
     if tipo_dte in ("03", "05", "06") and doc.get("customer"):
         customer = frappe.get_doc("Customer", doc.customer)
+        address  = _get_receptor_address(doc, doc.customer)
 
+        # ── Datos fiscales (Customer) ──────────────────────────────────────
         nit = customer.get("sv_nit") or None
         if not nit:
-            frappe.throw(f"El Customer '{doc.customer}' no tiene NIT DTE (sv_nit). Requerido para {tipo_dte}.")
+            frappe.throw(f"El Customer '{doc.customer}' no tiene DUI/NIT (sv_nit). Requerido para {tipo_dte}.")
 
         nrc = customer.get("sv_nrc") or None
         if not nrc:
-            frappe.throw(f"El Customer '{doc.customer}' no tiene NRC DTE (sv_nrc). Requerido para {tipo_dte}.")
+            frappe.throw(f"El Customer '{doc.customer}' no tiene NRC (sv_nrc). Requerido para {tipo_dte}.")
 
         cod_act = customer.get("sv_cod_actividad") or None
         if not cod_act:
             frappe.throw(f"El Customer '{doc.customer}' no tiene Código de Actividad (sv_cod_actividad). Requerido para {tipo_dte}.")
 
-        dep = customer.get("sv_direccion_departamento") or None
-        mun_raw = customer.get("sv_direccion_municipio") or None
-        mun = _resolve_municipio(mun_raw)
-        comp = customer.get("sv_direccion_complemento") or None
-        if not (dep and mun and comp):
-            frappe.throw(f"El Customer '{doc.customer}' no tiene dirección DTE completa (sv_direccion_*). Requerida para {tipo_dte}.")
+        # ── Dirección (Address primero, fallback legacy Customer) ──────────
+        dep  = (address.get("sv_departamento")  if address else None) or customer.get("sv_direccion_departamento") or None
+        mun  = _resolve_municipio(
+               (address.get("sv_municipio")      if address else None) or customer.get("sv_direccion_municipio"))
+        comp = (address.get("address_line1")     if address else None) or customer.get("sv_direccion_complemento") or None
 
-        # correo: fallback a contact_email del documento antes de fallar
-        correo = customer.get("sv_correo") or doc.get("contact_email") or None
+        if not (dep and mun and comp):
+            src = f"Address '{doc.customer_address}'" if doc.get("customer_address") else "el Customer"
+            frappe.throw(
+                f"No se encontró dirección DTE completa para '{doc.customer}' en {src}. "
+                "Configure el Address del cliente con Departamento, Municipio y Dirección (línea 1)."
+            )
+
+        # ── Contacto (Address primero, luego Contact/Sales Invoice, legacy) ─
+        correo = (
+            (address.get("email_id") if address else None)
+            or doc.get("contact_email")
+            or customer.get("sv_correo")
+            or None
+        )
         if not correo:
             frappe.throw(
-                f"El Customer '{doc.customer}' no tiene correo DTE (sv_correo) "
-                f"ni el documento tiene contact_email. Requerido por schema para {tipo_dte}."
+                f"No se encontró correo electrónico para '{doc.customer}'. "
+                "Configure email_id en el Address del cliente. Requerido por schema para {tipo_dte}."
             )
+
+        telefono = (
+            (address.get("phone") if address else None)
+            or doc.get("contact_mobile")
+            or customer.get("sv_telefono")
+            or None
+        )
 
         receptor.update({
             "nit":            nit,
@@ -178,7 +233,7 @@ def _build_receptor(doc, tipo_dte: str) -> dict:
                 "municipio":    mun,
                 "complemento":  comp,
             },
-            "telefono": customer.get("sv_telefono") or doc.get("contact_mobile") or None,
+            "telefono": telefono,
             "correo":   correo,
         })
 
