@@ -17,20 +17,19 @@ after_install = "erpnext_localization_sv.patches.v1_0.install.execute"
 
 # ---------------------------------------------------------------------------
 # Fixtures
-# Los archivos JSON en erpnext_localization_sv/fixtures/ se exportan/importan
-# con `bench export-fixtures` / durante migrate.
-# Descomentar cuando existan fixtures reales.
 # ---------------------------------------------------------------------------
-# fixtures = [
-# 	{"dt": "Custom Field", "filters": [["module", "=", "ERPNext Localization SV"]]},
-# ]
+fixtures = [
+    {"dt": "SV Actividad Economica"},
+]
 
 # ---------------------------------------------------------------------------
 # JS personalizado por DocType
 # ---------------------------------------------------------------------------
 doctype_js = {
-    "Sales Invoice":   "public/js/sales_invoice.js",
-    "SV DTE Document": "public/js/sv_dte_document.js",
+    "Sales Invoice":        "public/js/sales_invoice.js",
+    "SV DTE Document":      "public/js/sv_dte_document.js",
+    "SV DTE Settings":      "public/js/sv_dte_settings.js",
+    "Customer":             "public/js/customer_dte.js",
 }
 
 doctype_list_js = {

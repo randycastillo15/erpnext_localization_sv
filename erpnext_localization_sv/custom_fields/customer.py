@@ -38,10 +38,11 @@ _CUSTOMER_DTE_FIELDS = {
         },
         {
             "fieldname": "sv_cod_actividad",
-            "fieldtype": "Data",
-            "label": "Código Actividad",
+            "fieldtype": "Link",
+            "label": "Código Actividad (Giro)",
+            "options": "SV Actividad Economica",
             "no_copy": 0,
-            "description": "CAT-019 — código de actividad económica del receptor, requerido para CCF/NC",
+            "description": "Buscar por código o por nombre del giro — requerido para CCF/NC",
             "insert_after": "sv_nrc",
         },
         {
@@ -49,7 +50,8 @@ _CUSTOMER_DTE_FIELDS = {
             "fieldtype": "Small Text",
             "label": "Descripción Actividad",
             "no_copy": 0,
-            "description": "Descripción de la actividad económica del receptor",
+            "read_only": 1,
+            "description": "Se rellena automáticamente al seleccionar el Código Actividad",
             "insert_after": "sv_cod_actividad",
         },
         {

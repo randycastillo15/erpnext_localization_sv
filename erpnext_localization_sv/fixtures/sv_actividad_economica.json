@@ -1,0 +1,4646 @@
+[
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01111",
+  "codigo": "01111",
+  "descripcion": "Cultivo de cereales excepto arroz y para forrajes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01112",
+  "codigo": "01112",
+  "descripcion": "Cultivo de legumbres"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01113",
+  "codigo": "01113",
+  "descripcion": "Cultivo de semillas oleaginosas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01114",
+  "codigo": "01114",
+  "descripcion": "Cultivo de plantas para la preparación de semillas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01119",
+  "codigo": "01119",
+  "descripcion": "Cultivo de otros cereales excepto arroz y forrajeros n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01120",
+  "codigo": "01120",
+  "descripcion": "Cultivo de arroz"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01131",
+  "codigo": "01131",
+  "descripcion": "Cultivo de raíces y tubérculos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01132",
+  "codigo": "01132",
+  "descripcion": "Cultivo de brotes, bulbos, vegetales tubérculos y cultivos similares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01133",
+  "codigo": "01133",
+  "descripcion": "Cultivo hortícola de fruto"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01134",
+  "codigo": "01134",
+  "descripcion": "Cultivo de hortalizas de hoja y otras hortalizas ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01140",
+  "codigo": "01140",
+  "descripcion": "Cultivo de caña de azúcar"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01150",
+  "codigo": "01150",
+  "descripcion": "Cultivo de tabaco"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01161",
+  "codigo": "01161",
+  "descripcion": "Cultivo de algodón"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01162",
+  "codigo": "01162",
+  "descripcion": "Cultivo de fibras vegetales excepto algodón"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01191",
+  "codigo": "01191",
+  "descripcion": "Cultivo de plantas no perennes para la producción de semillas y flores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01192",
+  "codigo": "01192",
+  "descripcion": "Cultivo de cereales y pastos para la alimentación animal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01199",
+  "codigo": "01199",
+  "descripcion": "Producción de cultivos no estacionales ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01220",
+  "codigo": "01220",
+  "descripcion": "Cultivo de frutas tropicales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01230",
+  "codigo": "01230",
+  "descripcion": "Cultivo de cítricos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01240",
+  "codigo": "01240",
+  "descripcion": "Cultivo de frutas de pepita y hueso"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01251",
+  "codigo": "01251",
+  "descripcion": "Cultivo de frutas ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01252",
+  "codigo": "01252",
+  "descripcion": "Cultivo de otros frutos y nueces de árboles y arbustos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01260",
+  "codigo": "01260",
+  "descripcion": "Cultivo de frutos oleaginosos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01271",
+  "codigo": "01271",
+  "descripcion": "Cultivo de café"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01272",
+  "codigo": "01272",
+  "descripcion": "Cultivo de plantas para la elaboración de bebidas excepto café"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01281",
+  "codigo": "01281",
+  "descripcion": "Cultivo de especias y aromáticas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01282",
+  "codigo": "01282",
+  "descripcion": "Cultivo de plantas para la obtención de productos medicinales y farmacéuticos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01291",
+  "codigo": "01291",
+  "descripcion": "Cultivo de árboles de hule (caucho) para la obtención de látex"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01292",
+  "codigo": "01292",
+  "descripcion": "Cultivo de plantas para la obtención de productos químicos y colorantes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01299",
+  "codigo": "01299",
+  "descripcion": "Producción de cultivos perennes ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01300",
+  "codigo": "01300",
+  "descripcion": "Propagación de plantas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01301",
+  "codigo": "01301",
+  "descripcion": "Cultivo de plantas y flores ornamentales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01410",
+  "codigo": "01410",
+  "descripcion": "Cría y engorde de ganado bovino"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01420",
+  "codigo": "01420",
+  "descripcion": "Cría de caballos y otros equinos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01440",
+  "codigo": "01440",
+  "descripcion": "Cría de ovejas y cabras"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01450",
+  "codigo": "01450",
+  "descripcion": "Cría de cerdos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01460",
+  "codigo": "01460",
+  "descripcion": "Cría de aves de corral y producción de huevos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01491",
+  "codigo": "01491",
+  "descripcion": "Cría de abejas apicultura para la obtención de miel y otros productos apícolas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01492",
+  "codigo": "01492",
+  "descripcion": "Cría de conejos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01493",
+  "codigo": "01493",
+  "descripcion": "Cría de iguanas y garrobos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01494",
+  "codigo": "01494",
+  "descripcion": "Cría de mariposas y otros insectos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01499",
+  "codigo": "01499",
+  "descripcion": "Cría y obtención de productos animales n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01500",
+  "codigo": "01500",
+  "descripcion": "Cultivo de productos agrícolas en combinación con la cría de animales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01611",
+  "codigo": "01611",
+  "descripcion": "Servicios de maquinaria agrícola"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01612",
+  "codigo": "01612",
+  "descripcion": "Control de plagas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01613",
+  "codigo": "01613",
+  "descripcion": "Servicios de riego"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01614",
+  "codigo": "01614",
+  "descripcion": "Servicios de contratación de mano de obra para la agricultura"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01619",
+  "codigo": "01619",
+  "descripcion": "Servicios agrícolas ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01621",
+  "codigo": "01621",
+  "descripcion": "Actividades para mejorar la reproducción, el crecimiento y el rendimiento de los animales y sus productos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01622",
+  "codigo": "01622",
+  "descripcion": "Servicios de mano de obra pecuaria"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01629",
+  "codigo": "01629",
+  "descripcion": "Servicios pecuarios ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01631",
+  "codigo": "01631",
+  "descripcion": "Labores post cosecha de preparación de los productos agrícolas para su comercialización o para la industria"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01632",
+  "codigo": "01632",
+  "descripcion": "Servicio de beneficio de café"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01633",
+  "codigo": "01633",
+  "descripcion": "Servicio de beneficiado de plantas textiles (incluye el beneficiado cuando este es realizado en la misma explotación agropecuaria)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01640",
+  "codigo": "01640",
+  "descripcion": "Tratamiento de semillas para la propagación"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "01700",
+  "codigo": "01700",
+  "descripcion": "Caza ordinaria y mediante trampas, repoblación de animales de caza y servicios conexos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "02100",
+  "codigo": "02100",
+  "descripcion": "Silvicultura y otras actividades forestales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "02200",
+  "codigo": "02200",
+  "descripcion": "Extracción de madera"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "02300",
+  "codigo": "02300",
+  "descripcion": "Recolección de productos diferentes a la madera"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "02400",
+  "codigo": "02400",
+  "descripcion": "Servicios de apoyo a la silvicultura"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "03110",
+  "codigo": "03110",
+  "descripcion": "Pesca marítima de altura y costera"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "03120",
+  "codigo": "03120",
+  "descripcion": "Pesca de agua dulce"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "03210",
+  "codigo": "03210",
+  "descripcion": "Acuicultura marítima"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "03220",
+  "codigo": "03220",
+  "descripcion": "Acuicultura de agua dulce"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "03300",
+  "codigo": "03300",
+  "descripcion": "Servicios de apoyo a la pesca y acuicultura"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "05100",
+  "codigo": "05100",
+  "descripcion": "Extracción de hulla"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "05200",
+  "codigo": "05200",
+  "descripcion": "Extracción y aglomeración de lignito"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "06100",
+  "codigo": "06100",
+  "descripcion": "Extracción de petróleo crudo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "06200",
+  "codigo": "06200",
+  "descripcion": "Extracción de gas natural"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "07100",
+  "codigo": "07100",
+  "descripcion": "Extracción de minerales de hierro"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "07210",
+  "codigo": "07210",
+  "descripcion": "Extracción de minerales de uranio y torio"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "07290",
+  "codigo": "07290",
+  "descripcion": "Extracción de minerales metalíferos no ferrosos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "08100",
+  "codigo": "08100",
+  "descripcion": "Extracción de piedra, arena y arcilla"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "08910",
+  "codigo": "08910",
+  "descripcion": "Extracción de minerales para la fabricación de abonos y productos químicos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "08920",
+  "codigo": "08920",
+  "descripcion": "Extracción y aglomeración de turba"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "08930",
+  "codigo": "08930",
+  "descripcion": "Extracción de sal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "08990",
+  "codigo": "08990",
+  "descripcion": "Explotación de otras minas y canteras ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "09100",
+  "codigo": "09100",
+  "descripcion": "Actividades de apoyo a la extracción de petróleo y gas natural"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "09900",
+  "codigo": "09900",
+  "descripcion": "Actividades de apoyo a la explotación de minas y canteras"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10101",
+  "codigo": "10101",
+  "descripcion": "Servicio de rastros y mataderos de bovinos y porcinos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10102",
+  "codigo": "10102",
+  "descripcion": "Matanza y procesamiento de bovinos y porcinos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10103",
+  "codigo": "10103",
+  "descripcion": "Matanza y procesamientos de aves de corral"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10104",
+  "codigo": "10104",
+  "descripcion": "Elaboración y conservación de embutidos y tripas naturales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10105",
+  "codigo": "10105",
+  "descripcion": "Servicios de conservación y empaque de carnes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10106",
+  "codigo": "10106",
+  "descripcion": "Elaboración y conservación de grasas y aceites animales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10107",
+  "codigo": "10107",
+  "descripcion": "Servicios de molienda de carne"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10108",
+  "codigo": "10108",
+  "descripcion": "Elaboración de productos de carne ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10201",
+  "codigo": "10201",
+  "descripcion": "Procesamiento y conservación de pescado, crustáceos y moluscos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10209",
+  "codigo": "10209",
+  "descripcion": "Fabricación de productos de pescado ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10301",
+  "codigo": "10301",
+  "descripcion": "Elaboración de jugos de frutas y hortalizas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10302",
+  "codigo": "10302",
+  "descripcion": "Elaboración y envase de jaleas, mermeladas y frutas deshidratadas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10309",
+  "codigo": "10309",
+  "descripcion": "Elaboración de productos de frutas y hortalizas n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10401",
+  "codigo": "10401",
+  "descripcion": "Fabricación de aceites y grasas vegetales y animales comestibles"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10402",
+  "codigo": "10402",
+  "descripcion": "Fabricación de aceites y grasas vegetales y animales no comestibles"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10409",
+  "codigo": "10409",
+  "descripcion": "Servicio de maquilado de aceites"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10501",
+  "codigo": "10501",
+  "descripcion": "Fabricación de productos lácteos excepto sorbetes y quesos sustitutos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10502",
+  "codigo": "10502",
+  "descripcion": "Fabricación de sorbetes y helados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10503",
+  "codigo": "10503",
+  "descripcion": "Fabricación de quesos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10611",
+  "codigo": "10611",
+  "descripcion": "Molienda de cereales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10612",
+  "codigo": "10612",
+  "descripcion": "Elaboración de cereales para el desayuno y similares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10613",
+  "codigo": "10613",
+  "descripcion": "Servicios de beneficiado de productos agrícolas ncp (excluye Beneficio de azúcar rama 1072 y beneficio de café rama 0163)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10621",
+  "codigo": "10621",
+  "descripcion": "Fabricación de almidón"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10628",
+  "codigo": "10628",
+  "descripcion": "Servicio de molienda de maíz húmedo molino para nixtamal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10711",
+  "codigo": "10711",
+  "descripcion": "Elaboración de tortillas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10712",
+  "codigo": "10712",
+  "descripcion": "Fabricación de pan, galletas y barquillos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10713",
+  "codigo": "10713",
+  "descripcion": "Fabricación de repostería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10721",
+  "codigo": "10721",
+  "descripcion": "Ingenios azucareros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10722",
+  "codigo": "10722",
+  "descripcion": "Molienda de caña de azúcar para la elaboración de dulces"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10723",
+  "codigo": "10723",
+  "descripcion": "Elaboración de jarabes de azúcar y otros similares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10724",
+  "codigo": "10724",
+  "descripcion": "Maquilado de azúcar de caña"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10730",
+  "codigo": "10730",
+  "descripcion": "Fabricación de cacao, chocolates y productos de confitería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10740",
+  "codigo": "10740",
+  "descripcion": "Elaboración de macarrones, fideos, y productos farináceos similares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10750",
+  "codigo": "10750",
+  "descripcion": "Elaboración de comidas y platos preparados para la reventa en locales y/o para exportación"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10791",
+  "codigo": "10791",
+  "descripcion": "Elaboración de productos de café"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10792",
+  "codigo": "10792",
+  "descripcion": "Elaboración de especies, sazonadores y condimentos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10793",
+  "codigo": "10793",
+  "descripcion": "Elaboración de sopas, cremas y consomé"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10794",
+  "codigo": "10794",
+  "descripcion": "Fabricación de bocadillos tostados y/o fritos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10799",
+  "codigo": "10799",
+  "descripcion": "Elaboración de productos alimenticios ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10800",
+  "codigo": "10800",
+  "descripcion": "Elaboración de alimentos preparados para animales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "11012",
+  "codigo": "11012",
+  "descripcion": "Fabricación de aguardiente y licores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "11020",
+  "codigo": "11020",
+  "descripcion": "Elaboración de vinos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "11030",
+  "codigo": "11030",
+  "descripcion": "Fabricación de cerveza"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "11041",
+  "codigo": "11041",
+  "descripcion": "Fabricación de aguas gaseosas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "11042",
+  "codigo": "11042",
+  "descripcion": "Fabricación y envasado de agua"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "11043",
+  "codigo": "11043",
+  "descripcion": "Elaboración de refrescos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "11048",
+  "codigo": "11048",
+  "descripcion": "Maquilado de aguas gaseosas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "11049",
+  "codigo": "11049",
+  "descripcion": "Elaboración de bebidas no alcohólicas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "12000",
+  "codigo": "12000",
+  "descripcion": "Elaboración de productos de tabaco"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13111",
+  "codigo": "13111",
+  "descripcion": "Preparación de fibras textiles"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13112",
+  "codigo": "13112",
+  "descripcion": "Fabricación de hilados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13120",
+  "codigo": "13120",
+  "descripcion": "Fabricación de telas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13130",
+  "codigo": "13130",
+  "descripcion": "Acabado de productos textiles"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13910",
+  "codigo": "13910",
+  "descripcion": "Fabricación de tejidos de punto y ganchillo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13921",
+  "codigo": "13921",
+  "descripcion": "Fabricación de productos textiles para el hogar"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13922",
+  "codigo": "13922",
+  "descripcion": "Sacos, bolsas y otros artículos textiles"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13929",
+  "codigo": "13929",
+  "descripcion": "Fabricación de artículos confeccionados con materiales textiles, excepto prendas de vestir n.c.p"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13930",
+  "codigo": "13930",
+  "descripcion": "Fabricación de tapices y alfombras"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13941",
+  "codigo": "13941",
+  "descripcion": "Fabricación de cuerdas de henequén y otras fibras naturales (lazos, pitas)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13942",
+  "codigo": "13942",
+  "descripcion": "Fabricación de redes de diversos materiales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13948",
+  "codigo": "13948",
+  "descripcion": "Maquilado de productos trenzables de cualquier material (petates, sillas, etc.)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13991",
+  "codigo": "13991",
+  "descripcion": "Fabricación de adornos, etiquetas y otros artículos para prendas de vestir"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13992",
+  "codigo": "13992",
+  "descripcion": "Servicio de bordados en artículos y prendas de tela"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "13999",
+  "codigo": "13999",
+  "descripcion": "Fabricación de productos textiles ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14101",
+  "codigo": "14101",
+  "descripcion": "Fabricación de ropa interior, para dormir y similares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14102",
+  "codigo": "14102",
+  "descripcion": "Fabricación de ropa para niños"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14103",
+  "codigo": "14103",
+  "descripcion": "Fabricación de prendas de vestir para ambos sexos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14104",
+  "codigo": "14104",
+  "descripcion": "Confección de prendas a medida"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14105",
+  "codigo": "14105",
+  "descripcion": "Fabricación de prendas de vestir para deportes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14106",
+  "codigo": "14106",
+  "descripcion": "Elaboración de artesanías de uso personal confeccionadas especialmente de materiales textiles"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14108",
+  "codigo": "14108",
+  "descripcion": "Maquilado de prendas de vestir, accesorios y otros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14109",
+  "codigo": "14109",
+  "descripcion": "Fabricación de prendas y accesorios de vestir n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14200",
+  "codigo": "14200",
+  "descripcion": "Fabricación de artículos de piel"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14301",
+  "codigo": "14301",
+  "descripcion": "Fabricación de calcetines, calcetas, medias (panty house) y otros similares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14302",
+  "codigo": "14302",
+  "descripcion": "Fabricación de ropa interior de tejido de punto"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "14309",
+  "codigo": "14309",
+  "descripcion": "Fabricación de prendas de vestir de tejido de punto ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "15110",
+  "codigo": "15110",
+  "descripcion": "Curtido y adobo de cueros; adobo y teñido de pieles"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "15121",
+  "codigo": "15121",
+  "descripcion": "Fabricación de maletas, bolsos de mano y otros artículos de marroquinería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "15122",
+  "codigo": "15122",
+  "descripcion": "Fabricación de monturas, accesorios y vainas talabartería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "15123",
+  "codigo": "15123",
+  "descripcion": "Fabricación de artesanías principalmente de cuero natural y sintético"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "15128",
+  "codigo": "15128",
+  "descripcion": "Maquilado de artículos de cuero natural, sintético y de otros materiales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "15201",
+  "codigo": "15201",
+  "descripcion": "Fabricación de calzado"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "15202",
+  "codigo": "15202",
+  "descripcion": "Fabricación de partes y accesorios de calzado"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "15208",
+  "codigo": "15208",
+  "descripcion": "Maquilado de partes y accesorios de calzado"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "16100",
+  "codigo": "16100",
+  "descripcion": "Aserradero y acepilladura de madera"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "16210",
+  "codigo": "16210",
+  "descripcion": "Fabricación de madera laminada, terciada, enchapada y contrachapada, paneles para la construcción"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "16220",
+  "codigo": "16220",
+  "descripcion": "Fabricación de partes y piezas de carpintería para edificios y construcciones"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "16230",
+  "codigo": "16230",
+  "descripcion": "Fabricación de envases y recipientes de madera"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "16292",
+  "codigo": "16292",
+  "descripcion": "Fabricación de artesanías de madera, semillas, materiales trenzables"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "16299",
+  "codigo": "16299",
+  "descripcion": "Fabricación de productos de madera, corcho, paja y materiales trenzables ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "17010",
+  "codigo": "17010",
+  "descripcion": "Fabricación de pasta de madera, papel y cartón"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "17020",
+  "codigo": "17020",
+  "descripcion": "Fabricación de papel y cartón ondulado y envases de papel y cartón"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "17091",
+  "codigo": "17091",
+  "descripcion": "Fabricación de artículos de papel y cartón de uso personal y doméstico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "17092",
+  "codigo": "17092",
+  "descripcion": "Fabricación de productos de papel ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "18110",
+  "codigo": "18110",
+  "descripcion": "Impresión"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "18120",
+  "codigo": "18120",
+  "descripcion": "Servicios relacionados con la impresión"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "18200",
+  "codigo": "18200",
+  "descripcion": "Reproducción de grabaciones"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "19100",
+  "codigo": "19100",
+  "descripcion": "Fabricación de productos de hornos de coque"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "19201",
+  "codigo": "19201",
+  "descripcion": "Fabricación de combustible"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "19202",
+  "codigo": "19202",
+  "descripcion": "Fabricación de aceites y lubricantes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20111",
+  "codigo": "20111",
+  "descripcion": "Fabricación de materias primas para la fabricación de colorantes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20112",
+  "codigo": "20112",
+  "descripcion": "Fabricación de materiales curtientes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20113",
+  "codigo": "20113",
+  "descripcion": "Fabricación de gases industriales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20114",
+  "codigo": "20114",
+  "descripcion": "Fabricación de alcohol etílico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20119",
+  "codigo": "20119",
+  "descripcion": "Fabricación de sustancias químicas básicas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20120",
+  "codigo": "20120",
+  "descripcion": "Fabricación de abonos y fertilizantes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20130",
+  "codigo": "20130",
+  "descripcion": "Fabricación de plástico y caucho en formas primarias"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20210",
+  "codigo": "20210",
+  "descripcion": "Fabricación de plaguicidas y otros productos químicos de uso agropecuario"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20220",
+  "codigo": "20220",
+  "descripcion": "Fabricación de pinturas, barnices y productos de revestimiento similares; tintas de imprenta y masillas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20231",
+  "codigo": "20231",
+  "descripcion": "Fabricación de jabones, detergentes y similares para limpieza"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20232",
+  "codigo": "20232",
+  "descripcion": "Fabricación de perfumes, cosméticos y productos de higiene y cuidado personal, incluyendo tintes, champú, etc."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20291",
+  "codigo": "20291",
+  "descripcion": "Fabricación de tintas y colores para escribir y pintar; fabricación de cintas para impresoras"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20292",
+  "codigo": "20292",
+  "descripcion": "Fabricación de productos pirotécnicos, explosivos y municiones"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20299",
+  "codigo": "20299",
+  "descripcion": "Fabricación de productos químicos n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "20300",
+  "codigo": "20300",
+  "descripcion": "Fabricación de fibras artificiales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "21001",
+  "codigo": "21001",
+  "descripcion": "Manufactura de productos farmacéuticos, sustancias químicas y productos botánicos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "21008",
+  "codigo": "21008",
+  "descripcion": "Maquilado de medicamentos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "22110",
+  "codigo": "22110",
+  "descripcion": "Fabricación de cubiertas y cámaras; renovación y recauchutado de cubiertas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "22190",
+  "codigo": "22190",
+  "descripcion": "Fabricación de otros productos de caucho"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "22201",
+  "codigo": "22201",
+  "descripcion": "Fabricación de envases plásticos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "22202",
+  "codigo": "22202",
+  "descripcion": "Fabricación de productos plásticos para uso personal o doméstico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "22208",
+  "codigo": "22208",
+  "descripcion": "Maquila de plásticos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "22209",
+  "codigo": "22209",
+  "descripcion": "Fabricación de productos plásticos n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23101",
+  "codigo": "23101",
+  "descripcion": "Fabricación de vidrio"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23102",
+  "codigo": "23102",
+  "descripcion": "Fabricación de recipientes y envases de vidrio"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23108",
+  "codigo": "23108",
+  "descripcion": "Servicio de maquilado"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23109",
+  "codigo": "23109",
+  "descripcion": "Fabricación de productos de vidrio ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23910",
+  "codigo": "23910",
+  "descripcion": "Fabricación de productos refractarios"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23920",
+  "codigo": "23920",
+  "descripcion": "Fabricación de productos de arcilla para la construcción"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23931",
+  "codigo": "23931",
+  "descripcion": "Fabricación de productos de cerámica y porcelana no refractaria"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23932",
+  "codigo": "23932",
+  "descripcion": "Fabricación de productos de cerámica y porcelana ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23940",
+  "codigo": "23940",
+  "descripcion": "Fabricación de cemento, cal y yeso"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23950",
+  "codigo": "23950",
+  "descripcion": "Fabricación de artículos de hormigón, cemento y yeso"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23960",
+  "codigo": "23960",
+  "descripcion": "Corte, tallado y acabado de la piedra"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "23990",
+  "codigo": "23990",
+  "descripcion": "Fabricación de productos minerales no metálicos ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "24100",
+  "codigo": "24100",
+  "descripcion": "Industrias básicas de hierro y acero"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "24200",
+  "codigo": "24200",
+  "descripcion": "Fabricación de productos primarios de metales preciosos y metales no ferrosos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "24310",
+  "codigo": "24310",
+  "descripcion": "Fundición de hierro y acero"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "24320",
+  "codigo": "24320",
+  "descripcion": "Fundición de metales no ferrosos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "25111",
+  "codigo": "25111",
+  "descripcion": "Fabricación de productos metálicos para uso estructural"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "25118",
+  "codigo": "25118",
+  "descripcion": "Servicio de maquila para la fabricación de estructuras metálicas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "25120",
+  "codigo": "25120",
+  "descripcion": "Fabricación de tanques, depósitos y recipientes de metal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "25130",
+  "codigo": "25130",
+  "descripcion": "Fabricación de generadores de vapor, excepto calderas de agua caliente para calefacción central"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "25200",
+  "codigo": "25200",
+  "descripcion": "Fabricación de armas y municiones"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "25910",
+  "codigo": "25910",
+  "descripcion": "Forjado, prensado, estampado y laminado de metales; pulvimetalurgia"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "25920",
+  "codigo": "25920",
+  "descripcion": "Tratamiento y revestimiento de metales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "25930",
+  "codigo": "25930",
+  "descripcion": "Fabricación de artículos de cuchillería, herramientas de mano y artículos de ferretería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "25991",
+  "codigo": "25991",
+  "descripcion": "Fabricación de envases y artículos conexos de metal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "25992",
+  "codigo": "25992",
+  "descripcion": "Fabricación de artículos metálicos de uso personal y/o doméstico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "25999",
+  "codigo": "25999",
+  "descripcion": "Fabricación de productos elaborados de metal ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "26100",
+  "codigo": "26100",
+  "descripcion": "Fabricación de componentes electrónicos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "26200",
+  "codigo": "26200",
+  "descripcion": "Fabricación de computadoras y equipo conexo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "26300",
+  "codigo": "26300",
+  "descripcion": "Fabricación de equipo de comunicaciones"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "26400",
+  "codigo": "26400",
+  "descripcion": "Fabricación de aparatos electrónicos de consumo para audio, video radio y televisión"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "26510",
+  "codigo": "26510",
+  "descripcion": "Fabricación de instrumentos y aparatos para medir, verificar, ensayar, navegar y de control de procesos industriales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "26520",
+  "codigo": "26520",
+  "descripcion": "Fabricación de relojes y piezas de relojes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "26600",
+  "codigo": "26600",
+  "descripcion": "Fabricación de equipo médico de irradiación y equipo electrónico de uso médico y terapéutico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "26700",
+  "codigo": "26700",
+  "descripcion": "Fabricación de instrumentos de óptica y equipo fotográfico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "26800",
+  "codigo": "26800",
+  "descripcion": "Fabricación de medios magnéticos y ópticos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "27100",
+  "codigo": "27100",
+  "descripcion": "Fabricación de motores, generadores, transformadores eléctricos, aparatos de distribución y control de electricidad"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "27200",
+  "codigo": "27200",
+  "descripcion": "Fabricación de pilas, baterías y acumuladores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "27310",
+  "codigo": "27310",
+  "descripcion": "Fabricación de cables de fibra óptica"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "27320",
+  "codigo": "27320",
+  "descripcion": "Fabricación de otros hilos y cables eléctricos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "27330",
+  "codigo": "27330",
+  "descripcion": "Fabricación de dispositivos de cableados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "27400",
+  "codigo": "27400",
+  "descripcion": "Fabricación de equipo eléctrico de iluminación"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "27500",
+  "codigo": "27500",
+  "descripcion": "Fabricación de aparatos de uso doméstico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "27900",
+  "codigo": "27900",
+  "descripcion": "Fabricación de otros tipos de equipo eléctrico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28110",
+  "codigo": "28110",
+  "descripcion": "Fabricación de motores y turbinas, excepto motores para aeronaves, vehículos automotores y motocicletas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28120",
+  "codigo": "28120",
+  "descripcion": "Fabricación de equipo hidráulico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28130",
+  "codigo": "28130",
+  "descripcion": "Fabricación de otras bombas, compresores, grifos y válvulas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28140",
+  "codigo": "28140",
+  "descripcion": "Fabricación de cojinetes, engranajes, trenes de engranajes y piezas de transmisión"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28150",
+  "codigo": "28150",
+  "descripcion": "Fabricación de hornos y quemadores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28160",
+  "codigo": "28160",
+  "descripcion": "Fabricación de equipo de elevación y manipulación"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28170",
+  "codigo": "28170",
+  "descripcion": "Fabricación de maquinaria y equipo de oficina"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28180",
+  "codigo": "28180",
+  "descripcion": "Fabricación de herramientas manuales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28190",
+  "codigo": "28190",
+  "descripcion": "Fabricación de otros tipos de maquinaria de uso general"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28210",
+  "codigo": "28210",
+  "descripcion": "Fabricación de maquinaria agropecuaria y forestal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28220",
+  "codigo": "28220",
+  "descripcion": "Fabricación de máquinas para conformar metales y maquinaria herramienta"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28230",
+  "codigo": "28230",
+  "descripcion": "Fabricación de maquinaria metalúrgica"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28240",
+  "codigo": "28240",
+  "descripcion": "Fabricación de maquinaria para la explotación de minas y canteras y para obras de construcción"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28250",
+  "codigo": "28250",
+  "descripcion": "Fabricación de maquinaria para la elaboración de alimentos, bebidas y tabaco"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28260",
+  "codigo": "28260",
+  "descripcion": "Fabricación de maquinaria para la elaboración de productos textiles, prendas de vestir y cueros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28291",
+  "codigo": "28291",
+  "descripcion": "Fabricación de máquinas para imprenta"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "28299",
+  "codigo": "28299",
+  "descripcion": "Fabricación de maquinaria de uso especial ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "29100",
+  "codigo": "29100",
+  "descripcion": "Fabricación vehículos automotores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "29200",
+  "codigo": "29200",
+  "descripcion": "Fabricación de carrocerías para vehículos automotores; fabricación de remolques y semiremolques"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "29300",
+  "codigo": "29300",
+  "descripcion": "Fabricación de partes, piezas y accesorios para vehículos automotores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "30110",
+  "codigo": "30110",
+  "descripcion": "Fabricación de buques"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "30120",
+  "codigo": "30120",
+  "descripcion": "Construcción y reparación de embarcaciones de recreo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "30200",
+  "codigo": "30200",
+  "descripcion": "Fabricación de locomotoras y de material rodante"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "30300",
+  "codigo": "30300",
+  "descripcion": "Fabricación de aeronaves y naves espaciales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "30400",
+  "codigo": "30400",
+  "descripcion": "Fabricación de vehículos militares de combate"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "30910",
+  "codigo": "30910",
+  "descripcion": "Fabricación de motocicletas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "30920",
+  "codigo": "30920",
+  "descripcion": "Fabricación de bicicletas y sillones de ruedas para inválidos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "30990",
+  "codigo": "30990",
+  "descripcion": "Fabricación de equipo de transporte ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "31001",
+  "codigo": "31001",
+  "descripcion": "Fabricación de colchones y somier"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "31002",
+  "codigo": "31002",
+  "descripcion": "Fabricación de muebles y otros productos de madera a medida"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "31008",
+  "codigo": "31008",
+  "descripcion": "Servicios de maquilado de muebles"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "31009",
+  "codigo": "31009",
+  "descripcion": "Fabricación de muebles ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32110",
+  "codigo": "32110",
+  "descripcion": "Fabricación de joyas platerías y joyerías"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32120",
+  "codigo": "32120",
+  "descripcion": "Fabricación de joyas de imitación (fantasía) y artículos conexos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32200",
+  "codigo": "32200",
+  "descripcion": "Fabricación de instrumentos musicales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32301",
+  "codigo": "32301",
+  "descripcion": "Fabricación de artículos de deporte"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32308",
+  "codigo": "32308",
+  "descripcion": "Servicio de maquila de productos deportivos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32401",
+  "codigo": "32401",
+  "descripcion": "Fabricación de juegos de mesa y de salón"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32402",
+  "codigo": "32402",
+  "descripcion": "Servicio de maquilado de juguetes y juegos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32409",
+  "codigo": "32409",
+  "descripcion": "Fabricación de juegos y juguetes n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32500",
+  "codigo": "32500",
+  "descripcion": "Fabricación de instrumentos y materiales médicos y odontológicos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32901",
+  "codigo": "32901",
+  "descripcion": "Fabricación de lápices, bolígrafos, sellos y artículos de librería en general"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32902",
+  "codigo": "32902",
+  "descripcion": "Fabricación de escobas, cepillos, pinceles y similares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32903",
+  "codigo": "32903",
+  "descripcion": "Fabricación de artesanías de materiales diversos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32904",
+  "codigo": "32904",
+  "descripcion": "Fabricación de artículos de uso personal y domésticos n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32905",
+  "codigo": "32905",
+  "descripcion": "Fabricación de accesorios para las confecciones y la marroquinería n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32908",
+  "codigo": "32908",
+  "descripcion": "Servicios de maquila ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "32909",
+  "codigo": "32909",
+  "descripcion": "Fabricación de productos manufacturados n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "33110",
+  "codigo": "33110",
+  "descripcion": "Reparación y mantenimiento de productos elaborados de metal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "33120",
+  "codigo": "33120",
+  "descripcion": "Reparación y mantenimiento de maquinaria"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "33130",
+  "codigo": "33130",
+  "descripcion": "Reparación y mantenimiento de equipo electrónico y óptico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "33140",
+  "codigo": "33140",
+  "descripcion": "Reparación y mantenimiento de equipo eléctrico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "33150",
+  "codigo": "33150",
+  "descripcion": "Reparación y mantenimiento de equipo de transporte, excepto vehículos automotores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "33190",
+  "codigo": "33190",
+  "descripcion": "Reparación y mantenimiento de equipos n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "33200",
+  "codigo": "33200",
+  "descripcion": "Instalación de maquinaria y equipo industrial"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "35101",
+  "codigo": "35101",
+  "descripcion": "Generación de energía eléctrica"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "35102",
+  "codigo": "35102",
+  "descripcion": "Transmisión de energía eléctrica"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "35103",
+  "codigo": "35103",
+  "descripcion": "Distribución de energía eléctrica"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "35200",
+  "codigo": "35200",
+  "descripcion": "Fabricación de gas, distribución de combustibles gaseosos por tuberías"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "35300",
+  "codigo": "35300",
+  "descripcion": "Suministro de vapor y agua caliente"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "36000",
+  "codigo": "36000",
+  "descripcion": "Captación, tratamiento y suministro de agua"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "37000",
+  "codigo": "37000",
+  "descripcion": "Evacuación de aguas residuales (alcantarillado)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "38110",
+  "codigo": "38110",
+  "descripcion": "Recolección y transporte de desechos sólidos proveniente de hogares y sector urbano"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "38120",
+  "codigo": "38120",
+  "descripcion": "Recolección de desechos peligrosos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "38210",
+  "codigo": "38210",
+  "descripcion": "Tratamiento y eliminación de desechos inicuos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "38220",
+  "codigo": "38220",
+  "descripcion": "Tratamiento y eliminación de desechos peligrosos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "38301",
+  "codigo": "38301",
+  "descripcion": "Reciclaje de desperdicios y desechos textiles"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "38302",
+  "codigo": "38302",
+  "descripcion": "Reciclaje de desperdicios y desechos de plástico y caucho"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "38303",
+  "codigo": "38303",
+  "descripcion": "Reciclaje de desperdicios y desechos de vidrio"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "38304",
+  "codigo": "38304",
+  "descripcion": "Reciclaje de desperdicios y desechos de papel y cartón"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "38305",
+  "codigo": "38305",
+  "descripcion": "Reciclaje de desperdicios y desechos metálicos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "38309",
+  "codigo": "38309",
+  "descripcion": "Reciclaje de desperdicios y desechos no metálicos n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "39000",
+  "codigo": "39000",
+  "descripcion": "Actividades de Saneamiento y otros Servicios de Gestión de Desechos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "41001",
+  "codigo": "41001",
+  "descripcion": "Construcción de edificios residenciales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "41002",
+  "codigo": "41002",
+  "descripcion": "Construcción de edificios no residenciales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "42100",
+  "codigo": "42100",
+  "descripcion": "Construcción de carreteras, calles y caminos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "42200",
+  "codigo": "42200",
+  "descripcion": "Construcción de proyectos de servicio público"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "42900",
+  "codigo": "42900",
+  "descripcion": "Construcción de obras de ingeniería civil n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "43110",
+  "codigo": "43110",
+  "descripcion": "Demolición"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "43120",
+  "codigo": "43120",
+  "descripcion": "Preparación de terreno"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "43210",
+  "codigo": "43210",
+  "descripcion": "Instalaciones eléctricas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "43220",
+  "codigo": "43220",
+  "descripcion": "Instalación de fontanería, calefacción y aire acondicionado"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "43290",
+  "codigo": "43290",
+  "descripcion": "Otras instalaciones para obras de construcción"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "43300",
+  "codigo": "43300",
+  "descripcion": "Terminación y acabado de edificios"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "43900",
+  "codigo": "43900",
+  "descripcion": "Otras actividades especializadas de construcción"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "43901",
+  "codigo": "43901",
+  "descripcion": "Fabricación de techos y materiales diversos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45100",
+  "codigo": "45100",
+  "descripcion": "Venta de vehículos automotores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45201",
+  "codigo": "45201",
+  "descripcion": "Reparación mecánica de vehículos automotores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45202",
+  "codigo": "45202",
+  "descripcion": "Reparaciones eléctricas del automotor y recarga de baterías"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45203",
+  "codigo": "45203",
+  "descripcion": "Enderezado y pintura de vehículos automotores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45204",
+  "codigo": "45204",
+  "descripcion": "Reparaciones de radiadores, escapes y silenciadores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45205",
+  "codigo": "45205",
+  "descripcion": "Reparación y reconstrucción de vías, stop y otros artículos de fibra de vidrio"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45206",
+  "codigo": "45206",
+  "descripcion": "Reparación de llantas de vehículos automotores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45207",
+  "codigo": "45207",
+  "descripcion": "Polarizado de vehículos (mediante la adhesión de papel especial a los vidrios)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45208",
+  "codigo": "45208",
+  "descripcion": "Lavado y pasteado de vehículos (carwash)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45209",
+  "codigo": "45209",
+  "descripcion": "Reparaciones de vehículos n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45211",
+  "codigo": "45211",
+  "descripcion": "Remolque de vehículos automotores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45301",
+  "codigo": "45301",
+  "descripcion": "Venta de partes, piezas y accesorios nuevos para vehículos automotores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45302",
+  "codigo": "45302",
+  "descripcion": "Venta de partes, piezas y accesorios usados para vehículos automotores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45401",
+  "codigo": "45401",
+  "descripcion": "Venta de motocicletas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45402",
+  "codigo": "45402",
+  "descripcion": "Venta de repuestos, piezas y accesorios de motocicletas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "45403",
+  "codigo": "45403",
+  "descripcion": "Mantenimiento y reparación de motocicletas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46100",
+  "codigo": "46100",
+  "descripcion": "Venta al por mayor a cambio de retribución o por contrata"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46201",
+  "codigo": "46201",
+  "descripcion": "Venta al por mayor de materias primas agrícolas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46202",
+  "codigo": "46202",
+  "descripcion": "Venta al por mayor de productos de la silvicultura"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46203",
+  "codigo": "46203",
+  "descripcion": "Venta al por mayor de productos pecuarios y de granja"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46211",
+  "codigo": "46211",
+  "descripcion": "Venta de productos para uso agropecuario"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46291",
+  "codigo": "46291",
+  "descripcion": "Venta al por mayor de granos básicos (cereales, leguminosas)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46292",
+  "codigo": "46292",
+  "descripcion": "Venta al por mayor de semillas mejoradas para cultivo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46293",
+  "codigo": "46293",
+  "descripcion": "Venta al por mayor de café oro y uva"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46294",
+  "codigo": "46294",
+  "descripcion": "Venta al por mayor de caña de azúcar"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46295",
+  "codigo": "46295",
+  "descripcion": "Venta al por mayor de flores, plantas y otros productos naturales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46296",
+  "codigo": "46296",
+  "descripcion": "Venta al por mayor de productos agrícolas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46297",
+  "codigo": "46297",
+  "descripcion": "Venta al por mayor de ganado bovino (vivo)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46298",
+  "codigo": "46298",
+  "descripcion": "Venta al por mayor de animales porcinos, ovinos, caprino, canículas, apícolas, avícolas vivos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46299",
+  "codigo": "46299",
+  "descripcion": "Venta de otras especies vivas del reino animal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46301",
+  "codigo": "46301",
+  "descripcion": "Venta al por mayor de alimentos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46302",
+  "codigo": "46302",
+  "descripcion": "Venta al por mayor de bebidas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46303",
+  "codigo": "46303",
+  "descripcion": "Venta al por mayor de tabaco"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46371",
+  "codigo": "46371",
+  "descripcion": "Venta al por mayor de frutas, hortalizas (verduras), legumbres y tubérculos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46372",
+  "codigo": "46372",
+  "descripcion": "Venta al por mayor de pollos, gallinas destazadas, pavos y otras aves"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46373",
+  "codigo": "46373",
+  "descripcion": "Venta al por mayor de carne bovina y porcina, productos de carne y embutidos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46374",
+  "codigo": "46374",
+  "descripcion": "Venta al por mayor de huevos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46375",
+  "codigo": "46375",
+  "descripcion": "Venta al por mayor de productos lácteos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46376",
+  "codigo": "46376",
+  "descripcion": "Venta al por mayor de productos farináceos de panadería (pan dulce, cakes, respostería, etc.)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46377",
+  "codigo": "46377",
+  "descripcion": "Venta al por mayor de pastas alimenticias, aceites y grasas comestibles vegetal y animal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46378",
+  "codigo": "46378",
+  "descripcion": "Venta al por mayor de sal comestible"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46379",
+  "codigo": "46379",
+  "descripcion": "Venta al por mayor de azúcar"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46391",
+  "codigo": "46391",
+  "descripcion": "Venta al por mayor de abarrotes (vinos, licores, productos alimenticios envasados, etc.)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46392",
+  "codigo": "46392",
+  "descripcion": "Venta al por mayor de aguas gaseosas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46393",
+  "codigo": "46393",
+  "descripcion": "Venta al por mayor de agua purificada"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46394",
+  "codigo": "46394",
+  "descripcion": "Venta al por mayor de refrescos y otras bebidas, líquidas o en polvo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46395",
+  "codigo": "46395",
+  "descripcion": "Venta al por mayor de cerveza y licores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46396",
+  "codigo": "46396",
+  "descripcion": "Venta al por mayor de hielo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46411",
+  "codigo": "46411",
+  "descripcion": "Venta al por mayor de hilados, tejidos y productos textiles de mercería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46412",
+  "codigo": "46412",
+  "descripcion": "Venta al por mayor de artículos textiles excepto confecciones para el hogar"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46413",
+  "codigo": "46413",
+  "descripcion": "Venta al por mayor de confecciones textiles para el hogar"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46414",
+  "codigo": "46414",
+  "descripcion": "Venta al por mayor de prendas de vestir y accesorios de vestir"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46415",
+  "codigo": "46415",
+  "descripcion": "Venta al por mayor de ropa usada"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46416",
+  "codigo": "46416",
+  "descripcion": "Venta al por mayor de calzado"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46417",
+  "codigo": "46417",
+  "descripcion": "Venta al por mayor de artículos de marroquinería y talabartería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46418",
+  "codigo": "46418",
+  "descripcion": "Venta al por mayor de artículos de peletería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46419",
+  "codigo": "46419",
+  "descripcion": "Venta al por mayor de otros artículos textiles n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46471",
+  "codigo": "46471",
+  "descripcion": "Venta al por mayor de instrumentos musicales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46472",
+  "codigo": "46472",
+  "descripcion": "Venta al por mayor de colchones, almohadas, cojines, etc."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46473",
+  "codigo": "46473",
+  "descripcion": "Venta al por mayor de artículos de aluminio para el hogar y para otros usos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46474",
+  "codigo": "46474",
+  "descripcion": "Venta al por mayor de depósitos y otros artículos plásticos para el hogar y otros usos, incluyendo los desechables de durapax y no desechables"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46475",
+  "codigo": "46475",
+  "descripcion": "Venta al por mayor de cámaras fotográficas, accesorios y materiales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46482",
+  "codigo": "46482",
+  "descripcion": "Venta al por mayor de medicamentos, artículos y otros productos de uso veterinario"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46483",
+  "codigo": "46483",
+  "descripcion": "Venta al por mayor de productos y artículos de belleza y de uso personal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46484",
+  "codigo": "46484",
+  "descripcion": "Venta de productos farmacéuticos y medicinales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46491",
+  "codigo": "46491",
+  "descripcion": "Venta al por mayor de productos medicinales, cosméticos, perfumería y productos de limpieza"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46492",
+  "codigo": "46492",
+  "descripcion": "Venta al por mayor de relojes y artículos de joyería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46493",
+  "codigo": "46493",
+  "descripcion": "Venta al por mayor de electrodomésticos y artículos del hogar excepto bazar; artículos de iluminación"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46494",
+  "codigo": "46494",
+  "descripcion": "Venta al por mayor de artículos de bazar y similares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46495",
+  "codigo": "46495",
+  "descripcion": "Venta al por mayor de artículos de óptica"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46496",
+  "codigo": "46496",
+  "descripcion": "Venta al por mayor de revistas, periódicos, libros, artículos de librería y artículos de papel y cartón en general"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46497",
+  "codigo": "46497",
+  "descripcion": "Venta de artículos deportivos, juguetes y rodados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46498",
+  "codigo": "46498",
+  "descripcion": "Venta al por mayor de productos usados para el hogar o el uso personal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46499",
+  "codigo": "46499",
+  "descripcion": "Venta al por mayor de enseres domésticos y de uso personal n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46500",
+  "codigo": "46500",
+  "descripcion": "Venta al por mayor de bicicletas, partes, accesorios y otros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46510",
+  "codigo": "46510",
+  "descripcion": "Venta al por mayor de computadoras, equipo periférico y programas informáticos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46520",
+  "codigo": "46520",
+  "descripcion": "Venta al por mayor de equipos de comunicación"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46530",
+  "codigo": "46530",
+  "descripcion": "Venta al por mayor de maquinaria y equipo agropecuario, accesorios, partes y suministros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46590",
+  "codigo": "46590",
+  "descripcion": "Venta de equipos e instrumentos de uso profesional y científico y aparatos de medida y control"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46591",
+  "codigo": "46591",
+  "descripcion": "Venta al por mayor de maquinaria equipo, accesorios y materiales para la industria de la madera y sus productos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46592",
+  "codigo": "46592",
+  "descripcion": "Venta al por mayor de maquinaria, equipo, accesorios y materiales para la industria gráfica y del papel, cartón y productos de papel y cartón"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46593",
+  "codigo": "46593",
+  "descripcion": "Venta al por mayor de maquinaria, equipo, accesorios y materiales para la industria de productos químicos, plástico y caucho"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46594",
+  "codigo": "46594",
+  "descripcion": "Venta al por mayor de maquinaria, equipo, accesorios y materiales para la industria metálica y de sus productos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46595",
+  "codigo": "46595",
+  "descripcion": "Venta al por mayor de equipamiento para uso médico, odontológico, veterinario y servicios conexos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46596",
+  "codigo": "46596",
+  "descripcion": "Venta al por mayor de maquinaria, equipo, accesorios y partes para la industria de la alimentación"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46597",
+  "codigo": "46597",
+  "descripcion": "Venta al por mayor de maquinaria, equipo, accesorios y partes para la industria textil, confecciones y cuero"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46598",
+  "codigo": "46598",
+  "descripcion": "Venta al por mayor de maquinaria, equipo y accesorios para la construcción y explotación de minas y canteras"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46599",
+  "codigo": "46599",
+  "descripcion": "Venta al por mayor de otro tipo de maquinaria y equipo con sus accesorios y partes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46610",
+  "codigo": "46610",
+  "descripcion": "Venta al por mayor de otros combustibles sólidos, líquidos, gaseosos y de productos conexos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46612",
+  "codigo": "46612",
+  "descripcion": "Venta al por mayor de combustibles para automotores, aviones, barcos, maquinaria y otros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46613",
+  "codigo": "46613",
+  "descripcion": "Venta al por mayor de lubricantes, grasas y otros aceites para automotores, maquinaria industrial, etc."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46614",
+  "codigo": "46614",
+  "descripcion": "Venta al por mayor de gas propano"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46615",
+  "codigo": "46615",
+  "descripcion": "Venta al por mayor de leña y carbón"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46620",
+  "codigo": "46620",
+  "descripcion": "Venta al por mayor de metales y minerales metalíferos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46631",
+  "codigo": "46631",
+  "descripcion": "Venta al por mayor de puertas, ventanas, vitrinas y similares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46632",
+  "codigo": "46632",
+  "descripcion": "Venta al por mayor de artículos de ferretería y pinturerías"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46633",
+  "codigo": "46633",
+  "descripcion": "Vidrierías"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46634",
+  "codigo": "46634",
+  "descripcion": "Venta al por mayor de maderas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46639",
+  "codigo": "46639",
+  "descripcion": "Venta al por mayor de materiales para la construcción n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46691",
+  "codigo": "46691",
+  "descripcion": "Venta al por mayor de sal industrial sin yodar"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46692",
+  "codigo": "46692",
+  "descripcion": "Venta al por mayor de productos intermedios y desechos de origen textil"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46693",
+  "codigo": "46693",
+  "descripcion": "Venta al por mayor de productos intermedios y desechos de origen metálico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46694",
+  "codigo": "46694",
+  "descripcion": "Venta al por mayor de productos intermedios y desechos de papel y cartón"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46695",
+  "codigo": "46695",
+  "descripcion": "Venta al por mayor fertilizantes, abonos, agroquímicos y productos similares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46696",
+  "codigo": "46696",
+  "descripcion": "Venta al por mayor de productos intermedios y desechos de origen plástico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46697",
+  "codigo": "46697",
+  "descripcion": "Venta al por mayor de tintas para imprenta, productos curtientes y materias y productos colorantes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46698",
+  "codigo": "46698",
+  "descripcion": "Venta de productos intermedios y desechos de origen químico y de caucho"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46699",
+  "codigo": "46699",
+  "descripcion": "Venta al por mayor de productos intermedios y desechos ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46701",
+  "codigo": "46701",
+  "descripcion": "Venta de algodón en oro"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46900",
+  "codigo": "46900",
+  "descripcion": "Venta al por mayor de otros productos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46901",
+  "codigo": "46901",
+  "descripcion": "Venta al por mayor de cohetes y otros productos pirotécnicos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46902",
+  "codigo": "46902",
+  "descripcion": "Venta al por mayor de artículos diversos para consumo humano"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46903",
+  "codigo": "46903",
+  "descripcion": "Venta al por mayor de armas de fuego, municiones y accesorios"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46904",
+  "codigo": "46904",
+  "descripcion": "Venta al por mayor de toldos y tiendas de campaña de cualquier material"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46905",
+  "codigo": "46905",
+  "descripcion": "Venta al por mayor de exhibidores publicitarios y rótulos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "46906",
+  "codigo": "46906",
+  "descripcion": "Venta al por mayor de artículos promocionales diversos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47111",
+  "codigo": "47111",
+  "descripcion": "Venta en supermercados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47112",
+  "codigo": "47112",
+  "descripcion": "Venta en tiendas de artículos de primera necesidad"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47119",
+  "codigo": "47119",
+  "descripcion": "Almacenes (venta de diversos artículos)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47120",
+  "codigo": "47120",
+  "descripcion": "Almacenes (venta de diversos artículos), y venta de vehículos automotores y motocicletas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47190",
+  "codigo": "47190",
+  "descripcion": "Venta al por menor de otros productos en comercios no especializados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47199",
+  "codigo": "47199",
+  "descripcion": "Venta de establecimientos no especializados con surtido compuesto principalmente de alimentos, bebidas y tabaco"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47211",
+  "codigo": "47211",
+  "descripcion": "Venta al por menor de frutas y hortalizas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47212",
+  "codigo": "47212",
+  "descripcion": "Venta al por menor de carnes, embutidos y productos de granja"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47213",
+  "codigo": "47213",
+  "descripcion": "Venta al por menor de pescado y mariscos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47214",
+  "codigo": "47214",
+  "descripcion": "Venta al por menor de productos lácteos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47215",
+  "codigo": "47215",
+  "descripcion": "Venta al por menor de productos de panadería, repostería y galletas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47216",
+  "codigo": "47216",
+  "descripcion": "Venta al por menor de huevos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47217",
+  "codigo": "47217",
+  "descripcion": "Venta al por menor de carnes y productos cárnicos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47218",
+  "codigo": "47218",
+  "descripcion": "Venta al por menor de granos básicos y otros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47219",
+  "codigo": "47219",
+  "descripcion": "Venta al por menor de alimentos n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47221",
+  "codigo": "47221",
+  "descripcion": "Venta al por menor de hielo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47223",
+  "codigo": "47223",
+  "descripcion": "Venta de bebidas no alcohólicas, para su consumo fuera del establecimiento"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47224",
+  "codigo": "47224",
+  "descripcion": "Venta de bebidas alcohólicas, para su consumo fuera del establecimiento"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47225",
+  "codigo": "47225",
+  "descripcion": "Venta de bebidas alcohólicas para su consumo dentro del establecimiento"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47230",
+  "codigo": "47230",
+  "descripcion": "Venta al por menor de tabaco"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47300",
+  "codigo": "47300",
+  "descripcion": "Venta de combustibles, lubricantes y otros (gasolineras)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47411",
+  "codigo": "47411",
+  "descripcion": "Venta al por menor de computadoras y equipo periférico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47412",
+  "codigo": "47412",
+  "descripcion": "Venta de equipo y accesorios de telecomunicación"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47420",
+  "codigo": "47420",
+  "descripcion": "Venta al por menor de equipo de audio y video"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47510",
+  "codigo": "47510",
+  "descripcion": "Venta al por menor de hilados, tejidos y productos textiles de mercería; confecciones para el hogar y textiles n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47521",
+  "codigo": "47521",
+  "descripcion": "Venta al por menor de productos de madera"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47522",
+  "codigo": "47522",
+  "descripcion": "Venta al por menor de artículos de ferretería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47523",
+  "codigo": "47523",
+  "descripcion": "Venta al por menor de productos de pinturerías"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47524",
+  "codigo": "47524",
+  "descripcion": "Venta al por menor en vidrierías"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47529",
+  "codigo": "47529",
+  "descripcion": "Venta al por menor de materiales de construcción y artículos conexos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47530",
+  "codigo": "47530",
+  "descripcion": "Venta al por menor de tapices, alfombras y revestimientos de paredes y pisos en comercios especializados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47591",
+  "codigo": "47591",
+  "descripcion": "Venta al por menor de muebles"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47592",
+  "codigo": "47592",
+  "descripcion": "Venta al por menor de artículos de bazar"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47593",
+  "codigo": "47593",
+  "descripcion": "Venta al por menor de aparatos electrodomésticos, repuestos y accesorios"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47594",
+  "codigo": "47594",
+  "descripcion": "Venta al por menor de artículos eléctricos y de iluminación"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47598",
+  "codigo": "47598",
+  "descripcion": "Venta al por menor de instrumentos musicales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47610",
+  "codigo": "47610",
+  "descripcion": "Venta al por menor de libros, periódicos y artículos de papelería en comercios especializados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47620",
+  "codigo": "47620",
+  "descripcion": "Venta al por menor de discos láser, cassettes, cintas de video y otros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47630",
+  "codigo": "47630",
+  "descripcion": "Venta al por menor de productos y equipos de deporte"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47631",
+  "codigo": "47631",
+  "descripcion": "Venta al por menor de bicicletas, accesorios y repuestos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47640",
+  "codigo": "47640",
+  "descripcion": "Venta al por menor de juegos y juguetes en comercios especializados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47711",
+  "codigo": "47711",
+  "descripcion": "Venta al por menor de prendas de vestir y accesorios de vestir"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47712",
+  "codigo": "47712",
+  "descripcion": "Venta al por menor de calzado"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47713",
+  "codigo": "47713",
+  "descripcion": "Venta al por menor de artículos de peletería, marroquinería y talabartería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47721",
+  "codigo": "47721",
+  "descripcion": "Venta al por menor de medicamentos farmacéuticos y otros materiales y artículos de uso médico, odontológico y veterinario"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47722",
+  "codigo": "47722",
+  "descripcion": "Venta al por menor de productos cosméticos y de tocador"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47731",
+  "codigo": "47731",
+  "descripcion": "Venta al por menor de productos de joyería, bisutería, óptica, relojería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47732",
+  "codigo": "47732",
+  "descripcion": "Venta al por menor de plantas, semillas, animales y artículos conexos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47733",
+  "codigo": "47733",
+  "descripcion": "Venta al por menor de combustibles de uso doméstico (gas propano y gas licuado)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47734",
+  "codigo": "47734",
+  "descripcion": "Venta al por menor de artesanías, artículos cerámicos y recuerdos en general"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47735",
+  "codigo": "47735",
+  "descripcion": "Venta al por menor de ataúdes, lápidas y cruces, trofeos, artículos religiosos en general"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47736",
+  "codigo": "47736",
+  "descripcion": "Venta al por menor de armas de fuego, municiones y accesorios"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47737",
+  "codigo": "47737",
+  "descripcion": "Venta al por menor de artículos de cohetería y pirotécnicos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47738",
+  "codigo": "47738",
+  "descripcion": "Venta al por menor de artículos desechables de uso personal y doméstico (servilletas, papel higiénico, pañales, toallas sanitarias, etc.)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47739",
+  "codigo": "47739",
+  "descripcion": "Venta al por menor de otros productos n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47741",
+  "codigo": "47741",
+  "descripcion": "Venta al por menor de artículos usados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47742",
+  "codigo": "47742",
+  "descripcion": "Venta al por menor de textiles y confecciones usados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47743",
+  "codigo": "47743",
+  "descripcion": "Venta al por menor de libros, revistas, papel y cartón usados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47749",
+  "codigo": "47749",
+  "descripcion": "Venta al por menor de productos usados n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47811",
+  "codigo": "47811",
+  "descripcion": "Venta al por menor de frutas, verduras y hortalizas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47814",
+  "codigo": "47814",
+  "descripcion": "Venta al por menor de productos lácteos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47815",
+  "codigo": "47815",
+  "descripcion": "Venta al por menor de productos de panadería, galletas y similares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47816",
+  "codigo": "47816",
+  "descripcion": "Venta al por menor de bebidas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47818",
+  "codigo": "47818",
+  "descripcion": "Venta al por menor en tiendas de mercado y puestos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47821",
+  "codigo": "47821",
+  "descripcion": "Venta al por menor de hilados, tejidos y productos textiles de mercería en puestos de mercados y ferias"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47822",
+  "codigo": "47822",
+  "descripcion": "Venta al por menor de artículos textiles excepto confecciones para el hogar en puestos de mercados y ferias"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47823",
+  "codigo": "47823",
+  "descripcion": "Venta al por menor de confecciones textiles para el hogar en puestos de mercados y ferias"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47824",
+  "codigo": "47824",
+  "descripcion": "Venta al por menor de prendas de vestir, accesorios de vestir y similares en puestos de mercados y ferias"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47825",
+  "codigo": "47825",
+  "descripcion": "Venta al por menor de ropa usada"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47826",
+  "codigo": "47826",
+  "descripcion": "Venta al por menor de calzado, artículos de marroquinería y talabartería en puestos de mercados y ferias"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47827",
+  "codigo": "47827",
+  "descripcion": "Venta al por menor de artículos de marroquinería y talabartería en puestos de mercados y ferias"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47829",
+  "codigo": "47829",
+  "descripcion": "Venta al por menor de artículos textiles ncp en puestos de mercados y ferias"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47891",
+  "codigo": "47891",
+  "descripcion": "Venta al por menor de animales, flores y productos conexos en puestos de feria y mercados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47892",
+  "codigo": "47892",
+  "descripcion": "Venta al por menor de productos medicinales, cosméticos, de tocador y de limpieza en puestos de ferias y mercados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47893",
+  "codigo": "47893",
+  "descripcion": "Venta al por menor de artículos de bazar en puestos de ferias y mercados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47894",
+  "codigo": "47894",
+  "descripcion": "Venta al por menor de artículos de papel, envases, libros, revistas y conexos en puestos de feria y mercados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47895",
+  "codigo": "47895",
+  "descripcion": "Venta al por menor de materiales de construcción, electrodomésticos, accesorios para autos y similares en puestos de feria y mercados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47896",
+  "codigo": "47896",
+  "descripcion": "Venta al por menor de equipos accesorios para las comunicaciones en puestos de feria y mercados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47899",
+  "codigo": "47899",
+  "descripcion": "Venta al por menor en puestos de ferias y mercados n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47910",
+  "codigo": "47910",
+  "descripcion": "Venta al por menor por correo o Internet"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "47990",
+  "codigo": "47990",
+  "descripcion": "Otros tipos de venta al por menor no realizada, en almacenes, puestos de venta o mercado"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49110",
+  "codigo": "49110",
+  "descripcion": "Transporte interurbano de pasajeros por ferrocarril"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49120",
+  "codigo": "49120",
+  "descripcion": "Transporte de carga por ferrocarril"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49211",
+  "codigo": "49211",
+  "descripcion": "Transporte de pasajeros urbanos e interurbano mediante buses"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49212",
+  "codigo": "49212",
+  "descripcion": "Transporte de pasajeros interdepartamental mediante microbuses"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49213",
+  "codigo": "49213",
+  "descripcion": "Transporte de pasajeros urbanos e interurbano mediante microbuses"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49214",
+  "codigo": "49214",
+  "descripcion": "Transporte de pasajeros interdepartamental mediante buses"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49221",
+  "codigo": "49221",
+  "descripcion": "Transporte internacional de pasajeros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49222",
+  "codigo": "49222",
+  "descripcion": "Transporte de pasajeros mediante taxis y autos con chofer"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49223",
+  "codigo": "49223",
+  "descripcion": "Transporte escolar"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49225",
+  "codigo": "49225",
+  "descripcion": "Transporte de pasajeros para excursiones"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49226",
+  "codigo": "49226",
+  "descripcion": "Servicios de transporte de personal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49229",
+  "codigo": "49229",
+  "descripcion": "Transporte de pasajeros por vía terrestre ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49231",
+  "codigo": "49231",
+  "descripcion": "Transporte de carga urbano"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49232",
+  "codigo": "49232",
+  "descripcion": "Transporte nacional de carga"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49233",
+  "codigo": "49233",
+  "descripcion": "Transporte de carga internacional"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49234",
+  "codigo": "49234",
+  "descripcion": "Servicios de mudanza"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49235",
+  "codigo": "49235",
+  "descripcion": "Alquiler de vehículos de carga con conductor"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "49300",
+  "codigo": "49300",
+  "descripcion": "Transporte por oleoducto o gasoducto"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "50110",
+  "codigo": "50110",
+  "descripcion": "Transporte de pasajeros marítimo y de cabotaje"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "50120",
+  "codigo": "50120",
+  "descripcion": "Transporte de carga marítimo y de cabotaje"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "50211",
+  "codigo": "50211",
+  "descripcion": "Transporte de pasajeros por vías de navegación interiores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "50212",
+  "codigo": "50212",
+  "descripcion": "Alquiler de equipo de transporte de pasajeros por vías de navegación interior con conductor"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "50220",
+  "codigo": "50220",
+  "descripcion": "Transporte de carga por vías de navegación interiores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "51100",
+  "codigo": "51100",
+  "descripcion": "Transporte aéreo de pasajeros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "51201",
+  "codigo": "51201",
+  "descripcion": "Transporte de carga por vía aérea"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "51202",
+  "codigo": "51202",
+  "descripcion": "Alquiler de equipo de aerotransporte con operadores para el propósito de transportar carga"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52101",
+  "codigo": "52101",
+  "descripcion": "Alquiler de instalaciones de almacenamiento en zonas francas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52102",
+  "codigo": "52102",
+  "descripcion": "Alquiler de silos para conservación y almacenamiento de granos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52103",
+  "codigo": "52103",
+  "descripcion": "Alquiler de instalaciones con refrigeración para almacenamiento y conservación de alimentos y otros productos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52109",
+  "codigo": "52109",
+  "descripcion": "Alquiler de bodegas para almacenamiento y depósito n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52211",
+  "codigo": "52211",
+  "descripcion": "Servicio de garaje y estacionamiento"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52212",
+  "codigo": "52212",
+  "descripcion": "Servicios de terminales para el transporte por vía terrestre"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52219",
+  "codigo": "52219",
+  "descripcion": "Servicios para el transporte por vía terrestre n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52220",
+  "codigo": "52220",
+  "descripcion": "Servicios para el transporte acuático"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52230",
+  "codigo": "52230",
+  "descripcion": "Servicios para el transporte aéreo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52240",
+  "codigo": "52240",
+  "descripcion": "Manipulación de carga"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52290",
+  "codigo": "52290",
+  "descripcion": "Servicios para el transporte ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "52291",
+  "codigo": "52291",
+  "descripcion": "Agencias de tramitaciones aduanales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "53100",
+  "codigo": "53100",
+  "descripcion": "Servicios de correo nacional"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "53200",
+  "codigo": "53200",
+  "descripcion": "Actividades de correo distintas a las actividades postales nacionales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "53201",
+  "codigo": "53201",
+  "descripcion": "Agencia privada de correo y encomiendas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "55101",
+  "codigo": "55101",
+  "descripcion": "Actividades de alojamiento para estancias cortas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "55102",
+  "codigo": "55102",
+  "descripcion": "Hoteles"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "55200",
+  "codigo": "55200",
+  "descripcion": "Actividades de campamentos, parques de vehículos de recreo y parques de caravanas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "55900",
+  "codigo": "55900",
+  "descripcion": "Alojamiento n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "56101",
+  "codigo": "56101",
+  "descripcion": "Restaurantes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "56106",
+  "codigo": "56106",
+  "descripcion": "Pupusería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "56107",
+  "codigo": "56107",
+  "descripcion": "Actividades varias de restaurantes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "56108",
+  "codigo": "56108",
+  "descripcion": "Comedores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "56109",
+  "codigo": "56109",
+  "descripcion": "Merenderos ambulantes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "56210",
+  "codigo": "56210",
+  "descripcion": "Preparación de comida para eventos especiales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "56291",
+  "codigo": "56291",
+  "descripcion": "Servicios de provisión de comidas por contrato"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "56292",
+  "codigo": "56292",
+  "descripcion": "Servicios de concesión de cafetines y chalet en empresas e instituciones"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "56299",
+  "codigo": "56299",
+  "descripcion": "Servicios de preparación de comidas ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "56301",
+  "codigo": "56301",
+  "descripcion": "Servicio de expendio de bebidas en salones y bares"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "56302",
+  "codigo": "56302",
+  "descripcion": "Servicio de expendio de bebidas en puestos callejeros, mercados y ferias"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "58110",
+  "codigo": "58110",
+  "descripcion": "Edición de libros, folletos, partituras y otras ediciones distintas a estas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "58120",
+  "codigo": "58120",
+  "descripcion": "Edición de directorios y listas de correos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "58130",
+  "codigo": "58130",
+  "descripcion": "Edición de periódicos, revistas y otras publicaciones periódicas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "58190",
+  "codigo": "58190",
+  "descripcion": "Otras actividades de edición"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "58200",
+  "codigo": "58200",
+  "descripcion": "Edición de programas informáticos (software)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "59110",
+  "codigo": "59110",
+  "descripcion": "Actividades de producción cinematográfica"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "59120",
+  "codigo": "59120",
+  "descripcion": "Actividades de post producción de películas, videos y programas de televisión"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "59130",
+  "codigo": "59130",
+  "descripcion": "Actividades de distribución de películas cinematográficas, videos y programas de televisión"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "59140",
+  "codigo": "59140",
+  "descripcion": "Actividades de exhibición de películas cinematográficas y cintas de vídeo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "59200",
+  "codigo": "59200",
+  "descripcion": "Actividades de edición y grabación de música"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "60100",
+  "codigo": "60100",
+  "descripcion": "Servicios de difusiones de radio"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "60201",
+  "codigo": "60201",
+  "descripcion": "Actividades de programación y difusión de televisión abierta"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "60202",
+  "codigo": "60202",
+  "descripcion": "Actividades de suscripción y difusión de televisión por cable y/o suscripción"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "60299",
+  "codigo": "60299",
+  "descripcion": "Servicios de televisión, incluye televisión por cable"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "60900",
+  "codigo": "60900",
+  "descripcion": "Programación y transmisión de radio y televisión"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "61101",
+  "codigo": "61101",
+  "descripcion": "Servicio de telefonía"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "61102",
+  "codigo": "61102",
+  "descripcion": "Servicio de Internet"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "61103",
+  "codigo": "61103",
+  "descripcion": "Servicio de telefonía fija"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "61109",
+  "codigo": "61109",
+  "descripcion": "Servicio de Internet n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "61201",
+  "codigo": "61201",
+  "descripcion": "Servicios de telefonía celular"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "61202",
+  "codigo": "61202",
+  "descripcion": "Servicios de Internet inalámbrico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "61209",
+  "codigo": "61209",
+  "descripcion": "Servicios de telecomunicaciones inalámbrico n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "61301",
+  "codigo": "61301",
+  "descripcion": "Telecomunicaciones satelitales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "61309",
+  "codigo": "61309",
+  "descripcion": "Comunicación vía satélite n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "61900",
+  "codigo": "61900",
+  "descripcion": "Actividades de telecomunicación n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "62010",
+  "codigo": "62010",
+  "descripcion": "Programación Informática"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "62020",
+  "codigo": "62020",
+  "descripcion": "Consultorías y gestión de servicios informáticos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "62090",
+  "codigo": "62090",
+  "descripcion": "Otras actividades de tecnología de información y servicios de computadora"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "63110",
+  "codigo": "63110",
+  "descripcion": "Procesamiento de datos y Actividades relacionadas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "63120",
+  "codigo": "63120",
+  "descripcion": "Portales WEB"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "63910",
+  "codigo": "63910",
+  "descripcion": "Servicios de Agencias de Noticias"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "63990",
+  "codigo": "63990",
+  "descripcion": "Otros servicios de información n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64110",
+  "codigo": "64110",
+  "descripcion": "Servicios provistos por el Banco Central de El salvador"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64190",
+  "codigo": "64190",
+  "descripcion": "Bancos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64192",
+  "codigo": "64192",
+  "descripcion": "Entidades dedicadas al envío de remesas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64199",
+  "codigo": "64199",
+  "descripcion": "Otras entidades financieras"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64200",
+  "codigo": "64200",
+  "descripcion": "Actividades de sociedades de cartera"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64300",
+  "codigo": "64300",
+  "descripcion": "Fideicomisos, fondos y otras fuentes de financiamiento"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64910",
+  "codigo": "64910",
+  "descripcion": "Arrendamientos financieros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64920",
+  "codigo": "64920",
+  "descripcion": "Asociaciones cooperativas de ahorro y crédito dedicadas a la intermediación financiera"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64921",
+  "codigo": "64921",
+  "descripcion": "Instituciones emisoras de tarjetas de crédito y otros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64922",
+  "codigo": "64922",
+  "descripcion": "Tipos de crédito ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64928",
+  "codigo": "64928",
+  "descripcion": "Prestamistas y casas de empeño"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "64990",
+  "codigo": "64990",
+  "descripcion": "Actividades de servicios financieros, excepto la financiación de planes de seguros y de pensiones n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "65110",
+  "codigo": "65110",
+  "descripcion": "Planes de seguros de vida"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "65120",
+  "codigo": "65120",
+  "descripcion": "Planes de seguro excepto de vida"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "65199",
+  "codigo": "65199",
+  "descripcion": "Seguros generales de todo tipo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "65200",
+  "codigo": "65200",
+  "descripcion": "Planes se seguro"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "65300",
+  "codigo": "65300",
+  "descripcion": "Planes de pensiones"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "66110",
+  "codigo": "66110",
+  "descripcion": "Administración de mercados financieros (Bolsa de Valores)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "66120",
+  "codigo": "66120",
+  "descripcion": "Actividades bursátiles (Corredores de Bolsa)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "66190",
+  "codigo": "66190",
+  "descripcion": "Actividades auxiliares de la intermediación financiera ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "66210",
+  "codigo": "66210",
+  "descripcion": "Evaluación de riesgos y daños"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "66220",
+  "codigo": "66220",
+  "descripcion": "Actividades de agentes y corredores de seguros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "66290",
+  "codigo": "66290",
+  "descripcion": "Otras actividades auxiliares de seguros y fondos de pensiones"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "66300",
+  "codigo": "66300",
+  "descripcion": "Actividades de administración de fondos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "68101",
+  "codigo": "68101",
+  "descripcion": "Servicio de alquiler y venta de lotes en cementerios"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "68109",
+  "codigo": "68109",
+  "descripcion": "Actividades inmobiliarias realizadas con bienes propios o arrendados n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "68200",
+  "codigo": "68200",
+  "descripcion": "Actividades Inmobiliarias Realizadas a Cambio de una Retribución o por Contrata"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "69100",
+  "codigo": "69100",
+  "descripcion": "Actividades jurídicas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "69200",
+  "codigo": "69200",
+  "descripcion": "Actividades de contabilidad, teneduría de libros y auditoría; asesoramiento en materia de impuestos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "70100",
+  "codigo": "70100",
+  "descripcion": "Actividades de oficinas centrales de sociedades de cartera"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "70200",
+  "codigo": "70200",
+  "descripcion": "Actividades de consultoría en gestión empresarial"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "71101",
+  "codigo": "71101",
+  "descripcion": "Servicios de arquitectura y planificación urbana y servicios conexos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "71102",
+  "codigo": "71102",
+  "descripcion": "Servicios de ingeniería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "71103",
+  "codigo": "71103",
+  "descripcion": "Servicios de agrimensura, topografía, cartografía, prospección y geofísica y servicios conexos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "71200",
+  "codigo": "71200",
+  "descripcion": "Ensayos y análisis técnicos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "72100",
+  "codigo": "72100",
+  "descripcion": "Investigaciones y desarrollo experimental en el campo de las ciencias naturales y la ingeniería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "72199",
+  "codigo": "72199",
+  "descripcion": "Investigaciones científicas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "72200",
+  "codigo": "72200",
+  "descripcion": "Investigaciones y desarrollo experimental en el campo de las ciencias sociales y las humanidades científica y desarrollo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "73100",
+  "codigo": "73100",
+  "descripcion": "Publicidad"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "73200",
+  "codigo": "73200",
+  "descripcion": "Investigación de mercados y realización de encuestas de opinión pública"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "74100",
+  "codigo": "74100",
+  "descripcion": "Actividades de diseño especializado"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "74200",
+  "codigo": "74200",
+  "descripcion": "Actividades de fotografía"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "74900",
+  "codigo": "74900",
+  "descripcion": "Servicios profesionales y científicos ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "75000",
+  "codigo": "75000",
+  "descripcion": "Actividades veterinarias"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "77101",
+  "codigo": "77101",
+  "descripcion": "Alquiler de equipo de transporte terrestre"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "77102",
+  "codigo": "77102",
+  "descripcion": "Alquiler de equipo de transporte acuático"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "77103",
+  "codigo": "77103",
+  "descripcion": "Alquiler de equipo de transporte por vía aérea"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "77210",
+  "codigo": "77210",
+  "descripcion": "Alquiler y arrendamiento de equipo de recreo y deportivo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "77220",
+  "codigo": "77220",
+  "descripcion": "Alquiler de cintas de video y discos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "77290",
+  "codigo": "77290",
+  "descripcion": "Alquiler de otros efectos personales y enseres domésticos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "77300",
+  "codigo": "77300",
+  "descripcion": "Alquiler de maquinaria y equipo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "77400",
+  "codigo": "77400",
+  "descripcion": "Arrendamiento de productos de propiedad intelectual"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "78100",
+  "codigo": "78100",
+  "descripcion": "Obtención y dotación de personal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "78200",
+  "codigo": "78200",
+  "descripcion": "Actividades de las agencias de trabajo temporal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "78300",
+  "codigo": "78300",
+  "descripcion": "Dotación de recursos humanos y gestión; gestión de las funciones de recursos humanos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "79110",
+  "codigo": "79110",
+  "descripcion": "Actividades de agencias de viajes y organizadores de viajes; actividades de asistencia a turistas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "79120",
+  "codigo": "79120",
+  "descripcion": "Actividades de los operadores turísticos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "79900",
+  "codigo": "79900",
+  "descripcion": "Otros servicios de reservas y actividades relacionadas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "80100",
+  "codigo": "80100",
+  "descripcion": "Servicios de seguridad privados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "80201",
+  "codigo": "80201",
+  "descripcion": "Actividades de servicios de sistemas de seguridad"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "80202",
+  "codigo": "80202",
+  "descripcion": "Actividades para la prestación de sistemas de seguridad"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "80300",
+  "codigo": "80300",
+  "descripcion": "Actividades de investigación"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "81100",
+  "codigo": "81100",
+  "descripcion": "Actividades combinadas de mantenimiento de edificios e instalaciones"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "81210",
+  "codigo": "81210",
+  "descripcion": "Limpieza general de edificios"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "81290",
+  "codigo": "81290",
+  "descripcion": "Otras actividades combinadas de mantenimiento de edificios e instalaciones ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "81300",
+  "codigo": "81300",
+  "descripcion": "Servicio de jardinería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "82110",
+  "codigo": "82110",
+  "descripcion": "Servicios administrativos de oficinas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "82190",
+  "codigo": "82190",
+  "descripcion": "Servicio de fotocopiado y similares, excepto en imprentas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "82200",
+  "codigo": "82200",
+  "descripcion": "Actividades de las centrales de llamadas (call center)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "82300",
+  "codigo": "82300",
+  "descripcion": "Organización de convenciones y ferias de negocios"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "82910",
+  "codigo": "82910",
+  "descripcion": "Actividades de agencias de cobro y oficinas de crédito"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "82921",
+  "codigo": "82921",
+  "descripcion": "Servicios de envase y empaque de productos alimenticios"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "82922",
+  "codigo": "82922",
+  "descripcion": "Servicios de envase y empaque de productos medicinales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "82929",
+  "codigo": "82929",
+  "descripcion": "Servicio de envase y empaque ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "82990",
+  "codigo": "82990",
+  "descripcion": "Actividades de apoyo empresariales ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "84110",
+  "codigo": "84110",
+  "descripcion": "Actividades de la Administración Pública en general"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "84111",
+  "codigo": "84111",
+  "descripcion": "Alcaldías Municipales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "84120",
+  "codigo": "84120",
+  "descripcion": "Regulación de las actividades de prestación de servicios sanitarios, educativos, culturales y otros servicios sociales, excepto seguridad social"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "84130",
+  "codigo": "84130",
+  "descripcion": "Regulación y facilitación de la actividad económica"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "84210",
+  "codigo": "84210",
+  "descripcion": "Actividades de administración y funcionamiento del Ministerio de Relaciones Exteriores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "84220",
+  "codigo": "84220",
+  "descripcion": "Actividades de defensa"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "84230",
+  "codigo": "84230",
+  "descripcion": "Actividades de mantenimiento del orden público y de seguridad"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "84300",
+  "codigo": "84300",
+  "descripcion": "Actividades de planes de seguridad social de afiliación obligatoria"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85101",
+  "codigo": "85101",
+  "descripcion": "Guardería educativa"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85102",
+  "codigo": "85102",
+  "descripcion": "Enseñanza preescolar o parvularia"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85103",
+  "codigo": "85103",
+  "descripcion": "Enseñanza primaria"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85104",
+  "codigo": "85104",
+  "descripcion": "Servicio de educación preescolar y primaria integrada"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85211",
+  "codigo": "85211",
+  "descripcion": "Enseñanza secundaria tercer ciclo (7°, 8° y 9°)"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85212",
+  "codigo": "85212",
+  "descripcion": "Enseñanza secundaria de formación general bachillerato"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85221",
+  "codigo": "85221",
+  "descripcion": "Enseñanza secundaria de formación técnica y profesional"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85222",
+  "codigo": "85222",
+  "descripcion": "Enseñanza secundaria de formación técnica y profesional integrada con enseñanza primaria"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85301",
+  "codigo": "85301",
+  "descripcion": "Enseñanza superior universitaria"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85302",
+  "codigo": "85302",
+  "descripcion": "Enseñanza superior no universitaria"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85303",
+  "codigo": "85303",
+  "descripcion": "Enseñanza superior integrada a educación secundaria y/o primaria"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85410",
+  "codigo": "85410",
+  "descripcion": "Educación deportiva y recreativa"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85420",
+  "codigo": "85420",
+  "descripcion": "Educación cultural"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85490",
+  "codigo": "85490",
+  "descripcion": "Otros tipos de enseñanza n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85499",
+  "codigo": "85499",
+  "descripcion": "Enseñanza formal"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "85500",
+  "codigo": "85500",
+  "descripcion": "Servicios de apoyo a la enseñanza"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "86100",
+  "codigo": "86100",
+  "descripcion": "Actividades de hospitales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "86201",
+  "codigo": "86201",
+  "descripcion": "Clínicas médicas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "86202",
+  "codigo": "86202",
+  "descripcion": "Servicios de Odontología"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "86203",
+  "codigo": "86203",
+  "descripcion": "Servicios médicos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "86901",
+  "codigo": "86901",
+  "descripcion": "Servicios de análisis y estudios de diagnóstico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "86902",
+  "codigo": "86902",
+  "descripcion": "Actividades de atención de la salud humana"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "86909",
+  "codigo": "86909",
+  "descripcion": "Otros Servicio relacionados con la salud ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "87100",
+  "codigo": "87100",
+  "descripcion": "Residencias de ancianos con atención de enfermería"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "87200",
+  "codigo": "87200",
+  "descripcion": "Instituciones dedicadas al tratamiento del retraso mental, problemas de salud mental y el uso indebido de sustancias nocivas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "87300",
+  "codigo": "87300",
+  "descripcion": "Instituciones dedicadas al cuidado de ancianos y discapacitados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "87900",
+  "codigo": "87900",
+  "descripcion": "Actividades de asistencia a niños y jóvenes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "87901",
+  "codigo": "87901",
+  "descripcion": "Otras actividades de atención en instituciones"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "88100",
+  "codigo": "88100",
+  "descripcion": "Actividades de asistencia sociales sin alojamiento para ancianos y discapacitados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "88900",
+  "codigo": "88900",
+  "descripcion": "servicios sociales sin alojamiento ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "90000",
+  "codigo": "90000",
+  "descripcion": "Actividades creativas artísticas y de esparcimiento"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "91010",
+  "codigo": "91010",
+  "descripcion": "Actividades de bibliotecas y archivos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "91020",
+  "codigo": "91020",
+  "descripcion": "Actividades de museos y preservación de lugares y edificios históricos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "91030",
+  "codigo": "91030",
+  "descripcion": "Actividades de jardines botánicos, zoológicos y de reservas naturales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "92000",
+  "codigo": "92000",
+  "descripcion": "Actividades de juegos y apuestas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "93110",
+  "codigo": "93110",
+  "descripcion": "Gestión de instalaciones deportivas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "93120",
+  "codigo": "93120",
+  "descripcion": "Actividades de clubes deportivos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "93190",
+  "codigo": "93190",
+  "descripcion": "Otras actividades deportivas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "93210",
+  "codigo": "93210",
+  "descripcion": "Actividades de parques de atracciones y parques temáticos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "93291",
+  "codigo": "93291",
+  "descripcion": "Discotecas y salas de baile"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "93298",
+  "codigo": "93298",
+  "descripcion": "Centros vacacionales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "93299",
+  "codigo": "93299",
+  "descripcion": "Actividades de esparcimiento ncp"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "94110",
+  "codigo": "94110",
+  "descripcion": "Actividades de organizaciones empresariales y de empleadores"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "94120",
+  "codigo": "94120",
+  "descripcion": "Actividades de organizaciones profesionales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "94200",
+  "codigo": "94200",
+  "descripcion": "Actividades de sindicatos"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "94910",
+  "codigo": "94910",
+  "descripcion": "Actividades de organizaciones religiosas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "94920",
+  "codigo": "94920",
+  "descripcion": "Actividades de organizaciones políticas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "94990",
+  "codigo": "94990",
+  "descripcion": "Actividades de asociaciones n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "95110",
+  "codigo": "95110",
+  "descripcion": "Reparación de computadoras y equipo periférico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "95120",
+  "codigo": "95120",
+  "descripcion": "Reparación de equipo de comunicación"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "95210",
+  "codigo": "95210",
+  "descripcion": "Reparación de aparatos electrónicos de consumo"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "95220",
+  "codigo": "95220",
+  "descripcion": "Reparación de aparatos doméstico y equipo de hogar y jardín"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "95230",
+  "codigo": "95230",
+  "descripcion": "Reparación de calzado y artículos de cuero"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "95240",
+  "codigo": "95240",
+  "descripcion": "Reparación de muebles y accesorios para el hogar"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "95291",
+  "codigo": "95291",
+  "descripcion": "Reparación de Instrumentos musicales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "95292",
+  "codigo": "95292",
+  "descripcion": "Servicios de cerrajería y copiado de llaves"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "95293",
+  "codigo": "95293",
+  "descripcion": "Reparación de joyas y relojes"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "95294",
+  "codigo": "95294",
+  "descripcion": "Reparación de bicicletas, sillas de ruedas y rodados n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "95299",
+  "codigo": "95299",
+  "descripcion": "Reparaciones de enseres personales n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "96010",
+  "codigo": "96010",
+  "descripcion": "Lavado y limpieza de prendas de tela y de piel, incluso la limpieza en seco"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "96020",
+  "codigo": "96020",
+  "descripcion": "Peluquería y otros tratamientos de belleza"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "96030",
+  "codigo": "96030",
+  "descripcion": "Pompas fúnebres y actividades conexas"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "96091",
+  "codigo": "96091",
+  "descripcion": "Servicios de sauna y otros servicios para la estética corporal n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "96092",
+  "codigo": "96092",
+  "descripcion": "Servicios n.c.p."
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "97000",
+  "codigo": "97000",
+  "descripcion": "Actividad de los hogares en calidad de empleadores de personal doméstico"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "98100",
+  "codigo": "98100",
+  "descripcion": "Actividades indiferenciadas de producción de bienes de los hogares privados para uso propio"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "98200",
+  "codigo": "98200",
+  "descripcion": "Actividades indiferenciadas de producción de servicios de los hogares privados para uso propio"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "99000",
+  "codigo": "99000",
+  "descripcion": "Actividades de organizaciones y órganos extraterritoriales"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10001",
+  "codigo": "10001",
+  "descripcion": "Empleados"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10002",
+  "codigo": "10002",
+  "descripcion": "Pensionado"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10003",
+  "codigo": "10003",
+  "descripcion": "Estudiante"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10004",
+  "codigo": "10004",
+  "descripcion": "Desempleado"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10005",
+  "codigo": "10005",
+  "descripcion": "Otros"
+ },
+ {
+  "doctype": "SV Actividad Economica",
+  "name": "10006",
+  "codigo": "10006",
+  "descripcion": "Comerciante"
+ }
+]
