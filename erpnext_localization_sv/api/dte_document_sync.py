@@ -27,6 +27,9 @@ def sync_on_emit(
     customer: str | None = None,
     customer_name: str | None = None,
     mh_verification_url: str | None = None,
+    mh_request_json: str | None = None,
+    mh_response_json: str | None = None,
+    observaciones_mh: str | None = None,
 ) -> None:
     """Crea o actualiza SV DTE Document tras emisión exitosa."""
     if not generation_code:
@@ -69,6 +72,12 @@ def sync_on_emit(
         doc.customer_name = customer_name
     if mh_verification_url:
         doc.mh_verification_url = mh_verification_url
+    if mh_request_json:
+        doc.mh_request_json = mh_request_json
+    if mh_response_json:
+        doc.mh_response_json = mh_response_json
+    if observaciones_mh is not None:
+        doc.observaciones_mh = observaciones_mh
     doc.last_status_check_at = now_datetime()
 
     if existing_name:
@@ -102,6 +111,10 @@ def sync_on_invalidation(
     generation_code: str,
     invalidated_at=None,
     replacement_generation_code: str | None = None,
+    tipo_anulacion: int | str | None = None,
+    motivo_anulacion: str | None = None,
+    mh_request_json: str | None = None,
+    mh_response_json: str | None = None,
 ) -> None:
     """Marca el SV DTE Document como invalidado.
 
@@ -114,10 +127,19 @@ def sync_on_invalidation(
         "SV DTE Document", {"generation_code": generation_code}, "name"
     )
     if existing_name:
-        frappe.db.set_value("SV DTE Document", existing_name, {
+        values = {
             "mh_status": "INVALIDADO",
             "is_invalidated": 1,
             "invalidated_at": invalidated_at or now_datetime(),
             "replacement_generation_code": replacement_generation_code or "",
             "last_status_check_at": now_datetime(),
-        })
+        }
+        if tipo_anulacion is not None:
+            values["tipo_anulacion"] = str(tipo_anulacion)
+        if motivo_anulacion is not None:
+            values["motivo_anulacion"] = motivo_anulacion
+        if mh_request_json is not None:
+            values["mh_request_json"] = mh_request_json
+        if mh_response_json is not None:
+            values["mh_response_json"] = mh_response_json
+        frappe.db.set_value("SV DTE Document", existing_name, values)

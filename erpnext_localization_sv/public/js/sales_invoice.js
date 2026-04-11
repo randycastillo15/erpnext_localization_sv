@@ -21,6 +21,28 @@ function _dte_sv_refresh_buttons(frm) {
 	const qr_url    = (frm.doc.sv_dte_qr_url || "").trim();
 	const G = "DTE El Salvador";
 
+	// Ver Detalle DTE — navega al SV DTE Document asociado
+	if (gen_code) {
+		frm.add_custom_button(__("Ver Detalle DTE"), () => {
+			frappe.db.get_value(
+				"SV DTE Document",
+				{ generation_code: gen_code },
+				"name",
+				(r) => {
+					if (r && r.name) {
+						frappe.set_route("Form", "SV DTE Document", r.name);
+					} else {
+						frappe.msgprint({
+							title: __("Documento DTE no encontrado"),
+							message: __("No se encontró el registro SV DTE Document para este código de generación."),
+							indicator: "orange",
+						});
+					}
+				}
+			);
+		}, G);
+	}
+
 	// Emitir DTE — solo si tipo_doc seleccionado y aún sin gen_code
 	if (tipo_doc && !gen_code) {
 		frm.add_custom_button(__("Emitir DTE"), () => {
@@ -37,70 +59,18 @@ function _dte_sv_refresh_buttons(frm) {
 		}, G);
 	}
 
-	// Ver en Hacienda — muestra diálogo con datos listos para pegar en el portal MH
-	// El portal (admin.factura.gob.sv/consultaPublica) es una SPA Angular que no acepta
-	// params en la URL. Se copia el UUID al portapapeles y se muestra la fecha formateada.
-	// El botón aparece siempre que haya gen_code; usa sv_dte_qr_url o fallback.
-	const portal_url = qr_url || "https://admin.factura.gob.sv/consultaPublica";
+	// Ver en Hacienda — abre directamente el portal MH con los parámetros correctos.
+	// sv_dte_qr_url contiene la URL completa: ?ambiente=XX&codGen=UUID&fechaEmi=YYYY-MM-DD
+	// Fallback para facturas legacy (emitidas antes del patch): construir URL desde componentes.
 	if (gen_code) {
 		frm.add_custom_button(__("Ver en Hacienda"), () => {
-			const uuid = gen_code;
-			const raw_date = frm.doc.posting_date || "";
-			// El portal espera fecha en formato DD/MM/YYYY
-			let fecha_portal = raw_date;
-			if (raw_date && raw_date.includes("-")) {
-				const [y, m, d] = raw_date.split("-");
-				fecha_portal = `${d}/${m}/${y}`;
+			let url = qr_url;
+			if (!url || !url.includes("codGen=")) {
+				const ambiente = frm.doc.sv_dte_environment || "00";
+				const fecha    = frm.doc.posting_date || "";
+				url = `https://admin.factura.gob.sv/consultaPublica?ambiente=${ambiente}&codGen=${gen_code}&fechaEmi=${fecha}`;
 			}
-
-			// Copiar UUID al portapapeles (best-effort)
-			if (navigator.clipboard && navigator.clipboard.writeText) {
-				navigator.clipboard.writeText(uuid).catch(() => {});
-			}
-
-			const dlg = new frappe.ui.Dialog({
-				title: __("Verificar DTE en portal Ministerio de Hacienda"),
-				fields: [{
-					fieldtype: "HTML",
-					options: `
-						<p style="margin-bottom:12px;">
-							Ingresa estos datos en el portal
-							<strong>admin.factura.gob.sv/consultaPublica</strong>:
-						</p>
-						<table style="width:100%;font-size:13px;border-collapse:collapse;">
-							<tr>
-								<td style="padding:6px 10px 6px 0;font-weight:bold;white-space:nowrap;vertical-align:top;">
-									Fecha de Generación:
-								</td>
-								<td>
-									<code style="background:#f0f4ff;border:1px solid #c7d2fe;padding:4px 10px;border-radius:4px;font-size:13px;display:inline-block;">
-										${fecha_portal}
-									</code>
-								</td>
-							</tr>
-							<tr>
-								<td style="padding:6px 10px 6px 0;font-weight:bold;white-space:nowrap;vertical-align:top;">
-									Código de Generación:
-								</td>
-								<td>
-									<code style="background:#f0f4ff;border:1px solid #c7d2fe;padding:4px 10px;border-radius:4px;font-size:12px;word-break:break-all;display:inline-block;">
-										${uuid}
-									</code>
-								</td>
-							</tr>
-						</table>
-						<p style="margin-top:10px;color:#4b5563;font-size:11px;">
-							&#x2713; Código de Generación copiado al portapapeles — solo pégalo en el portal.
-						</p>
-					`,
-				}],
-				primary_action_label: __("Abrir portal MH"),
-				primary_action() {
-					window.open(portal_url, "_blank", "noopener,noreferrer");
-					dlg.hide();
-				},
-			});
-			dlg.show();
+			window.open(url, "_blank", "noopener,noreferrer");
 		}, G);
 	}
 

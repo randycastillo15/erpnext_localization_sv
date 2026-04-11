@@ -6,9 +6,9 @@
  "engine": "InnoDB",
  "read_only": 1,
  "field_order": [
+  "sec_identificacion",
   "dte_type_label",
   "dte_type_code",
-  "mh_status",
   "generation_code",
   "control_number",
   "col_break_ids",
@@ -17,21 +17,35 @@
   "customer",
   "customer_name",
   "sec_mh",
+  "mh_status",
   "reception_seal",
   "mh_processed_at",
-  "ambiente",
-  "company",
+  "observaciones_mh",
   "col_break_mh",
   "mh_verification_url",
+  "ambiente",
+  "company",
+  "last_status_check_at",
+  "sec_invalidacion",
   "is_invalidated",
   "invalidated_at",
+  "tipo_anulacion",
+  "col_break_anulacion",
   "replacement_generation_code",
-  "last_status_check_at",
+  "motivo_anulacion",
+  "sec_payloads",
+  "mh_request_json",
+  "mh_response_json",
   "sec_auditoria",
   "issued_at",
   "issued_by"
  ],
  "fields": [
+  {
+   "fieldname": "sec_identificacion",
+   "fieldtype": "Section Break",
+   "label": "Identificaci\u00f3n"
+  },
   {
    "bold": 1,
    "fieldname": "dte_type_label",
@@ -39,33 +53,29 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Tipo DTE",
-   "options": "\nFE\nCCF\nNC\nND"
+   "options": "\nFE\nCCF\nNC\nND",
+   "read_only": 1
   },
   {
    "fieldname": "dte_type_code",
    "fieldtype": "Data",
-   "label": "C\u00f3digo Tipo"
-  },
-  {
-   "fieldname": "mh_status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Estado MH",
-   "options": "\nPENDIENTE\nPROCESADO\nRECHAZADO\nINVALIDADO\nCONTINGENCIA"
+   "label": "C\u00f3digo Tipo",
+   "read_only": 1
   },
   {
    "fieldname": "generation_code",
    "fieldtype": "Data",
    "label": "C\u00f3digo de Generaci\u00f3n",
-   "search_index": 1
+   "search_index": 1,
+   "read_only": 1
   },
   {
    "fieldname": "control_number",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "N\u00famero de Control",
-   "search_index": 1
+   "search_index": 1,
+   "read_only": 1
   },
   {
    "fieldname": "col_break_ids",
@@ -75,7 +85,8 @@
    "fieldname": "source_doctype",
    "fieldtype": "Link",
    "label": "Tipo Documento Origen",
-   "options": "DocType"
+   "options": "DocType",
+   "read_only": 1
   },
   {
    "fieldname": "source_docname",
@@ -83,49 +94,56 @@
    "in_list_view": 1,
    "label": "Documento Origen",
    "options": "source_doctype",
-   "search_index": 1
+   "search_index": 1,
+   "read_only": 1
   },
   {
    "fieldname": "customer",
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Cliente",
-   "options": "Customer"
+   "options": "Customer",
+   "read_only": 1
   },
   {
    "fieldname": "customer_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Nombre Cliente",
-   "search_index": 1
+   "search_index": 1,
+   "read_only": 1
   },
   {
    "fieldname": "sec_mh",
    "fieldtype": "Section Break",
-   "label": "Informaci\u00f3n MH"
+   "label": "Estado MH"
+  },
+  {
+   "fieldname": "mh_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estado MH",
+   "options": "\nPENDIENTE\nPROCESADO\nRECHAZADO\nINVALIDADO\nCONTINGENCIA",
+   "read_only": 1
   },
   {
    "fieldname": "reception_seal",
    "fieldtype": "Data",
-   "label": "Sello de Recepci\u00f3n"
+   "label": "Sello de Recepci\u00f3n",
+   "read_only": 1
   },
   {
    "fieldname": "mh_processed_at",
    "fieldtype": "Datetime",
-   "label": "Fecha Procesamiento MH"
+   "label": "Fecha Procesamiento MH",
+   "read_only": 1
   },
   {
-   "fieldname": "ambiente",
-   "fieldtype": "Select",
-   "in_standard_filter": 1,
-   "label": "Ambiente",
-   "options": "\n00\n01"
-  },
-  {
-   "fieldname": "company",
-   "fieldtype": "Link",
-   "label": "Empresa",
-   "options": "Company"
+   "fieldname": "observaciones_mh",
+   "fieldtype": "Small Text",
+   "label": "Observaciones MH",
+   "read_only": 1
   },
   {
    "fieldname": "col_break_mh",
@@ -134,27 +152,90 @@
   {
    "fieldname": "mh_verification_url",
    "fieldtype": "Data",
-   "label": "URL Verificaci\u00f3n MH"
+   "label": "URL Verificaci\u00f3n MH",
+   "read_only": 1
   },
   {
-   "fieldname": "is_invalidated",
-   "fieldtype": "Check",
-   "label": "\u00bfInvalidado?"
+   "fieldname": "ambiente",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Ambiente",
+   "options": "\n00\n01",
+   "read_only": 1
   },
   {
-   "fieldname": "invalidated_at",
-   "fieldtype": "Datetime",
-   "label": "Fecha Invalidaci\u00f3n"
-  },
-  {
-   "fieldname": "replacement_generation_code",
-   "fieldtype": "Data",
-   "label": "C\u00f3digo Generaci\u00f3n Reemplazo"
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Empresa",
+   "options": "Company",
+   "read_only": 1
   },
   {
    "fieldname": "last_status_check_at",
    "fieldtype": "Datetime",
-   "label": "\u00daltima Consulta Estado"
+   "label": "\u00daltima Consulta Estado",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_invalidacion",
+   "fieldtype": "Section Break",
+   "label": "Invalidaci\u00f3n",
+   "collapsible": 1,
+   "collapsible_depends_on": "is_invalidated"
+  },
+  {
+   "fieldname": "is_invalidated",
+   "fieldtype": "Check",
+   "label": "\u00bfInvalidado?",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invalidated_at",
+   "fieldtype": "Datetime",
+   "label": "Fecha Invalidaci\u00f3n",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tipo_anulacion",
+   "fieldtype": "Data",
+   "label": "Tipo Invalidaci\u00f3n",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_anulacion",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "replacement_generation_code",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo Generaci\u00f3n Reemplazo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "motivo_anulacion",
+   "fieldtype": "Small Text",
+   "label": "Motivo Invalidaci\u00f3n",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sec_payloads",
+   "fieldtype": "Section Break",
+   "label": "JSON MH",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "mh_request_json",
+   "fieldtype": "Code",
+   "label": "Request enviado a MH",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mh_response_json",
+   "fieldtype": "Code",
+   "label": "Response recibido de MH",
+   "options": "JSON",
+   "read_only": 1
   },
   {
    "fieldname": "sec_auditoria",
@@ -166,13 +247,15 @@
    "fieldname": "issued_at",
    "fieldtype": "Datetime",
    "in_list_view": 1,
-   "label": "Fecha Emisi\u00f3n"
+   "label": "Fecha Emisi\u00f3n",
+   "read_only": 1
   },
   {
    "fieldname": "issued_by",
    "fieldtype": "Link",
    "label": "Emitido por",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   }
  ],
  "links": [],

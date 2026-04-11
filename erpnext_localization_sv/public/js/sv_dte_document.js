@@ -24,69 +24,29 @@ function _sv_dte_doc_buttons(frm) {
 	}
 
 	// ── Ver en Hacienda ────────────────────────────────────────────────────
-	// El portal (admin.factura.gob.sv/consultaPublica) es una SPA Angular
-	// que no acepta params en URL — se muestra diálogo con datos para pegar.
+	// mh_verification_url contiene la URL completa: ?ambiente=XX&codGen=UUID&fechaEmi=DATE
+	// Siempre usa la fecha de EMISIÓN (posting_date de la factura), nunca la de invalidación.
 	if (gen_code) {
-		const portal_url = qr_url || "https://admin.factura.gob.sv/consultaPublica";
-
 		frm.add_custom_button(__("Ver en Hacienda"), () => {
-			const uuid = gen_code;
-			// issued_at tiene formato "YYYY-MM-DD HH:MM:SS" — extraer solo fecha
-			const raw_date = (frm.doc.issued_at || "").split(" ")[0];
-			let fecha_portal = raw_date;
-			if (raw_date && raw_date.includes("-")) {
-				const [y, m, d] = raw_date.split("-");
-				fecha_portal = `${d}/${m}/${y}`;
+			if (qr_url && qr_url.includes("codGen=")) {
+				// URL completa ya disponible — abrir directamente
+				window.open(qr_url, "_blank", "noopener,noreferrer");
+			} else {
+				// Fallback: obtener posting_date de la Sales Invoice de origen
+				// (issued_at puede diferir de posting_date — nunca usar fecha de invalidación)
+				const _open = (fecha) => {
+					const url = `https://admin.factura.gob.sv/consultaPublica?ambiente=00&codGen=${gen_code}&fechaEmi=${fecha}`;
+					window.open(url, "_blank", "noopener,noreferrer");
+				};
+				if (frm.doc.source_doctype === "Sales Invoice" && frm.doc.source_docname) {
+					frappe.db.get_value(
+						"Sales Invoice", frm.doc.source_docname, "posting_date",
+						(r) => _open((r && r.posting_date) || (frm.doc.issued_at || "").split(" ")[0])
+					);
+				} else {
+					_open((frm.doc.issued_at || "").split(" ")[0]);
+				}
 			}
-
-			// Copiar UUID al portapapeles (best-effort)
-			if (navigator.clipboard && navigator.clipboard.writeText) {
-				navigator.clipboard.writeText(uuid).catch(() => {});
-			}
-
-			const dlg = new frappe.ui.Dialog({
-				title: __("Verificar DTE en portal Ministerio de Hacienda"),
-				fields: [{
-					fieldtype: "HTML",
-					options: `
-						<p style="margin-bottom:12px;">
-							Ingresa estos datos en el portal
-							<strong>admin.factura.gob.sv/consultaPublica</strong>:
-						</p>
-						<table style="width:100%;font-size:13px;border-collapse:collapse;">
-							<tr>
-								<td style="padding:6px 10px 6px 0;font-weight:bold;white-space:nowrap;vertical-align:top;">
-									Fecha de Generación:
-								</td>
-								<td>
-									<code style="background:#f0f4ff;border:1px solid #c7d2fe;padding:4px 10px;border-radius:4px;font-size:13px;display:inline-block;">
-										${fecha_portal}
-									</code>
-								</td>
-							</tr>
-							<tr>
-								<td style="padding:6px 10px 6px 0;font-weight:bold;white-space:nowrap;vertical-align:top;">
-									Código de Generación:
-								</td>
-								<td>
-									<code style="background:#f0f4ff;border:1px solid #c7d2fe;padding:4px 10px;border-radius:4px;font-size:12px;word-break:break-all;display:inline-block;">
-										${uuid}
-									</code>
-								</td>
-							</tr>
-						</table>
-						<p style="margin-top:10px;color:#4b5563;font-size:11px;">
-							&#x2713; Código de Generación copiado al portapapeles — solo pégalo en el portal.
-						</p>
-					`,
-				}],
-				primary_action_label: __("Abrir portal MH"),
-				primary_action() {
-					window.open(portal_url, "_blank", "noopener,noreferrer");
-					dlg.hide();
-				},
-			});
-			dlg.show();
 		}, G);
 	}
 
