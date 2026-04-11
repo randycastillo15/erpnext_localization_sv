@@ -183,24 +183,24 @@ def anular_dte(
     # Persistir resultado de anulación en Sales Invoice
     anulado = bool(result.get("sello_recibido"))
     frappe.db.set_value("Sales Invoice", docname, {
-        "sv_anulacion_status":                     "Invalidado" if anulado else "Rechazado",
-        "sv_anulacion_tipo":                       tipo_anulacion,
-        "sv_motivo_anulacion":                     motivo_anulacion or "",
-        "sv_anulacion_sello":                      result.get("sello_recibido") or "",
-        "sv_anulacion_fecha":                      fecha_anula,
-        "sv_anulacion_codigo_generacion_reemplazo": codigo_generacion_reemplazo or "",
+        "sv_anulacion_status": "Invalidado" if anulado else "Rechazado",
         # Reflejar el estado real en MH: INVALIDADO si anulación fue aceptada
-        "sv_estado_mh":                            "INVALIDADO" if anulado else doc.get("sv_estado_mh"),
+        "sv_estado_mh":        "INVALIDADO" if anulado else doc.get("sv_estado_mh"),
     })
     frappe.db.commit()
 
     # Sincronizar SV DTE Document
     try:
         from erpnext_localization_sv.api.dte_document_sync import sync_on_invalidation
+        from erpnext_localization_sv.api.dte import _sanitize_for_log
         sync_on_invalidation(
             generation_code=gen_code,
             invalidated_at=fecha_anula if anulado else None,
             replacement_generation_code=codigo_generacion_reemplazo or None,
+            tipo_anulacion=tipo_anulacion,
+            motivo_anulacion=motivo_anulacion or "",
+            mh_request_json=frappe.as_json(_sanitize_for_log(payload), indent=2),
+            mh_response_json=frappe.as_json(_sanitize_for_log(result), indent=2),
         )
         frappe.db.commit()
     except Exception as _sync_exc:

@@ -1,10 +1,13 @@
 """
-Custom Fields DTE para Sales Invoice — v1.6
+Custom Fields DTE para Sales Invoice — v1.29
 
 Definición centralizada usada desde:
   - patches/v1_0/add_dte_custom_fields.py  (patch original — sitios existentes)
   - patches/v1_1/update_dte_custom_fields.py (patch v1.1 — añade campos ampliados)
   - patches/v1_4/add_anulacion_contingencia_fields.py (Sprint 4)
+
+v1.29: eliminados 15 campos no utilizados (datos duplicados en SV DTE Document,
+Section Breaks neutralizados, campos de contingencia de feature incompleta).
 """
 
 import frappe
@@ -37,6 +40,7 @@ _DTE_FIELDS = {
             "label": "Ambiente MH",
             "options": "\n00\n01",
             "read_only": 1,
+            "hidden": 1,
             "no_copy": 1,
             "insert_after": "sv_dte_document_type",
         },
@@ -57,38 +61,14 @@ _DTE_FIELDS = {
             "no_copy": 1,
             "insert_after": "sv_dte_generation_code",
         },
-        # ── Estado ────────────────────────────────────────────────────────────
-        {
-            "fieldname": "sv_dte_status",
-            "fieldtype": "Data",
-            "label": "DTE Status (Gateway)",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_dte_control_number",
-        },
+        # ── Estado MH ─────────────────────────────────────────────────────────
         {
             "fieldname": "sv_estado_mh",
             "fieldtype": "Data",
             "label": "Estado MH",
             "read_only": 1,
             "no_copy": 1,
-            "insert_after": "sv_dte_status",
-        },
-        {
-            "fieldname": "sv_clasifica_msg",
-            "fieldtype": "Data",
-            "label": "Clasifica Mensaje",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_estado_mh",
-        },
-        {
-            "fieldname": "sv_codigo_msg",
-            "fieldtype": "Data",
-            "label": "Código Mensaje",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_clasifica_msg",
+            "insert_after": "sv_dte_control_number",
         },
         # ── Sello y fechas ────────────────────────────────────────────────────
         {
@@ -96,14 +76,16 @@ _DTE_FIELDS = {
             "fieldtype": "Data",
             "label": "Sello de Recepción",
             "read_only": 1,
+            "hidden": 1,
             "no_copy": 1,
-            "insert_after": "sv_codigo_msg",
+            "insert_after": "sv_estado_mh",
         },
         {
             "fieldname": "sv_dte_sent_at",
             "fieldtype": "Datetime",
             "label": "DTE Enviado el",
             "read_only": 1,
+            "hidden": 1,
             "no_copy": 1,
             "insert_after": "sv_sello_recepcion",
         },
@@ -112,25 +94,9 @@ _DTE_FIELDS = {
             "fieldtype": "Datetime",
             "label": "Fecha Procesamiento MH",
             "read_only": 1,
+            "hidden": 1,
             "no_copy": 1,
             "insert_after": "sv_dte_sent_at",
-        },
-        # ── Payloads ──────────────────────────────────────────────────────────
-        {
-            "fieldname": "sv_dte_last_payload",
-            "fieldtype": "Long Text",
-            "label": "DTE Último Payload Enviado",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_fecha_procesamiento",
-        },
-        {
-            "fieldname": "sv_dte_last_response",
-            "fieldtype": "Long Text",
-            "label": "DTE Última Respuesta",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_dte_last_payload",
         },
         # ── Observaciones ─────────────────────────────────────────────────────
         {
@@ -138,37 +104,33 @@ _DTE_FIELDS = {
             "fieldtype": "Long Text",
             "label": "Observaciones MH",
             "read_only": 1,
+            "hidden": 1,
             "no_copy": 1,
-            "insert_after": "sv_dte_last_response",
+            "insert_after": "sv_fecha_procesamiento",
         },
-        # ── URL verificación MH (Sprint 6 — generada al emitir) ──────────────
+        # ── URL verificación MH (generada al emitir) ──────────────────────────
         {
             "fieldname": "sv_dte_qr_url",
             "fieldtype": "Data",
             "label": "URL Verificación MH",
             "read_only": 1,
+            "hidden": 1,
             "no_copy": 1,
             "insert_after": "sv_observaciones_mh",
-            "description": "URL generada al emitir. Configurar la base URL en SV DTE Settings → URL Consulta Pública MH.",
+            "description": "URL parametrizada generada al emitir. Usar en 'Ver en Hacienda' y QR del impreso.",
         },
-        # ── IVA total DTE (Sprint 4 — fuente principal para anulación) ─────────
+        # ── IVA total DTE (fuente principal para anulación) ───────────────────
         {
             "fieldname": "sv_total_iva",
             "fieldtype": "Currency",
             "label": "IVA Total DTE",
             "read_only": 1,
+            "hidden": 1,
             "no_copy": 1,
             "insert_after": "sv_dte_qr_url",
             "description": "IVA calculado al momento de la emisión DTE. Fuente principal para montoIva en anulación.",
         },
-        # ── Sección Invalidación ──────────────────────────────────────────────
-        {
-            "fieldname": "sv_anulacion_section",
-            "fieldtype": "Section Break",
-            "label": "Invalidación DTE",
-            "collapsible": 1,
-            "insert_after": "sv_total_iva",
-        },
+        # ── Estado Invalidación ───────────────────────────────────────────────
         {
             "fieldname": "sv_anulacion_status",
             "fieldtype": "Select",
@@ -176,79 +138,7 @@ _DTE_FIELDS = {
             "options": "\nInvalidado\nRechazado",
             "read_only": 1,
             "no_copy": 1,
-            "insert_after": "sv_anulacion_section",
-        },
-        {
-            "fieldname": "sv_anulacion_tipo",
-            "fieldtype": "Int",
-            "label": "Tipo Invalidación",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_anulacion_status",
-        },
-        {
-            "fieldname": "sv_motivo_anulacion",
-            "fieldtype": "Small Text",
-            "label": "Motivo Invalidación",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_anulacion_tipo",
-        },
-        {
-            "fieldname": "sv_anulacion_sello",
-            "fieldtype": "Data",
-            "label": "Sello Invalidación",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_motivo_anulacion",
-        },
-        {
-            "fieldname": "sv_anulacion_fecha",
-            "fieldtype": "Date",
-            "label": "Fecha Invalidación",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_anulacion_sello",
-        },
-        {
-            "fieldname": "sv_anulacion_codigo_generacion_reemplazo",
-            "fieldtype": "Data",
-            "label": "UUID Reemplazo (Invalidación)",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_anulacion_fecha",
-        },
-        # ── Sección Contingencia ──────────────────────────────────────────────
-        {
-            "fieldname": "sv_contingencia_section",
-            "fieldtype": "Section Break",
-            "label": "Contingencia DTE",
-            "collapsible": 1,
-            "insert_after": "sv_anulacion_codigo_generacion_reemplazo",
-        },
-        {
-            "fieldname": "sv_contingencia_event_uuid",
-            "fieldtype": "Data",
-            "label": "UUID Evento Contingencia",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_contingencia_section",
-        },
-        {
-            "fieldname": "sv_contingencia_tipo",
-            "fieldtype": "Int",
-            "label": "Tipo Contingencia",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_contingencia_event_uuid",
-        },
-        {
-            "fieldname": "sv_contingencia_sello",
-            "fieldtype": "Data",
-            "label": "Sello Contingencia",
-            "read_only": 1,
-            "no_copy": 1,
-            "insert_after": "sv_contingencia_tipo",
+            "insert_after": "sv_total_iva",
         },
     ]
 }

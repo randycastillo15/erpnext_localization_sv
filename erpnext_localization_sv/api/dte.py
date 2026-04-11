@@ -192,44 +192,47 @@ def emit_dte(doctype: str, docname: str) -> dict:
     result = response.json()
     gen_code = result.get("generation_code") or result.get("uuid_dte")
 
-    # Computar URL del portal de consulta pública MH (Sprint 6, corregido Sprint 7).
-    # El portal admin.factura.gob.sv/consultaPublica es una SPA Angular que NO acepta
-    # parámetros en la URL para pre-poblar el formulario — solo usa la URL base.
-    # El usuario ingresa el codigoGeneracion manualmente en el portal.
-    # Solo si url_verificacion_mh está configurada en SV DTE Settings. No lanzar excepción si falta.
+    # Computar URL parametrizada del portal MH para consulta pública y QR.
+    # Formato confirmado funcional: ?ambiente=XX&codGen=UUID&fechaEmi=YYYY-MM-DD
+    # Se usa la constante MH_QR_URL de sv_fiscal_constants.py.
     _qr_url = ""
+    _ambiente_emit = "00"
     try:
+        from erpnext_localization_sv.config.sv_fiscal_constants import MH_QR_URL
         _settings = frappe.get_single("SV DTE Settings")
-        _base_url = (_settings.get("url_verificacion_mh") or "").strip().rstrip("/")
-        if gen_code and _base_url:
-            _qr_url = _base_url  # URL del portal — no se añaden query params (SPA no los lee)
+        _ambiente_emit = _settings.get("ambiente") or "00"
+        if gen_code:
+            _qr_url = MH_QR_URL.format(
+                ambiente=_ambiente_emit,
+                cod_gen=gen_code,
+                fecha_emi=str(doc.posting_date),
+            )
     except Exception:
         pass  # URL de QR es opcional — no bloquear la emisión
 
     # Persistir en Sales Invoice (solo datos limpios — sin firma)
     frappe.db.set_value("Sales Invoice", docname, {
-        "sv_dte_status":           result.get("status"),
         "sv_dte_generation_code":  gen_code,
         "sv_dte_control_number":   result.get("control_number"),
         "sv_dte_sent_at":          now_datetime(),
-        "sv_dte_last_payload":     frappe.as_json(_sanitize_for_log(payload), indent=2),
-        "sv_dte_last_response":    frappe.as_json(_sanitize_for_log(result), indent=2),
         "sv_estado_mh":            result.get("estado"),
-        "sv_clasifica_msg":        result.get("clasifica_msg"),
-        "sv_codigo_msg":           result.get("codigo_msg"),
         "sv_sello_recepcion":      result.get("sello_recibido"),
         "sv_fecha_procesamiento":  _parse_mh_datetime(result.get("fh_procesamiento")),
         "sv_observaciones_mh":     frappe.as_json(result.get("observaciones") or [], indent=2),
         # Sprint 4: persistir IVA calculado en el DTE como fuente principal para anulación
         "sv_total_iva":            float(payload.get("total_iva") or 0),
-        # Sprint 6: URL de verificación MH (vacía si url_verificacion_mh no está configurada)
+        # URL parametrizada del portal MH para "Ver en Hacienda" y QR del impreso
         "sv_dte_qr_url":           _qr_url,
+        # Ambiente registrado en el momento de emisión (para URL fallback en JS)
+        "sv_dte_environment":      _ambiente_emit,
     })
     frappe.db.commit()
 
     # Sincronizar SV DTE Document (índice operativo)
     try:
         from erpnext_localization_sv.api.dte_document_sync import sync_on_emit
+        _obs_list = result.get("observaciones") or []
+        _obs_str = "\n".join(f"• {o}" for o in _obs_list) if _obs_list else ""
         sync_on_emit(
             source_doctype="Sales Invoice",
             source_docname=docname,
@@ -245,6 +248,9 @@ def emit_dte(doctype: str, docname: str) -> dict:
             customer=doc.customer,
             customer_name=doc.customer_name,
             mh_verification_url=_qr_url,
+            mh_request_json=frappe.as_json(_sanitize_for_log(payload), indent=2),
+            mh_response_json=frappe.as_json(_sanitize_for_log(result), indent=2),
+            observaciones_mh=_obs_str,
         )
     except Exception as _sync_exc:
         frappe.logger().warning(

@@ -151,15 +151,6 @@ def emit_contingencia(
     event_uuid = result.get("event_uuid") or ""
     sello = result.get("sello_recibido") or ""
 
-    # Persistir sello y event_uuid en cada Sales Invoice incluido
-    for docname in docnames:
-        frappe.db.set_value("Sales Invoice", docname, {
-            "sv_contingencia_event_uuid": event_uuid,
-            "sv_contingencia_tipo":       tipo_contingencia,
-            "sv_contingencia_sello":      sello,
-        })
-    frappe.db.commit()
-
     frappe.logger().info(
         "[contingencia] event_uuid=%s tipo=%s dtes=%d estado=%s sello=%s",
         event_uuid, tipo_contingencia, len(docnames),
