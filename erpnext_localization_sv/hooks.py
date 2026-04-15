@@ -23,6 +23,7 @@ fixtures = [
     {"dt": "SV Departamento"},
     {"dt": "SV Municipio"},
     {"dt": "SV Distrito"},
+    {"dt": "SV Tipo Documento"},
 ]
 
 # ---------------------------------------------------------------------------

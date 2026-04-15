@@ -1,6 +1,7 @@
 /**
  * SV DTE Document — form script.
  * Botones: Ver en Hacienda, Consultar Estado MH, Invalidar DTE, Abrir Documento Origen.
+ * Sprint 9: Visibilidad de botones controlada por roles DTE.
  */
 
 frappe.ui.form.on("SV DTE Document", {
@@ -16,6 +17,12 @@ function _sv_dte_doc_buttons(frm) {
 	const invalidado = frm.doc.is_invalidated;
 	const qr_url     = (frm.doc.mh_verification_url || "").trim();
 
+	// Verificación de roles DTE (client-side — el servidor también valida)
+	const roles        = frappe.user_roles || [];
+	const canEmit      = roles.some(r => ["DTE Operador", "DTE Responsable", "DTE Admin"].includes(r));
+	const canInvalidar = roles.includes("DTE Responsable");
+	const canRead      = roles.some(r => ["DTE Operador", "DTE Responsable", "DTE Admin", "DTE Auditor"].includes(r));
+
 	// ── Abrir Documento Origen ─────────────────────────────────────────────
 	if (frm.doc.source_doctype && frm.doc.source_docname) {
 		frm.add_custom_button(__("Abrir Documento Origen"), () => {
@@ -26,7 +33,7 @@ function _sv_dte_doc_buttons(frm) {
 	// ── Ver en Hacienda ────────────────────────────────────────────────────
 	// mh_verification_url contiene la URL completa: ?ambiente=XX&codGen=UUID&fechaEmi=DATE
 	// Siempre usa la fecha de EMISIÓN (posting_date de la factura), nunca la de invalidación.
-	if (gen_code) {
+	if (gen_code && canRead) {
 		frm.add_custom_button(__("Ver en Hacienda"), () => {
 			if (qr_url && qr_url.includes("codGen=")) {
 				// URL completa ya disponible — abrir directamente
@@ -51,7 +58,7 @@ function _sv_dte_doc_buttons(frm) {
 	}
 
 	// ── Consultar Estado MH ────────────────────────────────────────────────
-	if (gen_code && mh_status !== "INVALIDADO") {
+	if (gen_code && mh_status !== "INVALIDADO" && canRead) {
 		frm.add_custom_button(__("Consultar Estado MH"), () => {
 			frappe.call({
 				method: "erpnext_localization_sv.api.sv_dte_document.refresh_dte_status",
@@ -80,12 +87,13 @@ function _sv_dte_doc_buttons(frm) {
 	}
 
 	// ── Invalidar DTE ──────────────────────────────────────────────────────
-	// Solo si PROCESADO, no invalidado y fuente es Sales Invoice
+	// Solo si PROCESADO, no invalidado, fuente es Sales Invoice y tiene rol DTE Responsable
 	if (
 		mh_status === "PROCESADO"
 		&& !invalidado
 		&& frm.doc.source_doctype === "Sales Invoice"
 		&& frm.doc.source_docname
+		&& canInvalidar
 	) {
 		frm.add_custom_button(__("Invalidar DTE"), () => {
 			frappe.prompt(

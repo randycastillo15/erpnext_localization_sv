@@ -3,6 +3,7 @@
  * Sprint 5: Emitir, Consultar Estado, Re-emitir, Anular DTE.
  * Sprint 6: Terminología → Invalidar DTE. Botón Ver en Hacienda.
  * Sprint 7: Ver en Hacienda muestra diálogo con fecha/UUID listos + copia UUID al portapapeles.
+ * Sprint 9: Visibilidad de botones controlada por roles DTE.
  */
 
 frappe.ui.form.on("Sales Invoice", {
@@ -21,8 +22,14 @@ function _dte_sv_refresh_buttons(frm) {
 	const qr_url    = (frm.doc.sv_dte_qr_url || "").trim();
 	const G = "DTE El Salvador";
 
+	// Verificación de roles DTE (client-side — el servidor también valida)
+	const roles       = frappe.user_roles || [];
+	const canEmit     = roles.some(r => ["DTE Operador", "DTE Responsable", "DTE Admin"].includes(r));
+	const canInvalidar = roles.includes("DTE Responsable");
+	const canRead     = roles.some(r => ["DTE Operador", "DTE Responsable", "DTE Admin", "DTE Auditor"].includes(r));
+
 	// Ver Detalle DTE — navega al SV DTE Document asociado
-	if (gen_code) {
+	if (gen_code && canRead) {
 		frm.add_custom_button(__("Ver Detalle DTE"), () => {
 			frappe.db.get_value(
 				"SV DTE Document",
@@ -44,7 +51,7 @@ function _dte_sv_refresh_buttons(frm) {
 	}
 
 	// Emitir DTE — solo si tipo_doc seleccionado y aún sin gen_code
-	if (tipo_doc && !gen_code) {
+	if (tipo_doc && !gen_code && canEmit) {
 		frm.add_custom_button(__("Emitir DTE"), () => {
 			frappe.call({
 				method: "erpnext_localization_sv.api.dte.emit_dte",
@@ -62,7 +69,7 @@ function _dte_sv_refresh_buttons(frm) {
 	// Ver en Hacienda — abre directamente el portal MH con los parámetros correctos.
 	// sv_dte_qr_url contiene la URL completa: ?ambiente=XX&codGen=UUID&fechaEmi=YYYY-MM-DD
 	// Fallback para facturas legacy (emitidas antes del patch): construir URL desde componentes.
-	if (gen_code) {
+	if (gen_code && canRead) {
 		frm.add_custom_button(__("Ver en Hacienda"), () => {
 			let url = qr_url;
 			if (!url || !url.includes("codGen=")) {
@@ -75,7 +82,7 @@ function _dte_sv_refresh_buttons(frm) {
 	}
 
 	// Consultar Estado MH — si tiene gen_code y no está INVALIDADO
-	if (gen_code && estado_mh !== "INVALIDADO") {
+	if (gen_code && estado_mh !== "INVALIDADO" && canRead) {
 		frm.add_custom_button(__("Consultar Estado MH"), () => {
 			frappe.call({
 				method: "erpnext_localization_sv.api.dte.get_dte_status",
@@ -102,7 +109,7 @@ function _dte_sv_refresh_buttons(frm) {
 	}
 
 	// Re-emitir DTE — solo si el último estado es RECHAZADO
-	if (gen_code && estado_mh === "RECHAZADO") {
+	if (gen_code && estado_mh === "RECHAZADO" && canEmit) {
 		frm.add_custom_button(__("Re-emitir DTE"), () => {
 			frappe.confirm(
 				__("El DTE fue rechazado por MH. ¿Desea intentar nuevamente?"),
@@ -120,7 +127,7 @@ function _dte_sv_refresh_buttons(frm) {
 	}
 
 	// Invalidar DTE — solo si PROCESADO y sin invalidación previa
-	if (estado_mh === "PROCESADO" && !anulado) {
+	if (estado_mh === "PROCESADO" && !anulado && canInvalidar) {
 		frm.add_custom_button(__("Invalidar DTE"), () => {
 			frappe.prompt(
 				[

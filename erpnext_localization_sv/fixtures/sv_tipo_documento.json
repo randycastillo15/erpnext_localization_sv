@@ -1,0 +1,32 @@
+[
+ {
+  "doctype": "SV Tipo Documento",
+  "name": "36",
+  "codigo": "36",
+  "descripcion": "NIT - Número de Identificación Tributaria"
+ },
+ {
+  "doctype": "SV Tipo Documento",
+  "name": "13",
+  "codigo": "13",
+  "descripcion": "DUI - Documento Único de Identidad"
+ },
+ {
+  "doctype": "SV Tipo Documento",
+  "name": "02",
+  "codigo": "02",
+  "descripcion": "Carnet de Residente"
+ },
+ {
+  "doctype": "SV Tipo Documento",
+  "name": "03",
+  "codigo": "03",
+  "descripcion": "Pasaporte"
+ },
+ {
+  "doctype": "SV Tipo Documento",
+  "name": "37",
+  "codigo": "37",
+  "descripcion": "Otro Documento"
+ }
+]

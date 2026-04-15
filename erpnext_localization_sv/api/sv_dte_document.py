@@ -4,6 +4,9 @@ API whitelisted para SV DTE Document.
 import frappe
 from frappe.utils import now_datetime
 
+# Roles con acceso a consulta de estado (lectura — incluye auditores)
+_DTE_READ_ROLES = frozenset(["DTE Operador", "DTE Responsable", "DTE Admin", "DTE Auditor"])
+
 
 @frappe.whitelist()
 def refresh_dte_status(dte_doc_name: str) -> dict:
@@ -16,6 +19,12 @@ def refresh_dte_status(dte_doc_name: str) -> dict:
     Args:
         dte_doc_name: name del SV DTE Document.
     """
+    if not (_DTE_READ_ROLES & set(frappe.get_roles())):
+        frappe.throw(
+            "Se requiere un rol DTE para consultar el estado de documentos.",
+            title="Acceso denegado",
+        )
+
     if not dte_doc_name:
         frappe.throw("dte_doc_name es requerido")
 

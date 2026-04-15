@@ -22,6 +22,14 @@ from erpnext_localization_sv.api.sv_payload_builder import build_emit_request
 # Timeout ajustado para flujo real: firma (~3s) + MH (~8s × reintentos)
 _GATEWAY_TIMEOUT = 30
 
+# ---------------------------------------------------------------------------
+# Roles DTE — control de acceso por endpoint
+# ---------------------------------------------------------------------------
+# Roles que pueden emitir DTEs, re-emitir, invalidar (operaciones de escritura)
+_DTE_EMIT_ROLES = frozenset(["DTE Operador", "DTE Responsable", "DTE Admin"])
+# Roles que pueden consultar estado (lectura de MH — incluye auditores)
+_DTE_READ_ROLES = frozenset(["DTE Operador", "DTE Responsable", "DTE Admin", "DTE Auditor"])
+
 # Claves sensibles que NO deben aparecer en logs ni en campos de la Sales Invoice
 _LOG_SENSITIVE_KEYS = frozenset({
     "password_pri", "api_password", "passwordPri",
@@ -118,6 +126,11 @@ def _write_dte_log(
 @frappe.whitelist()
 def ping_gateway() -> dict:
     """Verifica que el DTE Gateway esté en línea."""
+    if not (_DTE_EMIT_ROLES & set(frappe.get_roles())):
+        frappe.throw(
+            "Se requiere el rol 'DTE Operador' o superior para esta operación.",
+            title="Acceso denegado",
+        )
     url = _gateway_url("/health")
     try:
         response = requests.get(url, timeout=_GATEWAY_TIMEOUT)
@@ -146,6 +159,13 @@ def emit_dte(doctype: str, docname: str) -> dict:
     Returns:
         Respuesta JSON del gateway (sanitizada — sin firma ni tokens).
     """
+    if not (_DTE_EMIT_ROLES & set(frappe.get_roles())):
+        frappe.throw(
+            "No tienes un rol DTE para emitir documentos. "
+            "Solicita el rol 'DTE Operador' al administrador del sistema.",
+            title="Acceso denegado",
+        )
+
     if not doctype or not docname:
         frappe.throw("doctype y docname son requeridos")
 
@@ -294,6 +314,12 @@ def get_dte_status(docname: str) -> dict:
     Args:
         docname: Nombre del Sales Invoice con DTE emitido.
     """
+    if not (_DTE_READ_ROLES & set(frappe.get_roles())):
+        frappe.throw(
+            "Se requiere un rol DTE para consultar el estado de documentos.",
+            title="Acceso denegado",
+        )
+
     if not docname:
         frappe.throw("docname es requerido")
 

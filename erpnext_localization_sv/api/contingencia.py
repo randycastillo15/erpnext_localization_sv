@@ -96,15 +96,22 @@ def emit_contingencia(
     emisor_dict = _build_emisor_settings(settings, estab)
     ambiente = settings.get("ambiente") or "00"
 
-    # Responsable desde Settings
-    nombre_responsable = settings.get("sv_nombre_responsable") or ""
-    tipo_doc_responsable = settings.get("sv_tipo_doc_responsable") or "36"
-    num_doc_responsable = settings.get("sv_num_doc_responsable") or ""
-
-    if not nombre_responsable:
+    # Responsable: datos del usuario logueado (requiere rol DTE Responsable)
+    if "DTE Responsable" not in frappe.get_roles():
         frappe.throw(
-            "SV DTE Settings no tiene Responsable configurado (sv_nombre_responsable). "
-            "Configure el responsable antes de transmitir contingencias."
+            "No tienes el rol 'DTE Responsable'. "
+            "Solicita acceso al administrador del sistema antes de reportar contingencias."
+        )
+    user_doc = frappe.get_doc("User", frappe.session.user)
+    nombre_responsable = user_doc.full_name or ""
+    tipo_doc_responsable = user_doc.get("sv_tipo_doc_responsable") or "36"
+    num_doc_responsable = user_doc.get("sv_num_doc_responsable") or ""
+
+    if not nombre_responsable or not num_doc_responsable:
+        frappe.throw(
+            "Tu perfil de usuario no tiene los datos de Responsable DTE completos "
+            "(Tipo y Núm. Doc Responsable). "
+            "Completa la sección 'Responsable DTE' en tu perfil antes de transmitir contingencias."
         )
 
     today = frappe.utils.today()
